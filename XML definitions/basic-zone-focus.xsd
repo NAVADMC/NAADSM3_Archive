@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XSD file created for 3.1.15 XML output validation -->
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="basic-zone-focus-model-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module provides a policy of establishing a zone focus around
+          units that are detected as diseased.  Note that a model of detection
+          must also be running.  This module has no parameters.
+        ]]>
+      </documentation>
+    </annotation>    
+    <sequence>
+      <!-- Model parameters. -->
+    </sequence>
+    <attribute name="version" type="string" fixed="0.1" />
+    <attribute name="production-type" type="string" />
+    <attribute name="production-type-id" type="integer"  />
+  </complexType>
+
+</schema>

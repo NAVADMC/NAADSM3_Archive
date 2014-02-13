@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="trace-monitor-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module tracks traces.  It records the number of traces that
+          were attempted and the number that were successful.
+        ]]>
+      </documentation>
+    </annotation>
+    <sequence>
+      <!-- No parameters. -->
+
+      <element name="output" minOccurs="0" maxOccurs="unbounded">
+        <complexType>
+          <sequence>
+            <element name="variable-name">
+              <simpleType>
+                <restriction base="string">
+                  <enumeration value="trnUp">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of contacts that would have been
+                          discovered if tracing were 100% successful.  The
+                          count is reset to zero each time it is reported, so
+                          this variable gives a total for each reporting
+                          interval (e.g., day, week).
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="trnU">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of contacts that were discovered.  The
+                          count is reset to zero each time it is reported, so
+                          this variable gives a total for each reporting
+                          interval (e.g., day, week).
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="trnAp">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of animals in units potentially traced if tracing
+                          were 100% successful. Neil or Aaron please QA.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="trnA">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of animals in traced units.
+                          Neil or Aaron please QA.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="trcUp">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The cumulative number of contacts that would have
+                          been discovered since the beginning of the simulation
+                          if tracing were 100% successful.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="trcU">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of contacts that were discovered since the
+                          beginning of the simulation.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="trcAp">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The cumulative number of animals in unit contacts that would have
+                          been discovered since the beginning of the simulation
+                          if tracing were 100% successful.
+                          Neil or Aaron please QA.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="trcA">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of animals in unit contacts that were 
+                          discovered since the beginning of the simulation.
+                          Neil or Aaron please QA.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                </restriction>
+              </simpleType>
+            </element>
+            <element name="broken-down" type="naadsm:yes-no" minOccurs="0" />
+            <element name="frequency" type="naadsm:output-variable-frequency" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+
+    <attribute name="version" type="string" fixed="0.1" />
+  </complexType>
+
+</schema>

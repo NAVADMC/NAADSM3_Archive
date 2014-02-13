@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="vaccination-list-monitor-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module tracks the number of units waiting to be vaccinated.
+        ]]>
+      </documentation>
+    </annotation>    
+    <sequence>
+      <!-- No parameters. -->
+
+      <element name="output" minOccurs="0" maxOccurs="unbounded">
+        <complexType>
+          <sequence>
+            <element name="variable-name">
+              <simpleType>
+                <restriction base="string">                
+                  <enumeration value="vacwU">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of units waiting to be vaccinated.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="vacwUMax">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The peak number of units waiting to be vaccinated
+                          since the beginning of the simulation.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="vacwUMaxDay">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The first simulation day on which the maximum number
+                          of units in queue for vaccination was reached.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="vacwA">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of animals waiting to be vaccinated.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="vacwAMax">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The peak number of animals waiting to be vaccinated
+                          since the beginning of the simulation.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="vacwAMaxDay">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The first simulation day on which the maximum number
+                          of animals in queue for vaccination was reached.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="vacwUTimeAvg">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The average number of days any unit was waiting to be
+                          vaccinated.  This value is based only on units that have
+                          been vaccinated.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="vacwUTimeMax">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The peak number of days any unit was waiting to be
+                          vaccinated.  This value is based only on units that have
+                          been vaccinated.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                </restriction>
+              </simpleType>                   
+            </element>
+            <element name="broken-down" type="naadsm:yes-no" minOccurs="0" />
+            <element name="frequency" type="naadsm:output-variable-frequency" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+
+    <attribute name="version" type="string" fixed="0.1" />
+  </complexType>
+
+</schema>

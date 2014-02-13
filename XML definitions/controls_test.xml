@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<naadsm:disease-simulation
+  xmlns:naadsm="http://www.naadsm.org/schema"
+  xmlns:xdf="http://xml.gsfc.nasa.gov/XDF">
+  <description>Parameters for a sample simulation run.</description>
+  <num-days>200</num-days>
+  <num-runs>1</num-runs>
+
+  <models>
+
+    <!-- foot-and-mouth disease -->
+    <disease-model production-type="Cattle">
+      <latent-period>
+        <triangular>
+          <a>5</a>
+          <c>7.5</c>
+          <b>10</b>
+        </triangular>
+        <units><xdf:unit>day</xdf:unit></units>
+      </latent-period>
+      <infectious-subclinical-period>
+        <point>0</point>
+        <units><xdf:unit>day</xdf:unit></units>
+      </infectious-subclinical-period>
+      <infectious-clinical-period>
+        <triangular>
+          <a>0</a>
+          <c>21</c>
+          <b>81</b>
+        </triangular>
+        <units><xdf:unit>day</xdf:unit></units>
+      </infectious-clinical-period>
+      <immunity-period>
+        <triangular>
+          <a>180</a>
+          <c>270</c>
+          <b>360</b>
+        </triangular>
+        <units><xdf:unit>day</xdf:unit></units>
+      </immunity-period>
+    </disease-model>
+
+    <!-- direct contact -->
+    <contact-spread-model from-production-type="Cattle" to-production-type="Cattle" contact-type="direct">
+      <movement-rate>
+        <value>0.4</value> <!-- 0.15=slow, 0.4=fast -->
+        <units><xdf:unit power="-1">day</xdf:unit></units>
+      </movement-rate>
+      <distance>
+        <triangular>
+          <a>0</a>
+          <c>0.9</c>
+          <b>100</b>
+        </triangular>
+        <units><xdf:unit>km</xdf:unit></units>
+      </distance>
+      <delay>
+        <point>0</point>
+        <units><xdf:unit>day</xdf:unit></units>
+      </delay>
+      <prob-infect>0.8</prob-infect>
+      <movement-control>
+        <value>0</value>  <value>1.0</value>
+        <value>42</value> <value>0.1667</value>
+        <units><xdf:unit>day</xdf:unit></units>
+        <units><xdf:unitless /></units>
+      </movement-control>
+      <quarantine-noncompliance>0</quarantine-noncompliance>
+      <latent-units-can-infect>true</latent-units-can-infect>
+      <subclinical-units-can-infect>true</subclinical-units-can-infect>
+    </contact-spread-model>
+
+    <!-- indirect contact -->
+    <contact-spread-model from-production-type="Cattle" to-production-type="Cattle" contact-type="indirect">
+      <movement-rate>
+        <value>2</value> <!-- 1=slow, 2=fast -->
+        <units><xdf:unit power="-1">day</xdf:unit></units>
+      </movement-rate>
+      <distance>
+        <triangular>
+          <a>0</a>
+          <c>0.9</c>
+          <b>30</b>
+        </triangular>
+        <units><xdf:unit>km</xdf:unit></units>
+      </distance>
+      <delay>
+        <point>0</point>
+        <units><xdf:unit>day</xdf:unit></units>
+      </delay>
+      <prob-infect>0.05</prob-infect>
+      <movement-control>
+        <value>0</value> <value>1.0</value>
+        <value>42</value> <value>0.1667</value>
+        <units><xdf:unit>day</xdf:unit></units>
+        <units><xdf:unitless /></units>
+      </movement-control>
+      <quarantine-noncompliance>0</quarantine-noncompliance>
+      <latent-units-can-infect>false</latent-units-can-infect>
+      <subclinical-units-can-infect>true</subclinical-units-can-infect>
+    </contact-spread-model>
+
+    <airborne-spread-model from-production-type="Cattle" to-production-type="Cattle">
+      <prob-spread-1km>0.0001</prob-spread-1km>
+      <wind-direction-start>
+	<value>0</value>
+	<units><xdf:unit>degree</xdf:unit></units>
+      </wind-direction-start>
+      <wind-direction-end>
+	<value>360</value>
+	<units><xdf:unit>degree</xdf:unit></units>
+      </wind-direction-end>
+      <max-spread>
+	<value>4</value> <!-- 2=slow, 4=fast -->
+	<units>
+	  <xdf:unit>km</xdf:unit>
+	</units>
+      </max-spread>
+    </airborne-spread-model>
+
+    <detection-model production-type="Cattle">
+      <prob-report-vs-time-clinical>
+        <value>1</value> <value>0.2</value>
+        <value>5</value> <value>1.0</value>
+        <units><xdf:unit>day</xdf:unit></units>
+        <units><xdf:unitless /></units>
+      </prob-report-vs-time-clinical>
+      <prob-report-vs-time-since-outbreak>
+        <value>1</value>  <value>0.15</value>
+        <value>50</value> <value>1.0</value>
+        <units><xdf:unit>day</xdf:unit></units>
+        <units><xdf:unitless /></units>
+      </prob-report-vs-time-since-outbreak>
+    </detection-model>
+
+    <detection-monitor>
+      <output>
+        <variable-name>time-to-first-detection</variable-name>
+        <frequency>once</frequency>
+      </output>
+    </detection-monitor>
+
+    <cdn-authorities-model>
+      <destruction-program-delay>
+        <value>5</value>
+        <units><xdf:unit>day</xdf:unit></units>	
+      </destruction-program-delay>
+      <destruction-delay>
+        <value>1</value>
+        <units><xdf:unit>day</xdf:unit></units>	
+      </destruction-delay>
+      <destruction-capacity>
+        <value>0</value> <value>250</value>
+        <units><xdf:unit>day</xdf:unit></units>
+        <units><xdf:unit>herd</xdf:unit><xdf:unit power="-1">day</xdf:unit></units>
+      </destruction-capacity>
+      <vaccination-capacity>
+        <value>0</value> <value>650</value>
+        <units><xdf:unit>day</xdf:unit></units>
+        <units><xdf:unit>herd</xdf:unit><xdf:unit power="-1">day</xdf:unit></units>
+      </vaccination-capacity>
+      <min-time-between-vaccinations>
+        <value>31</value>
+        <units><xdf:unit>day</xdf:unit></units>
+      </min-time-between-vaccinations>      
+    </cdn-authorities-model>
+
+    <!-- Units marked for destruction or vaccination are quarantined. -->
+    <quarantine-model>
+    </quarantine-model>
+
+    <!-- A diseased unit will be destroyed when the infection is confirmed. -->
+    <basic-destruction-model production-type="Cattle">
+      <priority>1</priority>
+    </basic-destruction-model>
+
+    <!-- Units that have had direct contact with a diseased unit in the past
+      14 days will be destroyed. -->
+    <trace-back-destruction-model from-production-type="Cattle" to-production-type="Cattle" contact-type="direct">
+      <priority>2</priority>
+      <trace-success>1.0</trace-success>
+      <trace-period>
+        <value>14</value>
+        <units><xdf:unit>day</xdf:unit></units>
+      </trace-period>
+      <output>
+        <variable-name>num-contacts-recorded</variable-name>
+        <frequency>weekly</frequency>
+      </output>
+      <output>
+        <variable-name>num-traces-attempted</variable-name>
+        <frequency>weekly</frequency>
+      </output>
+      <output>
+        <variable-name>cumulative-num-traces-attempted</variable-name>
+        <frequency>weekly</frequency>
+      </output>
+      <output>
+        <variable-name>num-contacts-potentially-traced</variable-name>
+        <frequency>weekly</frequency>
+      </output>
+      <output>
+        <variable-name>num-contacts-traced</variable-name>
+        <frequency>weekly</frequency>
+      </output>
+    </trace-back-destruction-model>
+
+    <!-- Units within 3 km of a diseased unit will be destroyed. -->
+    <ring-destruction-model from-production-type="Cattle" to-production-type="Cattle">
+      <priority>3</priority>
+      <radius>
+        <value>3</value>
+        <units><xdf:unit>km</xdf:unit></units>
+      </radius>
+    </ring-destruction-model>
+
+    <!-- Units that have had indirect contact with a diseased unit in the past
+      14 days will be destroyed. -->
+    <trace-back-destruction-model from-production-type="Cattle" to-production-type="Cattle" contact-type="indirect">
+      <priority>4</priority>
+      <trace-success>1.0</trace-success>
+      <trace-period>
+        <value>14</value>
+        <units><xdf:unit>day</xdf:unit></units>
+      </trace-period>
+      <output>
+        <variable-name>num-contacts-recorded</variable-name>
+        <frequency>weekly</frequency>
+      </output>
+      <output>
+        <variable-name>num-traces-attempted</variable-name>
+        <frequency>weekly</frequency>
+      </output>
+      <output>
+        <variable-name>cumulative-num-traces-attempted</variable-name>
+        <frequency>weekly</frequency>
+      </output>
+      <output>
+        <variable-name>num-contacts-potentially-traced</variable-name>
+        <frequency>weekly</frequency>
+      </output>
+      <output>
+        <variable-name>num-contacts-traced</variable-name>
+        <frequency>weekly</frequency>
+      </output>
+    </trace-back-destruction-model>
+
+    <destruction-list-monitor>
+      <output>
+        <variable-name>num-units-awaiting-destruction</variable-name>
+        <frequency>daily</frequency>
+      </output>
+    </destruction-list-monitor>
+
+    <!-- Other units within 10 km of a diseased unit will be vaccinated. -->
+    <ring-vaccination-model from-production-type="Cattle" to-production-type="Cattle">
+      <radius>
+        <value>10</value>
+        <units><xdf:unit>km</xdf:unit></units>
+      </radius>
+      <begin-after-detections>2</begin-after-detections>
+    </ring-vaccination-model>
+
+    <vaccination-list-monitor>
+      <output>
+        <variable-name>num-units-awaiting-vaccination</variable-name>
+        <frequency>daily</frequency>
+      </output>
+    </vaccination-list-monitor>
+
+    <vaccine-model production-type="Cattle">
+      <delay>
+        <value>4</value>
+        <units><xdf:unit>day</xdf:unit></units>
+      </delay>
+      <immunity-period>
+        <triangular>
+          <a>122</a>
+          <c>152</c>
+          <b>183</b>
+        </triangular>
+        <units><xdf:unit>day</xdf:unit></units>
+      </immunity-period>
+    </vaccine-model>
+
+    <economic-model production-type="Cattle">
+      <appraisal>
+        <value>99</value>  <value>300</value>
+        <value>100</value> <value>400</value>
+        <value>450</value> <value>400</value>
+        <value>451</value> <value>500</value>
+        <units><xdf:unitless /></units>
+        <units><xdf:unit>USD</xdf:unit></units>
+      </appraisal>
+      <euthanasia>
+        <value>5.5</value>
+        <units><xdf:unit>USD</xdf:unit></units>
+      </euthanasia>
+      <indemnification>
+        <value>250</value>
+        <units><xdf:unit>USD</xdf:unit></units>
+      </indemnification>
+      <carcass-disposal>
+        <value>450</value> <value>11</value>
+        <value>451</value> <value>12</value>
+        <units><xdf:unitless /></units>
+        <units><xdf:unit>USD</xdf:unit></units>
+      </carcass-disposal>
+      <cleaning-disinfecting>
+        <value>99</value>  <value>5000</value>
+        <value>100</value> <value>7000</value>
+        <value>450</value> <value>7000</value>
+        <value>451</value> <value>10000</value>
+        <units><xdf:unitless /></units>
+        <units><xdf:unit>USD</xdf:unit></units>
+      </cleaning-disinfecting>
+      <visiting>
+        <value>99</value>  <value>50</value>
+        <value>100</value> <value>75</value>
+        <value>450</value> <value>75</value>
+        <value>451</value> <value>100</value>
+        <units><xdf:unitless /></units>
+        <units><xdf:unit>USD</xdf:unit></units>
+      </visiting>
+      <testing>
+        <value>99</value>  <value>150</value>
+        <value>100</value> <value>200</value>
+        <value>450</value> <value>200</value>
+        <value>451</value> <value>400</value>
+        <units><xdf:unitless /></units>
+        <units><xdf:unit>USD</xdf:unit></units>
+      </testing>
+      <vaccination-fixed>
+        <value>99</value>  <value>300</value>
+        <value>100</value> <value>500</value>
+        <value>450</value> <value>500</value>
+        <value>451</value> <value>800</value>
+        <units><xdf:unitless /></units>
+        <units><xdf:unit>USD</xdf:unit></units>
+      </vaccination-fixed>
+      <vaccination>
+        <value>6</value>
+        <units><xdf:unit>USD</xdf:unit></units>
+      </vaccination>
+      <baseline-vaccination-capacity>2000000</baseline-vaccination-capacity>
+      <additional-vaccination>
+        <value>0.5</value>
+        <units><xdf:unit>USD</xdf:unit></units>
+      </additional-vaccination>
+      <output>
+        <variable-name>total-cost</variable-name>
+        <frequency>weekly</frequency>
+      </output>
+      <output>
+        <variable-name>cumulative-total-cost</variable-name>
+        <frequency>weekly</frequency>
+      </output>
+      <output>
+        <variable-name>vaccination-cost</variable-name>
+        <frequency>weekly</frequency>
+      </output>
+      <output>
+        <variable-name>cumulative-vaccination-cost</variable-name>
+        <frequency>weekly</frequency>
+      </output>
+    </economic-model>
+
+  </models>
+
+<!--
+  <output>
+    <variable-name>all-units-states</variable-name>
+    <frequency>daily</frequency>
+  </output>
+-->
+  <output>
+    <variable-name>num-units-in-each-state</variable-name>
+    <frequency>daily</frequency>
+  </output>
+  <output>
+    <variable-name>num-units-in-each-state-by-production-type</variable-name>
+    <frequency>daily</frequency>
+  </output>
+  <output>
+    <variable-name>num-animals-in-each-state</variable-name>
+    <frequency>daily</frequency>
+  </output>
+  <output>
+    <variable-name>num-animals-in-each-state-by-production-type</variable-name>
+    <frequency>daily</frequency>
+  </output>
+  <output>
+    <variable-name>time-to-end-of-outbreak</variable-name>
+    <frequency>once</frequency>
+  </output>
+  <output>
+    <variable-name>cumulative-num-units-infected</variable-name>
+    <frequency>once</frequency>
+  </output>
+  <output>
+    <variable-name>cumulative-num-units-vaccinated</variable-name>
+    <frequency>once</frequency>
+  </output>
+  <output>
+    <variable-name>cumulative-num-units-destroyed</variable-name>
+    <frequency>once</frequency>
+  </output>
+
+</naadsm:disease-simulation>

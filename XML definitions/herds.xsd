@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!-- 
+******************************************************************************** 
+**                                                                            **
+**        This is the main herd file structure                                ** 
+**        This file is the herd XML file.  It may contain a list of herds, a  **
+**        list of production-types, and a projection system section.          **
+**                                                                            **
+******************************************************************************** 
+-->
+  <xsd:import namespace="http://www.opengis.net/gml"
+  	schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd" />
+  <xsd:element name="herds">
+		<xsd:annotation>
+			<xsd:documentation>One or more herd structures, an optional projection-system structure for location information, and an optional list of production types contained in this file.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice maxOccurs="unbounded" minOccurs="0">
+				<xsd:sequence maxOccurs="unbounded" minOccurs="0">
+					<xsd:element ref="naadsm:spatial_reference"
+						minOccurs="0">
+					</xsd:element>
+					<xsd:element minOccurs="0" ref="naadsm:PROJCS"/>
+					<xsd:element minOccurs="0" name="production-types" type="naadsm:type_production-types"/>
+					<xsd:element ref="naadsm:herd"/>
+				</xsd:sequence>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="herd">
+		<xsd:annotation>
+			<xsd:documentation>This element contains information specific to one single herd.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType mixed="true">
+			<xsd:choice maxOccurs="unbounded" minOccurs="0">
+				<xsd:element ref="naadsm:id"/>
+				<xsd:element ref="naadsm:production-type"/>
+				<xsd:element ref="naadsm:size"/>
+				<xsd:element ref="naadsm:location"/>
+				<xsd:element ref="naadsm:status"/>
+				<xsd:element minOccurs="0" ref="naadsm:days-in-status"/>
+				<xsd:element minOccurs="0" ref="naadsm:days-left-in-status"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+<!-- 
+********************************************************************************
+*  This section contains definitions of the various elements, attributes, and  *
+*  types used by the herd file structure                                       *
+******************************************************************************** 
+-->
+<!-- 
+       *********************************************************** 
+     **  GIS related elements for the projection system section.  **
+     **          This is taken from the ESRI .prj files           ** 
+       *********************************************************** 
+-->
+  <xsd:complexType name="gml_CoordinateReferenceSystem">
+    <xsd:sequence>
+      <xsd:element ref="gml:_CoordinateReferenceSystem" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="spatial_reference">
+		<xsd:annotation>
+			<xsd:documentation>This represents the spatial reference information for the herd locations, and may contain various source spatial reference types, including GML, WKT, PROJ4, and ESRI.prj.  This may also contain, via these types, any projection information associated with the herd location data.</xsd:documentation></xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="1" maxOccurs="1">
+				<xsd:sequence minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>This section contains definitions of the various spatial reference types, WKT, GML, PROJ4, and ESRI.prj.  However, for now they are all set to be xsd:string.  This may change in the future, which is why they are defined separately here.  For instance the GML section, may need to be specified as a GML spatial reference so that an XML validator can validate the data before the program tries to read it using libgdal....</xsd:documentation></xsd:annotation>
+					<xsd:element name="WKT" type="xsd:string"
+						minOccurs="0" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="GML" type="naadsm:gml_CoordinateReferenceSystem"
+						minOccurs="0" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="PROJ4" type="xsd:string"
+						minOccurs="0" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="ESRI_prj" type="xsd:string"
+						minOccurs="0" maxOccurs="1">
+					</xsd:element>
+				</xsd:sequence>
+
+			</xsd:choice>
+			
+			
+			
+		</xsd:complexType>
+</xsd:element>
+	<xsd:element name="PROJCS">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="naadsm:GEOGCS"/>
+				<xsd:element ref="naadsm:PROJECTION"/>
+				<xsd:element maxOccurs="unbounded" minOccurs="0" ref="naadsm:PARAMETER"/>
+				<xsd:element ref="naadsm:UNIT"/>
+			</xsd:sequence>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="GEOGCS">
+		<xsd:complexType>
+			<xsd:choice maxOccurs="unbounded" minOccurs="0">
+				<xsd:element ref="naadsm:DATUM"/>
+				<xsd:element ref="naadsm:PRIMEM"/>
+				<xsd:element ref="naadsm:UNIT"/>
+			</xsd:choice>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="DATUM">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="naadsm:SPHEROID"/>
+			</xsd:sequence>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="SPHEROID">
+		<xsd:complexType>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+			<xsd:attribute name="value1" type="xsd:decimal" use="required"/>
+			<xsd:attribute name="value2" type="xsd:decimal" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="PRIMEM">
+		<xsd:complexType>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+			<xsd:attribute name="value" type="xsd:decimal" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="UNIT">
+		<xsd:complexType>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+			<xsd:attribute name="value" type="xsd:decimal" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="PROJECTION">
+		<xsd:complexType>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="PARAMETER">
+		<xsd:complexType>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+			<xsd:attribute name="value" type="xsd:decimal" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+<!-- 
+       ************************** 
+     **  Herd specific elements  **
+       ************************** 
+-->
+	<xsd:element name="id" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>This element contains the ID number associated with the herd</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="production-type" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>this element contains the production type name for this herd.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="size" type="xsd:positiveInteger">
+		<xsd:annotation>
+			<xsd:documentation>This element contains the size of this herd.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="location">
+		<xsd:annotation>
+			<xsd:documentation>This element contains the location of this herd.  Details of the datum and/or projection systems used for this location information is found it the PROJCS element.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType mixed="true">
+			<xsd:choice maxOccurs="unbounded" minOccurs="0">
+				<xsd:sequence>
+					<xsd:element ref="naadsm:latitude"/>
+					<xsd:element ref="naadsm:longitude"/>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:element ref="naadsm:x"/>
+					<xsd:element ref="naadsm:y"/>
+				</xsd:sequence>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="latitude">
+		<xsd:annotation>
+			<xsd:documentation>This element contains the latitidude value of the location of this herd.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:decimal">
+				<xsd:minInclusive value="-180"/>
+				<xsd:maxInclusive value="180"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="longitude">
+		<xsd:annotation>
+			<xsd:documentation>This element contains the longitude value of the lcoation of this herd.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:decimal">
+				<xsd:minInclusive value="-90"/>
+				<xsd:maxInclusive value="90"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="x" type="xsd:decimal">
+		<xsd:annotation>
+			<xsd:documentation>This element contains the X value of the location of this herd, if a projection system was used.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="y" type="xsd:decimal">
+		<xsd:annotation>
+			<xsd:documentation>This element contains the Y value of the location of this herd, if a projection system was used.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="status">
+		<xsd:annotation>
+			<xsd:documentation>This element contains the current status of this herd.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:pattern value="[0-5]"/>
+				<xsd:pattern value="[Ss]usceptible"/>
+				<xsd:pattern value="[Ii]ncubating|[Ll]atent"/>
+				<xsd:pattern value="[Ii]nfectious ?[Ss]ub[Cc]linical"/>
+				<xsd:pattern value="[Ii]napparent ?[Ss]hedding"/>
+				<xsd:pattern value="[Ss]ub[Cc]linical ?[Ss]hedding"/>
+				<xsd:pattern value="[Ii]nfectious ?[Cc]linical"/>
+				<xsd:pattern value="[Nn]aturally ?[Ii]mmune"/>
+				<xsd:pattern value="[Vv]accine ?[Ii]mmune"/>
+				<xsd:pattern value="[Dd]ead|[Dd]estroyed"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="days-in-status" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>This element contains a string representation of the length of time this herd has been in the status defined in the status element.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="days-left-in-status" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>This element contains a string representation of the length of time left for this herd to be in the status defined in the status element.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="all-in-all-out" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>This element tells whether the herd follows "all-in-all-out" practices.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+<!-- 
+      *************************************
+    **  Production type specific elements  **
+      ************************************* 
+-->
+	<xsd:complexType name="type_production-type">
+		<xsd:annotation>
+			<xsd:documentation>This element contains a name and an Id of a single production-type.  
+			-- The Id must be an integer value, and is used as an index key for this production-type if this data is sent to a database engine.  
+			-- The name must be an alpha-numeric string value describing this production-type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="id" type="xsd:nonNegativeInteger">
+				<xsd:annotation>
+					<xsd:documentation>A unique, non-negative, non-zero integer assigned to this production-type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="name" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>A unique, alpha-numeric string value describing this production-type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="type_production-types">
+		<xsd:annotation>
+			<xsd:documentation>This element is the root element of a list of production-type elements.  The production-types contained in this list must match the production-type name assigned to the herd elements in this same XML file.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="1" name="production-type" type="naadsm:type_production-type">
+				<xsd:annotation>
+					<xsd:documentation>One or more production-type structures.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="vaccine-model-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          These parameters describe the effect of a vaccine.
+        ]]>
+      </documentation>
+    </annotation>
+    <sequence>
+      <!-- Model parameters. -->
+      <element name="delay" type="naadsm:time">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              How long the vaccine takes to produce immunity at the herd level.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="immunity-period" type="naadsm:PDF">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              How long the immunity lasts.
+            ]]>
+          </documentation>
+          <appinfo>
+            <x-axis-type>naadsm:time</x-axis-type>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+    <attribute name="version" type="string" fixed="0.1" />
+    <attribute name="production-type" type="string" />
+    <attribute name="production-type-id" type="integer" use="optional"  />
+  </complexType>
+
+</schema>

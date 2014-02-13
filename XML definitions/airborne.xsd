@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+  
+  <complexType name="airborne-spread-model-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          These parameters describe airborne spread of the disease.
+          Probability of infection falls off linearly with increasing distance
+          from the source.
+        ]]>
+      </documentation>
+    </annotation>
+    <sequence>
+      <!-- Model parameters. -->      
+      <element name="prob-spread-1km" type="naadsm:probability">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The probability of infection at 1 km from the source.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="wind-direction-start" type="naadsm:angle">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The beginning of the range of angles in which airborne spread is
+              allowed.  Given in degrees, where N=0/360, E=90, S=180, and
+              W=270.  For example, for north winds (from the north), you might
+              use wind-direction-start=135 and wind-direction-end=225.
+            ]]>
+          </documentation>
+          <appinfo>
+            <diagram>directions.png</diagram>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="wind-direction-end" type="naadsm:angle">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The end of the range of angles in which airborne spread is
+              allowed.  Given in degrees, where N=0/360, E=90, S=180, and
+              W=270.  Note that wind-direction-end can be a smaller number than
+              wind-direction-start.  For example, for south winds (from the
+              south), you might use wind-direction-start=315 and
+              wind-direction-end=45.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <!--  minOccurs is zero in case a max distance is not desired and because 
+            this is not a parameter in the derived exponential airborne model type. -->
+      <element name="max-spread" type="naadsm:length" minOccurs="0">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The maximum distance of spread.  The probability of infection
+              falls off linearly with increasing distance from the source, and
+              becomes 0 at this distance.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="delay" type="naadsm:PDF">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The in-air time between the source of the contact and the
+              destination, given as a probability distribution.
+            ]]>
+          </documentation>
+          <appinfo>
+            <x-axis-type>naadsm:time</x-axis-type>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+    <attribute name="version" type="string" fixed="0.1" />
+    <attribute name="from-production-type" type="string" use="required" />
+    <attribute name="to-production-type" type="string" use="required" />
+  </complexType>
+  
+   <!-- rbh: derived type based on "airborne-spread-model-type" -->
+  <complexType name="airborne-spread-exponential-model-type">
+    <complexContent>
+      <extension base="naadsm:airborne-spread-model-type">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              These parameters describe airborne spread of the disease.
+              Probability of infection falls off exponentially with distance.
+              This model type is derived from the airborne linear model, 
+              and will inherit any parameter changes.
+            ]]>
+          </documentation>
+        </annotation>
+        <sequence>
+           <!-- Model parameters specific to expotential spread -->       
+        </sequence>
+       </extension>  
+     </complexContent>    
+  </complexType>
+    
+</schema>

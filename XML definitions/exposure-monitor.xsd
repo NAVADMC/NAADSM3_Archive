@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="exposure-monitor-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module tracks exposures.  It can record the number of units
+          exposed and by what causes, and the individual units that are
+          exposed.
+        ]]>
+      </documentation>
+    </annotation>    
+    <sequence>
+      <!-- No parameters. -->
+
+      <element name="output" minOccurs="0" maxOccurs="unbounded">
+        <complexType>
+          <sequence>
+            <element name="variable-name">
+              <simpleType>
+                <restriction base="string">                
+                  <enumeration value="exposures">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The source and target units of exposures.  This
+                          variable gives a comma separated list of 'a->b'
+                          items, where 'a' is the source of the exposure and
+                          'b' is the target.  'a' and 'b' are not unit IDs;
+                          rather, they would be a 0 to indicate the first unit
+                          in the list, a 1 to indicate the second, and so on.
+                          The list is emptied each time it is reported, so this
+                          variable gives new exposures for each reporting
+                          interval (e.g., day, week).  This variable is needed
+                          if exposures are to appear in the exposures and
+                          infections table.  WARNING: this variable can produce
+                          a very large amount of output and should be turned
+                          off when doing large numbers of Monte Carlo trials.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="expnU">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of units exposed.  The count starts at
+                          zero each new day.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="expnA">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of animals in exposed units.  The count
+                          starts at zero each new day.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="expcU">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The cumulative number of units exposed since the
+                          beginning of the simulation.  Note that this may be
+                          greater than the total number of units, since a unit
+                          may be exposed repeatedly, even when it is already
+                          diseased.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="expcA">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The cumulative number of animals in units exposed
+                          since the beginning of the simulation.  Note that
+                          this may be greater than the total number of units,
+                          since a unit may be exposed repeatedly, even when it
+                          is already diseased.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                </restriction>
+              </simpleType>                   
+            </element>
+            <element name="broken-down" type="naadsm:yes-no" minOccurs="0" />
+            <element name="frequency" type="naadsm:output-variable-frequency" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+
+    <attribute name="version" type="string" fixed="0.1" />
+  </complexType>
+
+</schema>

@@ -1,0 +1,433 @@
+<!--  XDF.dtd - eXtensible Data Format - version 0.17
+	Date: July 2, 2001
+	XML lanaguage Document Type Definition (DTD).
+
+	An XDF document contains arrays and data structures.  It  is
+	designed to be both an interchange format for scientific data 
+	and to be of archival quality.
+	Multidimensional tables and scalar or vector fields are represented
+	in a consistent way and become thoroughly self describing.
+        Axial information is well described so that the space in which 
+	each part of the data structure resides is fully described.  
+	This means that XDF provides a consistent way to hold spectra 
+	with their wavelength scales, images with coordinate axes, 
+	vector fields with unitDirection, data cubes in complicated 
+	spaces, tables with column headers, and series of tables
+	with each table having a unique name. 
+
+	Recent changes:
+-->
+<!ENTITY newLine "&#10;">
+<!ENTITY carriageReturn "&#13;">
+<!ENTITY space "&#32;">
+<!-- The entities _ADDITION allows subfield/specialty keywords to be added
+to the elements: XDF, structure, array, and field.  Do not change here.
+Rather create a subfieldML.dtd that overrides this and XDF_TYPE and
+calls XDF.dtd by a parameter entity.
+-->
+<!ENTITY % XDF_CHILDREN " ">
+<!ENTITY % AXIS_CHILDREN " ">
+<!ENTITY % ARRAY_CHILDREN " ">
+<!ENTITY % STRUCTURE_CHILDREN " ">
+<!ENTITY % FIELD_CHILDREN " ">
+<!ENTITY % XDF_TYPE "basic">
+
+<!ELEMENT XDF (%XDF_CHILDREN;(structure | parameter | parameterGroup | array | note)+)>
+<!ATTLIST XDF
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	type   CDATA  "%XDF_TYPE;"
+>
+<!ELEMENT structure (%STRUCTURE_CHILDREN;(structure | parameter | parameterGroup | array | note)+)>
+<!ATTLIST structure
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+>
+<!ELEMENT parameter ((units, (value | valueList | valueGroup)+)?, note*)>
+<!ATTLIST parameter
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	paramId ID #IMPLIED
+	paramIdRef IDREF #IMPLIED
+	datatype (integer | float | exponential | string | url) #IMPLIED
+>
+<!--    The unit strings should be written out without abbreviations to
+	avoid ambiguity, unless system SI units 
+	(http://physics.nist.gov/cuu/Units/index.html) are used.  
+	When non SI are
+	used, the singular form should be chosen.  units="unitless" means
+	unitless, <units><unit></unit></units> means undefined or unknown. 
+	Units are multiplied together (divide by using power="-1").
+	Units can begin with a constant multiplier in
+	float format (F) exponential (E) format. 
+	  10^12 kg*m/s^2  is expressed as,
+	<units system="SI" factor="1E12" > 
+		<unit>kg</unit><unit>m</unit>
+		<unit power="-2">s</unit>
+	</units>
+-->
+<!ELEMENT units (unitless | unit+)>
+<!ATTLIST units
+	factor CDATA #IMPLIED
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+>
+<!ELEMENT unit (#PCDATA)>
+<!ATTLIST unit
+	power NMTOKEN #IMPLIED
+	description CDATA #IMPLIED
+>
+<!ELEMENT unitless EMPTY>
+<!--    For the 'value' of the parameter, the attribute special is used
+	to set the data to infinity, negative infinity, noData.  
+        A noData implies that the value is unknown. 
+	When special is used the value element should be empty.
+	The inequality is used to indicate that the parameter is not
+	necessarily equal to the value, but is limited in some way by 
+	this value.  The datatype of the value is set by the attribute, 
+	therefore, when an inequality is used with datatype integer the 
+	parameter is set to all integers satisfying the constraint.
+	A new value for a parameter overrides the previous one
+	A parameter can be constrained to a finite range:
+		<parameter name="x"><value inequality="greaterThan">2</value>
+		<value inequality="lessThan">12</value></parameter>
+
+	In this schema, <anyelement anyelementIDRef="xx" /> means to
+	copy the content of the referenced element to this point.
+-->
+<!ELEMENT value (#PCDATA)>
+<!ATTLIST value
+	valueId ID #IMPLIED
+	valueRef IDREF #IMPLIED
+	special (infinite | infiniteNegative | noData | notANumber | underflow 
+	| overflow ) #IMPLIED
+	inequality (lessThan | lessThanOrEqual | greaterThan | greaterThanOrEqual) #IMPLIED
+	upperErrorValue NMTOKEN #IMPLIED
+	lowerErrorValue NMTOKEN #IMPLIED
+>
+<!--
+	One can fill valueList with value elements or a 
+	delimited set of values,  
+	repeatable="yes" would mean that the delimiter can repeat several
+	times in a row and still represent a single demarcation.
+-->
+<!ELEMENT valueList (#PCDATA)>
+<!ATTLIST valueList
+	size NMTOKEN #IMPLIED
+	delimiter CDATA "&space;"
+	repeatable (yes | no) "no"
+	start CDATA  #IMPLIED
+	step CDATA  #IMPLIED
+	valueListId ID #IMPLIED
+	valueListIdRef IDREF #IMPLIED
+	infiniteValue CDATA #IMPLIED
+	infiniteNegativeValue CDATA #IMPLIED
+	noDataValue CDATA #IMPLIED
+	notANumberValue   CDATA   #IMPLIED
+	underflowValue   CDATA   #IMPLIED
+	overflowValue     CDATA    #IMPLIED
+>
+<!ELEMENT parameterGroup ((parameter | parameterGroup)+)>
+<!ATTLIST parameterGroup
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+>
+<!--  There are several ways to fill the valueList array:
+	1) delimited valueList
+	<valueList size="3">1.3 2.3 3.7</valueList>
+	<valueList size="3" delimiter="|">M31|NGC1316|Milky Way</valueList>
+
+
+	 2) Use built-in facilities
+		<valueList size="601" start="0" step="2" />
+
+	 Hopefully, in the future we will support scripts as well.
+	[Note: If using Perl XML::DOM::Parser need KeepCDATA=1]
+	-->
+<!-- 	An array is a set of mixed native datatype data (strings
+	or numbers) that are to be read into an N-dimensioned variable.  
+	It is embedded in a coordinate space and therefore will have 
+	axis information.
+	Only one fieldAxis is permitted otherwise one could have conflicting 
+	data units.
+        array/@appendTo will extend the axis referred to with the current
+        array.  This makes it possible to assemble tiles of data that piece
+        together into a very large array.  It is necessary to use axis/@align
+        on each axis of the current array to properly assemble it.
+
+-->
+<!ELEMENT array (%ARRAY_CHILDREN;(parameter | parameterGroup)*, axis*, (fieldAxis | (units, dataFormat)), axis*, read, data, notes?)>
+<!ATTLIST array
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	arrayId ID #IMPLIED
+	appendTo IDREF #IMPLIED
+	class (spatial|temporal) #IMPLIED
+	lessThanValue           NMTOKEN    #IMPLIED
+	lessThanOrEqualValue    NMTOKEN    #IMPLIED
+	greaterThanValue        NMTOKEN    #IMPLIED
+	greaterThanOrEqualValue NMTOKEN    #IMPLIED
+	infiniteValue           CDATA      #IMPLIED
+	infiniteNegativeValue   CDATA      #IMPLIED
+	noDataValue             CDATA      #IMPLIED
+	notANumberValue         CDATA      #IMPLIED
+	underflowValue          CDATA      #IMPLIED
+	overflowValue           CDATA      #IMPLIED
+	disabledValue           CDATA      #IMPLIED
+>
+<!--    Each dimension of an N-dimensional structure is introduced by
+	an axis element.  The order is not important because the read element
+	describes the layout of the data.
+ 	axis/valueList is a list of numbers or strings (space delimited with
+	quotes where necessary) that describes one dimension of the array,
+	as in, the wavelength scale of a spectrum, or distance along
+	the width of an image.
+	In curvilinear coordinates the axis can merely 
+	reflect the index number in the array.  A
+	more detailed description of the space coordinates can be accomplished
+	by adding another dimension to a fieldAxis. Two dimensional data 
+	would need two fieldAxis/field/@class="coordinate" maps.  
+        axis/@align should refer to an axisId to indicate that these two axes 
+        runs essentially along the same direction.  It is required
+        to accomplish an array/@apppendTo.
+
+-->
+<!ELEMENT axis (%AXIS_CHILDREN;((axisUnits, (value | valueList | valueGroup)+) | unitDirection)*)>
+<!ATTLIST axis
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	axisId ID #REQUIRED
+	axisIdRef IDREF #IMPLIED
+	align IDREF #IMPLIED
+	axisDatatype (integer | float | exponential | string | url) #IMPLIED
+>
+<!ELEMENT axisUnits (unitless | unit+)>
+<!-- A vector field is represented by an additional axis with components or
+	unitDirection elements.  This could be "x-hat",
+	"y-hat", and "z-hat". When the direction is along one of the
+	other axes, the axisIdRef should refer to that axis.
+	unitDirections can also be used to represent complex number with the 
+	attribute imaginary set to "yes" in the imaginary unitDirection 
+-->
+<!ELEMENT unitDirection EMPTY>
+<!ATTLIST unitDirection
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	complex (real | imaginary) #IMPLIED
+	axisIdRef IDREF #IMPLIED
+>
+<!-- a table or a set of tables can be formatted in XDF. In the same
+	way that axis describes the value for each column in an image,  
+	fieldAxis/field elements are used to describe each column in the 
+	table.
+	
+	Another use for fieldAxis is to hold several images with 
+	different data units. 
+
+	A special field is field/@class="spatial" which is a pixel 
+	mapping of a coordinate for all of the nonspatial slices in
+	the array.  Generally, one spatial map for 
+	each coordinate. Each map is of the same size as 
+	the initial data.
+-->
+<!ELEMENT fieldAxis ((fieldGroup | field)*)>
+<!ATTLIST fieldAxis
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	axisId ID #IMPLIED
+	axisIdRef IDREF #IMPLIED
+>
+<!ELEMENT field (%FIELD_CHILDREN;(units, dataFormat)?, relation?, note*)>
+<!ATTLIST field
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	fieldId ID #IMPLIED
+	fieldIdRef IDREF #IMPLIED
+	class (spatial|temporal) #IMPLIED
+	lessThanValue           NMTOKEN    #IMPLIED
+	lessThanOrEqualValue    NMTOKEN    #IMPLIED
+	greaterThanValue        NMTOKEN    #IMPLIED
+	greaterThanOrEqualValue NMTOKEN    #IMPLIED
+	infiniteValue           CDATA      #IMPLIED
+	infiniteNegativeValue   CDATA      #IMPLIED
+	noDataValue             CDATA      #IMPLIED
+	notANumberValue         CDATA      #IMPLIED
+	underflowValue          CDATA      #IMPLIED
+	overflowValue           CDATA      #IMPLIED
+	disabledValue           CDATA      #IMPLIED
+
+>
+<!-- 	Relationships between fields in a fieldGroup can be expressed with 
+	the field/relation element.  
+	Measurements and their errors could be linked in this way. -->
+<!ELEMENT relation EMPTY>
+<!ATTLIST relation
+	description CDATA #IMPLIED
+	fieldIdRefs IDREFS #REQUIRED
+	role (precision | positiveError | negativeError | error | 
+		sensitivity | weight | reference | 
+		noteMark| quality ) #REQUIRED
+>
+<!--  Each array can contain notes to individual datum.
+-->
+<!ELEMENT notes (locationOrder?, note+)>
+<!ELEMENT locationOrder (index+)>
+<!ELEMENT index EMPTY>
+<!ATTLIST index
+	axisIdRef IDREF #REQUIRED
+>
+<!ELEMENT note (#PCDATA)>
+<!ATTLIST note
+	mark CDATA #IMPLIED
+	noteId ID #IMPLIED
+	noteIdRef IDREF #IMPLIED
+	location CDATA #IMPLIED
+	href CDATA #IMPLIED
+>
+<!-- 
+There are times when two or more of elements need to be logically
+connected into a higher level object. 
+This can be accomplished with the fieldGroup element.
+For instance, two fields, say "longitude" and  "latitude"  may be
+grouped together with name="position".	
+-->
+<!ELEMENT fieldGroup ((field | fieldGroup)+)>
+<!ATTLIST fieldGroup
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	class (spatial|temporal) #IMPLIED
+>
+<!ELEMENT valueGroup ((value | valueList | valueGroup)+)>
+<!ATTLIST valueGroup
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+>
+<!-- dataFormat will have a series of text or binary format elements
+	one for each element until the end of a record (at the terminator).
+	Or, if there are no terminators, the set of formats are 
+	repeated until the end of the data. 
+-->
+<!ELEMENT dataFormat (float | integer | string | binaryInteger | binaryFloat)>
+
+<!ELEMENT read (for | tagToAxis+)>
+<!ATTLIST read
+	encoding (ANSI | ISO-8859-1 | UTF-8 | UTF-16) "ISO-8859-1"
+	endian (BigEndian | LittleEndian) #IMPLIED
+	readId ID #IMPLIED
+	readIdRef IDREF #IMPLIED
+>
+<!--    read/for elements are instructions for reading in the data, 
+	they refer to axis elements. The order 
+	for filling up n-dimensional variables is indicated by the nesing
+	with the most nested being the most rapidly moving index.  
+	The format information and the data appear inside the most 
+	nested read element.  
+-->
+<!ELEMENT for (for | (readCell | skipChars | repeat)+ | textDelimiter)>
+<!ATTLIST for
+	axisIdRef IDREF #REQUIRED
+>
+<!ELEMENT readCell EMPTY>
+<!ELEMENT repeat ((repeat | readCell | skipChars)+)>
+<!ATTLIST repeat
+	count NMTOKEN #REQUIRED
+>
+<!--
+	A skipChars should be added at the end of format statements
+	to skip over the new-Line character.  Two if CR-NL is used.
+	The skipChars/@output should be assigned to the newLine character
+	when you want the output to maintain line breaks.
+-->
+<!ELEMENT skipChars EMPTY>
+<!ATTLIST skipChars
+	count NMTOKEN "1"
+	output CDATA "&space;"
+>
+<!-- 
+The element float is used for text format of non-integer (floating point) 
+numbers.  If exponential format is to be used, supply the width of the exponent
+with the exponent attribute.  If the exponent attribute is set then all numbers
+are expected to be read or written as E-format.  One can not mix E and F-format.
+-->
+<!ELEMENT float EMPTY>
+<!ATTLIST float
+	width NMTOKEN #REQUIRED
+	precision NMTOKEN #REQUIRED
+	exponent  NMTOKEN  #IMPLIED
+>
+
+<!ELEMENT integer EMPTY>
+<!ATTLIST integer
+	type (decimal | octal | hexadecimal) "decimal"
+	width NMTOKEN #REQUIRED
+	signed (yes|no) "yes"
+>
+<!ELEMENT string EMPTY>
+<!ATTLIST string
+	length NMTOKEN #REQUIRED
+>
+<!ELEMENT binaryInteger EMPTY>
+<!ATTLIST binaryInteger
+	signed (yes | no) "yes"
+	bits NMTOKEN #REQUIRED
+>
+<!-- floats will need to conform to the IEEE-754 standard.  
+	However, only real*4 and real*8 are universally accepted (real*10 and
+	real*16 are common but not everywhere).
+        1 bit is used for the sign and 8(11) bits for exponent.  
+	1.mantissa * 2^(exponent-bias) where the bias is 127(1023).
+-->
+<!ELEMENT binaryFloat EMPTY>
+<!ATTLIST binaryFloat
+	bits (32 | 64) #REQUIRED
+>
+<!ELEMENT textDelimiter EMPTY>
+<!ATTLIST textDelimiter
+	delimiter CDATA "&space;"
+	repeatable (yes | no) "yes"
+	recordTerminator CDATA "&newLine;"
+>
+<!-- repeatable attribute (above) means that one or more of the delimiter 
+     may occur as a single delimiter.  Here, especially, one must use
+     a noData-value to indicate null. -->
+<!--  If the data is tagged, use tagToAxis to associate the tag with 
+the particular axis.  For now, one is restricted to use d0...d7 for tagnames.
+-->
+<!ELEMENT tagToAxis EMPTY>
+<!ATTLIST tagToAxis
+	tag (d0 | d1 | d2 | d3 | d4 | d5 | d6 | d7) #REQUIRED
+	axisIdRef IDREF #REQUIRED
+>
+<!ELEMENT d0 (#PCDATA | d1)*>
+<!ELEMENT d1 (#PCDATA | d2)*>
+<!ELEMENT d2 (#PCDATA | d3)*>
+<!ELEMENT d3 (#PCDATA | d4)*>
+<!ELEMENT d4 (#PCDATA | d5)*>
+<!ELEMENT d5 (#PCDATA | d6)*>
+<!ELEMENT d6 (#PCDATA | d7)*>
+<!ELEMENT d7 (#PCDATA)>
+<!-- The Data element is a very general container for data.
+	It could be marked up with d0...dN for N+1 dimensional data.
+	It can be float format, or delimited data.  If it is not tagged data
+	it can begin with a <![CDATA[ and end with ]]>.  
+	However, a data element may contain data elements
+	within it.  For instance, an animation would be a set of frames
+	and it may be convenient to bracket each frame with a data tag.
+	These data tags are not needed to build the structure because the
+	structure is prescribed by the axis element.  Nevertheless,
+	an application can use the nested data tags to indicate exactly
+	where a problem lies in the data and aid in editing.  
+	Also, the application 
+	can use parts of the structure as soon as it hits some closed
+	data tags.  The parser can pass the images to the display applet
+	rather than waiting for the entire data set to arrive.	Of course,
+	external entities can be used, so that the data
+	may resides in one or several separate physical files. -->
+<!ELEMENT data (#PCDATA | data | d0)*>
+<!ATTLIST data
+	href ENTITY #IMPLIED
+	checksum NMTOKEN #IMPLIED
+	encoding (uuencoded | base64) #IMPLIED
+	compression (zip | gzip | bzip2 | XMILL | compress) #IMPLIED
+>
+<!-- End of XDF.dtd -->

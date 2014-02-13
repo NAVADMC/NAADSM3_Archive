@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="trace-model-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module provides a policy of requesting traces when a unit is
+          detected as diseased.
+        ]]>
+      </documentation>
+    </annotation>    
+    <sequence>
+      <!-- Model parameters. -->
+      <element name="trace-period" type="naadsm:time">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The time period prior to detection of the disease that is of
+              interest.
+            ]]>
+          </documentation>
+        </annotation>    
+      </element>
+    </sequence>
+
+    <attribute name="version" type="string" fixed="0.1" />
+    <attribute name="production-type" type="string" /> <!-- optional -->
+    <attribute name="production-type-id" type="integer" /> <!-- optional -->
+    <attribute name="contact-type" type="naadsm:contact-type" use="required" />
+    <attribute name="direction" type="naadsm:trace-direction-type" use="required" />
+  </complexType>
+
+</schema>

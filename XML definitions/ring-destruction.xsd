@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="ring-destruction-model-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module provides a policy of destroying units within a certain
+          distance of a diseased unit.
+        ]]>
+      </documentation>
+    </annotation>    
+    <sequence>
+      <!-- Model parameters. -->
+      <element name="priority" type="naadsm:unitless">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The priority to give to units destroyed for this reason.  1 is
+              the highest priority, 2 is the second-highest priority, and so on.
+            ]]>
+          </documentation>
+        </annotation>    
+      </element>
+      <element name="radius" type="naadsm:length">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The radius of the destruction ring.
+            ]]>
+          </documentation>
+        </annotation>    
+      </element>
+    </sequence>
+    <attribute name="version" type="string" fixed="0.1" />
+    <attribute name="from-production-type" type="string" />
+    <attribute name="to-production-type" type="string" />
+  </complexType>
+
+</schema>

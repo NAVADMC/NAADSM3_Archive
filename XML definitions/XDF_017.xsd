@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by Ed Shaya (NASA) -->
+<!-- edited with XML Spy v4.4 (http://www.xmlspy.com) by Ed Shaya (NASA) -->
+<xs:schema targetNamespace="http://xml.gsfc.nasa.gov/XDF" xmlns:xdf="http://xml.gsfc.nasa.gov/XDF" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation>XDF_017.xsd - eXtensible Data Format - version 0.17
+        Date: March 27, 2002
+        XML Schema.
+An XDF document contains arrays and data structures.  It  is
+        designed to be both an interchange format for scientific data 
+        and to be of archival quality.
+        Multidimensional tables and scalar or vector fields are represented
+        in a consistent way and become thoroughly self describing.
+        Axial information is well described so that the space in which 
+        each part of the data structure resides is fully described.  
+        This means that XDF provides a consistent way to hold spectra 
+        with their wavelength scales, images with coordinate axes, 
+        vector fields with unitDirection, data cubes in complicated 
+        spaces, tables with column headers, and series of tables
+        with each table having a unique name. 
+</xs:documentation>
+	</xs:annotation>
+	<xs:element name="XDF" type="xdf:XDF_Type"/>
+	<xs:complexType name="XDF_Type">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="parameter" type="xdf:parameterType"/>
+			<xs:element name="parameterGroup" type="xdf:parameterGroupType"/>
+			<xs:element name="array" type="xdf:arrayType"/>
+			<xs:element name="note" type="xdf:noteType"/>
+			<xs:element name="structure" type="xdf:structureType"/>
+		</xs:choice>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="description" type="xs:string"/>
+		<xs:attribute name="type" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="arrayType">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="parameter" type="xdf:parameterType"/>
+				<xs:element name="parameterGroup" type="xdf:parameterGroupType"/>
+			</xs:choice>
+			<xs:element name="axis" type="xdf:axisType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:choice>
+				<xs:element name="fieldAxis" type="xdf:fieldAxisType"/>
+				<xs:sequence>
+					<xs:element name="units" type="xdf:unitsType"/>
+					<xs:element name="dataFormat" type="xdf:dataFormatType"/>
+				</xs:sequence>
+			</xs:choice>
+			<xs:element name="axis" type="xdf:axisType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="read" type="xdf:readType"/>
+			<xs:element name="data" type="xdf:dataType"/>
+			<xs:element name="notes" type="xdf:notesType" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="description" type="xs:string"/>
+		<xs:attribute name="arrayId" type="xs:ID"/>
+		<xs:attribute name="appendTo" type="xs:IDREF"/>
+		<xs:attribute name="class">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="spatial"/>
+					<xs:enumeration value="temporal"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="lessThanValue" type="xs:NMTOKEN"/>
+		<xs:attribute name="lessThanOrEqualValue" type="xs:NMTOKEN"/>
+		<xs:attribute name="greaterThanValue" type="xs:NMTOKEN"/>
+		<xs:attribute name="greaterThanOrEqualValue" type="xs:NMTOKEN"/>
+		<xs:attribute name="infiniteValue" type="xs:string"/>
+		<xs:attribute name="infiniteNegativeValue" type="xs:string"/>
+		<xs:attribute name="noDataValue" type="xs:string"/>
+		<xs:attribute name="notANumberValue" type="xs:string"/>
+		<xs:attribute name="underflowValue" type="xs:string"/>
+		<xs:attribute name="overflowValue" type="xs:string"/>
+		<xs:attribute name="disabledValue" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="axisType">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:sequence>
+				<xs:element name="axisUnits" type="xdf:axisUnitsType"/>
+				<xs:choice maxOccurs="unbounded">
+					<xs:element name="value" type="xdf:valueType"/>
+					<xs:element name="valueList" type="xdf:valueListType"/>
+					<xs:element name="valueGroup" type="xdf:valueGroupType"/>
+				</xs:choice>
+			</xs:sequence>
+			<xs:element name="unitDirection" type="xdf:unitDirectionType"/>
+		</xs:choice>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="description" type="xs:string"/>
+		<xs:attribute name="axisId" type="xs:ID" use="required"/>
+		<xs:attribute name="axisIdRef" type="xs:IDREF"/>
+		<xs:attribute name="align" type="xs:IDREF"/>
+		<xs:attribute name="axisDatatype">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="integer"/>
+					<xs:enumeration value="float"/>
+					<xs:enumeration value="exponential"/>
+					<xs:enumeration value="string"/>
+					<xs:enumeration value="url"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="axisUnitsType">
+		<xs:choice>
+			<xs:element name="unitless"/>
+			<xs:element name="unit" type="xdf:unitType" maxOccurs="unbounded"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="binaryFloatType">
+		<xs:attribute name="bits" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="32"/>
+					<xs:enumeration value="64"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="binaryIntegerType">
+		<xs:attribute name="signed" default="yes">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="yes"/>
+					<xs:enumeration value="no"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="bits" type="xs:NMTOKEN" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="d0Type" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="d1" type="xdf:d1Type"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="d1Type" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="d2" type="xdf:d2Type"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="d2Type" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="d3" type="xdf:d3Type"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="d3Type" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="d4" type="xdf:d4Type"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="d4Type" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="d5" type="xdf:d5Type"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="d5Type" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="d6" type="xdf:d6Type"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="d6Type" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="d7"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:element name="d7" type="xs:string"/>
+	<xs:complexType name="dataType" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="data" type="xdf:dataType"/>
+			<xs:element name="d0" type="xdf:d0Type"/>
+		</xs:choice>
+		<xs:attribute name="href" type="xs:ENTITY"/>
+		<xs:attribute name="checksum" type="xs:NMTOKEN"/>
+		<xs:attribute name="encoding">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="uuencoded"/>
+					<xs:enumeration value="base64"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="compression">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="zip"/>
+					<xs:enumeration value="gzip"/>
+					<xs:enumeration value="bzip2"/>
+					<xs:enumeration value="XMILL"/>
+					<xs:enumeration value="compress"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="dataFormatType">
+		<xs:choice>
+			<xs:element name="float" type="xdf:floatType"/>
+			<xs:element name="integer" type="xdf:integerType"/>
+			<xs:element name="string" type="xdf:stringType"/>
+			<xs:element name="binaryInteger" type="xdf:binaryIntegerType"/>
+			<xs:element name="binaryFloat" type="xdf:binaryFloatType"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="fieldType">
+		<xs:sequence>
+			<xs:sequence minOccurs="0">
+				<xs:element name="units" type="xdf:unitsType"/>
+				<xs:element name="dataFormat" type="xdf:dataFormatType"/>
+			</xs:sequence>
+			<xs:element name="relation" type="xdf:relationType" minOccurs="0"/>
+			<xs:element name="note" type="xdf:noteType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="description" type="xs:string"/>
+		<xs:attribute name="fieldId" type="xs:ID"/>
+		<xs:attribute name="fieldIdRef" type="xs:IDREF"/>
+		<xs:attribute name="class">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="spatial"/>
+					<xs:enumeration value="temporal"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="lessThanValue" type="xs:NMTOKEN"/>
+		<xs:attribute name="lessThanOrEqualValue" type="xs:NMTOKEN"/>
+		<xs:attribute name="greaterThanValue" type="xs:NMTOKEN"/>
+		<xs:attribute name="greaterThanOrEqualValue" type="xs:NMTOKEN"/>
+		<xs:attribute name="infiniteValue" type="xs:string"/>
+		<xs:attribute name="infiniteNegativeValue" type="xs:string"/>
+		<xs:attribute name="noDataValue" type="xs:string"/>
+		<xs:attribute name="notANumberValue" type="xs:string"/>
+		<xs:attribute name="underflowValue" type="xs:string"/>
+		<xs:attribute name="overflowValue" type="xs:string"/>
+		<xs:attribute name="disabledValue" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="fieldAxisType">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="fieldGroup" type="xdf:fieldGroupType"/>
+			<xs:element name="field" type="xdf:fieldType"/>
+		</xs:choice>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="description" type="xs:string"/>
+		<xs:attribute name="axisId" type="xs:ID"/>
+		<xs:attribute name="axisIdRef" type="xs:IDREF"/>
+	</xs:complexType>
+	<xs:complexType name="fieldGroupType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="field" type="xdf:fieldType"/>
+			<xs:element name="fieldGroup" type="xdf:fieldGroupType"/>
+		</xs:choice>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="description" type="xs:string"/>
+		<xs:attribute name="class">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="spatial"/>
+					<xs:enumeration value="temporal"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="floatType">
+		<xs:attribute name="width" type="xs:NMTOKEN" use="required"/>
+		<xs:attribute name="precision" type="xs:NMTOKEN" use="required"/>
+		<xs:attribute name="exponent" type="xs:NMTOKEN"/>
+	</xs:complexType>
+	<xs:complexType name="forType">
+		<xs:choice>
+			<xs:element name="for" type="xdf:forType"/>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="readCell"/>
+				<xs:element name="skipChars" type="xdf:skipCharsType"/>
+				<xs:element name="repeat" type="xdf:repeatType"/>
+			</xs:choice>
+			<xs:element name="textDelimiter" type="xdf:textDelimiterType"/>
+		</xs:choice>
+		<xs:attribute name="axisIdRef" type="xs:IDREF" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="indexType">
+		<xs:attribute name="axisIdRef" type="xs:IDREF" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="integerType">
+		<xs:attribute name="type" default="decimal">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="decimal"/>
+					<xs:enumeration value="octal"/>
+					<xs:enumeration value="hexadecimal"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="width" type="xs:NMTOKEN" use="required"/>
+		<xs:attribute name="signed" default="yes">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="yes"/>
+					<xs:enumeration value="no"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="locationOrderType">
+		<xs:sequence>
+			<xs:element name="index" type="xdf:indexType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="noteType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="mark" type="xs:string"/>
+				<xs:attribute name="noteId" type="xs:ID"/>
+				<xs:attribute name="noteIdRef" type="xs:IDREF"/>
+				<xs:attribute name="location" type="xs:string"/>
+				<xs:attribute name="href" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="notesType">
+		<xs:sequence>
+			<xs:element name="locationOrder" type="xdf:locationOrderType" minOccurs="0"/>
+			<xs:element name="note" type="xdf:noteType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="parameterType">
+		<xs:sequence>
+			<xs:sequence minOccurs="0">
+				<xs:element name="units" type="xdf:unitsType"/>
+				<xs:choice maxOccurs="unbounded">
+					<xs:element name="value" type="xdf:valueType"/>
+					<xs:element name="valueList" type="xdf:valueListType"/>
+					<xs:element name="valueGroup" type="xdf:valueGroupType"/>
+				</xs:choice>
+			</xs:sequence>
+			<xs:element name="note" type="xdf:noteType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="description" type="xs:string"/>
+		<xs:attribute name="paramId" type="xs:ID"/>
+		<xs:attribute name="paramIdRef" type="xs:IDREF"/>
+		<xs:attribute name="datatype">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="integer"/>
+					<xs:enumeration value="float"/>
+					<xs:enumeration value="exponential"/>
+					<xs:enumeration value="string"/>
+					<xs:enumeration value="url"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="parameterGroupType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="parameter" type="xdf:parameterType"/>
+			<xs:element name="parameterGroup" type="xdf:parameterGroupType"/>
+		</xs:choice>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="description" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="readType">
+		<xs:choice>
+			<xs:element name="for" type="xdf:forType"/>
+			<xs:element name="tagToAxis" type="xdf:tagToAxisType" maxOccurs="unbounded"/>
+		</xs:choice>
+		<xs:attribute name="encoding" default="ISO-8859-1">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="ANSI"/>
+					<xs:enumeration value="ISO-8859-1"/>
+					<xs:enumeration value="UTF-8"/>
+					<xs:enumeration value="UTF-16"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="endian">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="BigEndian"/>
+					<xs:enumeration value="LittleEndian"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="readId" type="xs:ID"/>
+		<xs:attribute name="readIdRef" type="xs:IDREF"/>
+	</xs:complexType>
+	<xs:element name="readCell">
+		<xs:complexType/>
+	</xs:element>
+	<xs:complexType name="relationType">
+		<xs:attribute name="description" type="xs:string"/>
+		<xs:attribute name="fieldIdRefs" type="xs:IDREFS" use="required"/>
+		<xs:attribute name="role" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="precision"/>
+					<xs:enumeration value="positiveError"/>
+					<xs:enumeration value="negativeError"/>
+					<xs:enumeration value="error"/>
+					<xs:enumeration value="sensitivity"/>
+					<xs:enumeration value="weight"/>
+					<xs:enumeration value="reference"/>
+					<xs:enumeration value="noteMark"/>
+					<xs:enumeration value="quality"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="repeatType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="repeat" type="xdf:repeatType"/>
+			<xs:element name="readCell"/>
+			<xs:element name="skipChars" type="xdf:skipCharsType"/>
+		</xs:choice>
+		<xs:attribute name="count" type="xs:NMTOKEN" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="skipCharsType">
+		<xs:attribute name="count" type="xs:NMTOKEN" default="1"/>
+		<xs:attribute name="output" type="xs:string" default=" "/>
+	</xs:complexType>
+	<xs:complexType name="stringType">
+		<xs:attribute name="length" type="xs:NMTOKEN" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="structureType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="parameter" type="xdf:parameterType"/>
+			<xs:element name="parameterGroup" type="xdf:parameterGroupType"/>
+			<xs:element name="array" type="xdf:arrayType"/>
+			<xs:element name="note" type="xdf:noteType"/>
+			<xs:element name="structure" type="xdf:structureType"/>
+		</xs:choice>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="description" type="xs:string"/>
+		<xs:attribute name="type" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="tagToAxisType">
+		<xs:attribute name="tag" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="d0"/>
+					<xs:enumeration value="d1"/>
+					<xs:enumeration value="d2"/>
+					<xs:enumeration value="d3"/>
+					<xs:enumeration value="d4"/>
+					<xs:enumeration value="d5"/>
+					<xs:enumeration value="d6"/>
+					<xs:enumeration value="d7"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="axisIdRef" type="xs:IDREF" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="textDelimiterType">
+		<xs:attribute name="delimiter" type="xs:string" default=" "/>
+		<xs:attribute name="repeatable" default="yes">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="yes"/>
+					<xs:enumeration value="no"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="recordTerminator" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="unitType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="power" type="xs:NMTOKEN"/>
+				<xs:attribute name="description" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="unitDirectionType">
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="description" type="xs:string"/>
+		<xs:attribute name="complex">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="real"/>
+					<xs:enumeration value="imaginary"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="axisIdRef" type="xs:IDREF"/>
+	</xs:complexType>
+	<xs:element name="unitless">
+		<xs:complexType/>
+	</xs:element>
+	<xs:complexType name="unitsType">
+		<xs:choice>
+			<xs:element name="unitless"/>
+			<xs:element name="unit" type="xdf:unitType" maxOccurs="unbounded"/>
+		</xs:choice>
+		<xs:attribute name="factor" type="xs:string"/>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="description" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="valueType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="valueId" type="xs:ID"/>
+				<xs:attribute name="valueRef" type="xs:IDREF"/>
+				<xs:attribute name="special">
+					<xs:simpleType>
+						<xs:restriction base="xs:NMTOKEN">
+							<xs:enumeration value="infinite"/>
+							<xs:enumeration value="infiniteNegative"/>
+							<xs:enumeration value="noData"/>
+							<xs:enumeration value="notANumber"/>
+							<xs:enumeration value="underflow"/>
+							<xs:enumeration value="overflow"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="inequality">
+					<xs:simpleType>
+						<xs:restriction base="xs:NMTOKEN">
+							<xs:enumeration value="lessThan"/>
+							<xs:enumeration value="lessThanOrEqual"/>
+							<xs:enumeration value="greaterThan"/>
+							<xs:enumeration value="greaterThanOrEqual"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="upperErrorValue" type="xs:NMTOKEN"/>
+				<xs:attribute name="lowerErrorValue" type="xs:NMTOKEN"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="valueGroupType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="value" type="xdf:valueType"/>
+			<xs:element name="valueList" type="xdf:valueListType"/>
+			<xs:element name="valueGroup" type="xdf:valueGroupType"/>
+		</xs:choice>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="description" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="valueListType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="size" type="xs:NMTOKEN"/>
+				<xs:attribute name="delimiter" type="xs:string" default=" "/>
+				<xs:attribute name="repeatable" default="no">
+					<xs:simpleType>
+						<xs:restriction base="xs:NMTOKEN">
+							<xs:enumeration value="yes"/>
+							<xs:enumeration value="no"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="start" type="xs:string"/>
+				<xs:attribute name="step" type="xs:string"/>
+				<xs:attribute name="valueListId" type="xs:ID"/>
+				<xs:attribute name="valueListIdRef" type="xs:IDREF"/>
+				<xs:attribute name="infiniteValue" type="xs:string"/>
+				<xs:attribute name="infiniteNegativeValue" type="xs:string"/>
+				<xs:attribute name="noDataValue" type="xs:string"/>
+				<xs:attribute name="notANumberValue" type="xs:string"/>
+				<xs:attribute name="underflowValue" type="xs:string"/>
+				<xs:attribute name="overflowValue" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>

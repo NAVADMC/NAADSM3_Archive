@@ -1,0 +1,97 @@
+/1000herds_line.xml/1.1/Fri May 18 19:29:35 2007//Tnaadsm_3_line
+/16herds_square.xml/1.4/Tue May  1 16:10:26 2007//Tnaadsm_3_line
+/1herd.xml/1.4/Thu Sep 28 19:30:17 2006//Tnaadsm_3_line
+/1herd_1dayleft.xml/1.1/Fri Jun 23 19:12:53 2006//Tnaadsm_3_line
+/1herd_3daysleft.xml/1.1/Fri Jun 23 19:14:32 2006//Tnaadsm_3_line
+/1herd_start_infectious.xml/1.1/Fri Jun 23 19:14:21 2006//Tnaadsm_3_line
+/1herd_start_infectious_1dayin.xml/1.2/Tue Jan 27 23:21:05 2009//Tnaadsm_3_line
+/1herd_start_infectious_1dayin_4daysleft.xml/1.2/Tue Jan 27 23:21:05 2009//Tnaadsm_3_line
+/1herd_start_infectious_1dayleft.xml/1.1/Fri Jun 23 19:13:30 2006//Tnaadsm_3_line
+/1herd_start_infectious_2daysleft.xml/1.2/Tue Jan 27 23:21:05 2009//Tnaadsm_3_line
+/1herd_start_subclinical.xml/1.3/Wed May 14 15:12:49 2008//Tnaadsm_3_line
+/2herds.xml/1.4/Fri Jun 23 19:13:39 2006//Tnaadsm_3_line
+/2herds_100km.xml/1.3/Fri Jun 23 19:12:16 2006//Tnaadsm_3_line
+/2herds_1_start_destroyed.xml/1.2/Wed Sep  9 17:05:41 2009//Tnaadsm_3_line
+/2herds_1_start_nimmune.xml/1.1/Fri Jun 23 19:14:35 2006//Tnaadsm_3_line
+/2herds_1_start_nimmune_2daysleft.xml/1.1/Fri Jun 23 19:12:19 2006//Tnaadsm_3_line
+/2herds_1_start_nimmune_3daysleft.xml/1.1/Fri Jun 23 19:13:18 2006//Tnaadsm_3_line
+/2herds_1_start_vimmune.xml/1.2/Wed Sep  9 17:05:41 2009//Tnaadsm_3_line
+/2herds_1_start_vimmune_1dayleft.xml/1.1/Fri Jun 23 19:13:36 2006//Tnaadsm_3_line
+/2herds_1_start_vimmune_2daysleft.xml/1.1/Fri Jun 23 19:12:38 2006//Tnaadsm_3_line
+/2herds_ascii.xml/1.2/Wed May 14 17:49:11 2008//Tnaadsm_3_line
+/2herds_iso88591.xml/1.2/Wed May 14 17:49:11 2008/-kb/Tnaadsm_3_line
+/2herds_pigs_cattle_all_infected.xml/1.4/Thu Sep 28 19:30:17 2006//Tnaadsm_3_line
+/2herds_pigs_cattle_pigs_infected.xml/1.5/Wed May 14 15:12:49 2008//Tnaadsm_3_line
+/2herds_utf16_big_endian.xml/1.2/Wed May 14 17:49:11 2008/-kb/Tnaadsm_3_line
+/2herds_utf16_big_endian_no_bom.xml/1.2/Wed May 14 17:49:11 2008/-kb/Tnaadsm_3_line
+/2herds_utf16_little_endian.xml/1.2/Wed May 14 17:49:11 2008/-kb/Tnaadsm_3_line
+/2herds_utf16_little_endian_no_bom.xml/1.2/Wed May 14 17:49:11 2008/-kb/Tnaadsm_3_line
+/2herds_utf8.xml/1.2/Wed May 14 17:49:11 2008/-kb/Tnaadsm_3_line
+/2herds_utf8_no_bom.xml/1.2/Wed May 14 17:49:11 2008/-kb/Tnaadsm_3_line
+/2herds_xy.xml/1.2/Thu Aug 13 00:23:36 2009//Tnaadsm_3_line
+/2targets_same_dist_diff_size.xml/1.2/Fri Jun 23 19:14:18 2006//Tnaadsm_3_line
+/2targets_same_dist_same_size.xml/1.3/Fri Jul  4 19:45:17 2008//Tnaadsm_3_line
+/3herds.xml/1.3/Fri Jun 23 19:14:24 2006//Tnaadsm_3_line
+/3herds_1_start_destroyed.xml/1.1.2.1/Thu Oct 29 19:57:17 2009//Tnaadsm_3_line
+/3herds_1_start_vimmune.xml/1.1.2.1/Thu Oct 29 16:51:04 2009//Tnaadsm_3_line
+/3herds_2_at_same_loc.xml/1.3/Fri Jun 23 19:13:33 2006//Tnaadsm_3_line
+/3herds_pigs_2cattle_pigs_infected.xml/1.1/Fri Jun 23 19:14:00 2006//Tnaadsm_3_line
+/3herds_pigs_cattle_sheep_all_infected.xml/1.4/Wed May 14 15:12:49 2008//Tnaadsm_3_line
+/3herds_pigs_cattle_sheep_pigs_sheep_infected.xml/1.2/Fri Jun 23 19:12:50 2006//Tnaadsm_3_line
+/3herds_pigs_cattle_sheep_sheep_infected.xml/1.2/Fri Jun 23 19:12:13 2006//Tnaadsm_3_line
+/3targets_same_dist_same_size.xml/1.3/Thu May  7 01:57:24 2009//Tnaadsm_3_line
+/4herds_2.xml/1.1/Thu Dec 21 15:01:50 2006//Tnaadsm_3_line
+/4herds_all_infected.xml/1.3/Fri Jun 23 19:12:25 2006//Tnaadsm_3_line
+/4herds_line.xml/1.3.56.1/Fri Jul 15 18:09:04 2011//Tnaadsm_3_line
+/4herds_line_2.xml/1.1/Fri Jun 23 19:13:27 2006//Tnaadsm_3_line
+/4herds_line_3.xml/1.1/Fri Jun 23 19:12:00 2006//Tnaadsm_3_line
+/4herds_line_4.xml/1.1/Fri Jun 23 19:12:32 2006//Tnaadsm_3_line
+/4herds_line_5_xy.xml/1.1.2.1/Mon Jan  4 23:34:34 2010//Tnaadsm_3_line
+/4herds_line_xy.xml/1.1/Thu Aug 13 01:06:41 2009//Tnaadsm_3_line
+/5herds.xml/1.1/Fri Jun 23 19:13:00 2006//Tnaadsm_3_line
+/5herds_2.xml/1.2/Fri Jul  4 16:55:20 2008//Tnaadsm_3_line
+/5herds_very_close.xml/1.1/Tue Jun 12 19:45:08 2007//Tnaadsm_3_line
+/6herds.xml/1.1/Fri Jun 23 19:13:48 2006//Tnaadsm_3_line
+/6herds_2.xml/1.1/Fri Jun 23 19:14:09 2006//Tnaadsm_3_line
+/7herds.xml/1.3.46.1/Thu Apr  7 14:45:38 2011//Tnaadsm_3_line
+/8herds_2rows.xml/1.1/Fri Jun 23 19:13:42 2006//Tnaadsm_3_line
+/8herds_2rows_2.xml/1.1/Fri Jun 23 19:13:15 2006//Tnaadsm_3_line
+/8herds_2rows_3.xml/1.1.2.1/Sat Nov  6 03:52:47 2010//Tnaadsm_3_line
+/8herds_all_infected.xml/1.3/Fri Jun 23 19:13:03 2006//Tnaadsm_3_line
+/9herds.xml/1.4/Fri Jul  4 16:55:20 2008//Tnaadsm_3_line
+/9herds_hexagon.xml/1.1.2.1/Fri Dec 11 22:43:59 2009//Tnaadsm_3_line
+/Makefile.am/1.84.2.10/Fri Feb  7 14:08:03 2014//Tnaadsm_3_line
+/broken_herd_file_1.xml/1.1/Fri Jun 23 19:12:22 2006//Tnaadsm_3_line
+/broken_herd_file_2.xml/1.1/Fri Jun 23 19:13:45 2006//Tnaadsm_3_line
+/broken_herd_file_3.xml/1.1/Fri Jun 23 19:14:12 2006//Tnaadsm_3_line
+/broken_herd_file_4.xml/1.1/Fri Jun 23 19:13:09 2006//Tnaadsm_3_line
+/fcmp.c/1.3/Thu Sep 28 19:30:17 2006//Tnaadsm_3_line
+/herds_circle.xml/1.4/Thu Sep 28 19:30:17 2006//Tnaadsm_3_line
+/herds_circle2.xml/1.3/Fri Jun 23 19:12:03 2006//Tnaadsm_3_line
+/no_rtree_contact_spread.xml/1.1/Wed Jun 13 17:08:07 2007//Tnaadsm_3_line
+/no_rtree_lat-45.xml/1.2/Fri Jul  4 15:37:43 2008//Tnaadsm_3_line
+/no_rtree_lat0.xml/1.2/Tue May 15 00:21:56 2007//Tnaadsm_3_line
+/no_rtree_lat45.xml/1.1/Tue May 15 00:21:56 2007//Tnaadsm_3_line
+/no_rtree_lat45_xy.xml/1.1/Thu Aug 13 02:43:58 2009//Tnaadsm_3_line
+/rtree_contact_spread.xml/1.1/Wed Jun 13 17:08:07 2007//Tnaadsm_3_line
+/rtree_lat-45.xml/1.2/Fri Jul  4 15:37:43 2008//Tnaadsm_3_line
+/rtree_lat0.xml/1.2/Tue May 15 00:21:56 2007//Tnaadsm_3_line
+/rtree_lat45.xml/1.1/Tue May 15 00:21:56 2007//Tnaadsm_3_line
+/rtree_lat45_xy.xml/1.1/Thu Aug 13 02:43:57 2009//Tnaadsm_3_line
+/shell.c/1.16/Tue Aug 11 21:05:50 2009//Tnaadsm_3_line
+/shell2.c/1.6.2.1/Thu Dec  6 19:01:14 2012//Tnaadsm_3_line
+/tests_end_tag.xml/1.1/Fri Jun 23 19:12:41 2006//Tnaadsm_3_line
+/tests_start_tag.xml/1.2/Wed May 14 17:49:11 2008//Tnaadsm_3_line
+/xml2dox.py/1.22.2.2/Tue Jan 28 19:08:01 2014//Tnaadsm_3_line
+/xml2expect.py/1.11.2.1/Fri Nov 13 14:19:29 2009//Tnaadsm_3_line
+D/config////
+D/model.airborne-spread////
+D/model.control-measures////
+D/model.detection////
+D/model.direct-contact-spread////
+D/model.disease////
+D/model.economic////
+D/model.indirect-contact-spread////
+D/model.ring-destruction////
+D/model.ring-vaccination////
+D/model.zones////

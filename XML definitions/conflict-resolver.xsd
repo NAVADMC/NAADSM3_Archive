@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="conflict-resolver-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module decides what to do when a unit is infected and
+          vaccinated, infected and destroyed, vaccinated and destroyed, or all
+          three on a given day.
+        ]]>
+      </documentation>
+    </annotation>
+    <sequence>
+      <!-- No parameters or outputs. -->
+
+    </sequence>
+    <attribute name="version" type="string" fixed="0.1" />
+  </complexType>
+
+</schema>

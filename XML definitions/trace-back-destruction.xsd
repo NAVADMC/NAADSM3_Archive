@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+>
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="trace-back-destruction-model-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module provides a policy of destroying units that have had
+          contact with a diseased unit.
+        ]]>
+      </documentation>
+    </annotation>    
+    <sequence>
+      <!-- Model parameters. -->
+      <element name="priority" type="naadsm:unitless">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The priority to give to units destroyed for this reason.  1 is
+              the highest priority, 2 is the second-highest priority, and so on.
+            ]]>
+          </documentation>
+        </annotation>    
+      </element>
+      <element name="trace-success" type="naadsm:probability">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The probability that a trace is sucessful.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="trace-period" type="naadsm:time">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The time period prior to detection of the disease that is of
+              interest for trace investigations.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="quarantine-only" type="boolean">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              If this option is turned on, traced units will be quarantined but
+              not destroyed.  If this option is turned off, traced units will
+              be quarantined and (possibly after a delay) destroyed.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+    </sequence>
+
+    <attribute name="version" type="string" fixed="0.1" />
+    <attribute name="production-type" type="string" /> <!-- optional -->
+    <attribute name="production-type-id" type="integer" use="optional"  />
+    <attribute name="contact-type" type="naadsm:contact-type" use="required" />
+  </complexType>
+
+</schema>

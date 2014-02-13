@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="ring-vaccination-model-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module provides a policy of vaccinating units within a certain
+          distance of a diseased unit.
+        ]]>
+      </documentation>
+    </annotation>    
+    <sequence>
+      <!-- Model parameters. -->
+      <element name="priority" type="naadsm:unitless">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The priority to give to units destroyed for this reason.  1 is
+              the highest priority, 2 is the second-highest priority, and so on.
+            ]]>
+          </documentation>
+        </annotation>    
+      </element>
+      <element name="radius" type="naadsm:length">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The radius of the vaccination ring.
+            ]]>
+          </documentation>
+        </annotation>    
+      </element>
+      <element name="min-time-between-vaccinations" type="naadsm:time">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The minimum time that must pass after a unit is vaccinated before
+              the unit can be vaccinated again.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="vaccinate-detected-units" type="boolean" minOccurs="0">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              Whether to vaccinate known infected units.  If this parameter is
+              omitted, this module will request vaccination for all
+              non-destroyed units in the ring except the unit at the center
+              that triggered the ring.  If this parameter is yes, this module
+              will request vaccination for all non-destroyed units in the ring
+              including the unit at the center.  If this parameter is no, this
+              module will request vaccination only for non-destroyed units that
+              are not known to be infected.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+    </sequence>
+    <attribute name="version" type="string" fixed="0.1" />
+    <attribute name="from-production-type" type="string" />
+    <attribute name="to-production-type" type="string" />
+  </complexType>
+
+</schema>

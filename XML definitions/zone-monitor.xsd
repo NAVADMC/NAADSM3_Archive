@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="zone-monitor-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module tracks zones.  It can record the shape, area, and
+          perimeter of zones, the number of units in each zone, and the number
+          of "animal-days" in each zone.
+        ]]>
+      </documentation>
+    </annotation>    
+    <sequence>
+      <!-- No parameters. -->
+
+      <element name="output" minOccurs="0" maxOccurs="unbounded">
+        <complexType>
+          <sequence>
+            <element name="variable-name">
+              <simpleType>
+                <restriction base="string">
+                  <enumeration value="unitsInZone">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of units in the zone.  This variable always
+                          reports the count on the day of reporting, regardless
+                          of whether it is reported daily, weekly, or at some
+                          other interval.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="unitDaysInZone">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of "unit days" in the zone.  This is
+                          defined as the number of days a non-Destroyed unit
+                          spends in a zone.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="animalDaysInZone">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of "animal days" in the zone.  This is
+                          defined as the number of days a non-Destroyed unit
+                          spends in a zone times the number of animals in the
+                          unit.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="zoneShape">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The shape of the zone, which may include two or more
+                          physically separated areas.  The shape is given as a
+                          polygon in OpenGIS WKT (Well-Known Text) format.
+                          This variable always reports the shape on the day of
+                          reporting, regardless of whether it is reported
+                          daily, weekly, or at some other interval.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="zoneArea">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The area covered by the zone, in square kilometers.
+                          For the "background" zone, the value will be zero.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="maxZoneArea">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          Maximum area occupied by a zone over the course of the iteration.
+                          For the "background" zone, the value will be zero.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="maxZoneAreaDay">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of days a zone has maximum area.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="finalZoneArea">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The area covered by the zone, in square kilometers, at end of iteration.
+                          For the "background" zone, the value will be zero.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="zonePerimeter">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The perimeter of the zone, in kilometers.  For the
+                          "background" zone, the value will be zero.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="maxZonePerimeter">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The maximum perimeter of the zone, in kilometers, for the iteration.  
+                          For the "background" zone, the value will be zero.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="maxZonePerimeterDay">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of days a zone has maximum perimeter.  
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="finalZonePerimeter">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The perimeter of the zone, in kilometers, at the end of the iteration.  
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <!-- Not in v 3.2.5
+                  <enumeration value="num-separate-areas">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of physically separated areas making up
+                          the zone.  This variable always reports the count on
+                          the day of reporting, regardless of whether it is
+                          reported daily, weekly, or at some other interval.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>-->
+                </restriction>
+              </simpleType>
+            </element>
+            <element name="broken-down" type="string" minOccurs="0" /> 
+            <element name="frequency" type="naadsm:output-variable-frequency" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+
+    <attribute name="version" type="string" fixed="0.1" />
+  </complexType>
+
+</schema>

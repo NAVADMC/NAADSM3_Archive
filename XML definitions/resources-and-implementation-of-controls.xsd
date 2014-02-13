@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="resources-and-implementation-of-controls-model-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module simulates the actions and resources of government
+          authorities in an outbreak.  Note that there are no parameters for
+          deciding which units are destroyed or vaccinated.  Other modules,
+          such as the basic destruction module and the ring destruction module,
+          make those decisions; those modules can be included or excluded from
+          simulations to test different combinations of policies.
+        ]]>
+      </documentation>
+    </annotation>    
+    <sequence>
+      <!-- Model parameters. -->
+      <element name="destruction-program-delay" type="naadsm:time">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The time required to begin a destruction program, that is, the
+              delay between the first detection of a diseased unit and the
+              first destructions.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="destruction-capacity" type="naadsm:REL">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The number of units that can be destroyed per unit of time, based
+              on time since the first detection of a diseased unit.  The
+              capacity can be increased as time goes on, to simulate bringing
+              more resources on-line.
+            ]]>
+          </documentation>
+          <appinfo>
+            <x-axis-type>naadsm:time</x-axis-type>
+            <y-axis-type>naadsm:frequency</y-axis-type>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="destruction-priority-order" type="naadsm:text">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The relative priorities given to production type, reason for
+              destruction, and time waiting.  This is a text string, e.g.,
+              "production type,reason,time waiting",
+              "time waiting,reason,production type".  The three items in the
+              text string must be spelled as shown and separated only by
+              commas.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="vaccination-capacity" type="naadsm:REL">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The number of units that can be vaccinated per unit of time,
+              based on time since the first detection of a diseased unit.  The
+              capacity can be increased as time goes on, to simulate bringing
+              more resources on-line.
+            ]]>
+          </documentation>
+          <appinfo>
+            <x-axis-type>naadsm:time</x-axis-type>
+            <y-axis-type>naadsm:frequency</y-axis-type>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="vaccination-priority-order" type="naadsm:text">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The relative priorities given to production type, reason for
+              vaccination, and time waiting.  This is a text string, e.g.,
+              "production type,reason,time waiting",
+              "time waiting,reason,production type".  The three items in the
+              text string must be spelled as shown and separated only by
+              commas.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="vaccination-program-delay" type="nonNegativeInteger">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The number of diseased units that must be detected before
+              vaccinations will begin.
+            ]]>
+          </documentation>
+        </annotation>    
+      </element>  
+    </sequence>
+    <attribute name="version" type="string" fixed="0.1" />
+  </complexType>
+</schema>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+  xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+  xmlns:xml="http://www.w3.org/XML/1998/namespace"
+>
+
+  <include schemaLocation="airborne.xsd" /> <!-- rbh: for linear and exponetial types -->
+  <include schemaLocation="basic-destruction.xsd" />
+  <include schemaLocation="basic-zone-focus.xsd" />
+  <include schemaLocation="conflict-resolver.xsd" />  
+  <include schemaLocation="contact.xsd" />
+  <include schemaLocation="contact-recorder.xsd" />
+  <include schemaLocation="destruction-list-monitor.xsd" />
+  <include schemaLocation="destruction-monitor.xsd" /> 
+  <include schemaLocation="detection.xsd" />
+  <include schemaLocation="detection-monitor.xsd" />
+  <include schemaLocation="disease.xsd" />
+  <include schemaLocation="economic.xsd" />
+  <include schemaLocation="exposure-monitor.xsd" />
+  <include schemaLocation="exam-monitor.xsd" />
+  <include schemaLocation="infection-monitor.xsd" />
+  <include schemaLocation="quarantine.xsd" />
+  <include schemaLocation="resources-and-implementation-of-controls.xsd" /> 
+  <include schemaLocation="ring-destruction.xsd" />
+  <include schemaLocation="ring-vaccination.xsd" />
+  <include schemaLocation="test.xsd" />
+  <include schemaLocation="test-monitor.xsd" />
+  <include schemaLocation="trace.xsd" />
+  <include schemaLocation="trace-back-zone-focus.xsd" />
+  <include schemaLocation="trace-destruction.xsd" />
+  <include schemaLocation="trace-exam.xsd" />
+  <include schemaLocation="trace-monitor.xsd" /> <!-- rbh: replaces trace-back-monitor -->
+  <include schemaLocation="trace-quarantine.xsd" />
+  <include schemaLocation="trace-zone-focus.xsd" /> <!-- rbh: replaces trace-back-zone-focus -->
+  <include schemaLocation="vaccination-monitor.xsd" />
+  <include schemaLocation="vaccination-list-monitor.xsd" />
+  <include schemaLocation="vaccine.xsd" />  
+  <include schemaLocation="zone.xsd" />
+  <include schemaLocation="zone-monitor.xsd" />
+  
+  <annotation>
+    <documentation xml:lang="en">
+      <![CDATA[
+        This file defines parameters for a disease simulation.
+
+        Neil Harvey and Greg Klotz  
+        Department of Computing & Information Science, University of Guelph
+        Guelph, ON N1G 2W1
+        CANADA
+        (nharvey|glotz)@uoguelph.ca
+
+        Copyright (c) 2003-2009 University of Guelph.
+      ]]>
+    </documentation>
+  </annotation>
+
+  
+  <element name="disease-simulation" type="naadsm:disease-simulation-type"/>
+
+  <complexType name="disease-simulation-type">
+    <sequence>
+      <element name="description" type="string" minOccurs="0">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              A short description of the scenario being simulated.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="naadsm-version" minOccurs="0" maxOccurs="1">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The version of NAADSM that these parameters are for.  This
+              element is present in parameter files exported from NAADSM
+              version 3.2.0 and higher.
+            ]]>
+          </documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="major-version" type="positiveInteger" />
+            <element name="minor-version" type="nonNegativeInteger" />
+            <element name="release" type="nonNegativeInteger" minOccurs="0" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="language">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The default language for the GUI, following the
+              ISO 639-1 Language Codes and enumerated in I88n.pas
+            ]]>
+          </documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <enumeration value="en" /> 
+            <enumeration value="es" />
+          </restriction>
+        </simpleType>
+      </element>  
+      <element name="num-runs" type="positiveInteger">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The number of simulations to run.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="num-days" type="positiveInteger">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The maximum number of days in a simulation run.  A simulation run
+              may end earlier, if there are no latent or infectious animals and
+              no module has pending actions to complete.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="exit-condition" minOccurs="0" maxOccurs="1">
+        <complexType>
+          <sequence>
+            <element name="disease-end" minOccurs="0">
+              <annotation>
+                <documentation xml:lang="en">
+                  <![CDATA[
+                    If this element is present, a simulation will stop when
+                    there are no more latent or infectious units.
+                  ]]>
+                </documentation>
+              </annotation>
+            </element>
+            <element name="first-detection" minOccurs="0">
+              <annotation>
+                <documentation xml:lang="en">
+                  <![CDATA[
+                    If this element is present, a simulation will stop when the
+                    first detection occurs.
+                  ]]>
+                </documentation>
+              </annotation>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="models">
+        <!-- Include parameters from all known sub-models. -->
+        <complexType>
+          <choice minOccurs="1" maxOccurs="unbounded">
+            <element name="airborne-spread-model" type="naadsm:airborne-spread-model-type" />
+            <element name="airborne-spread-exponential-model" type="naadsm:airborne-spread-exponential-model-type" />
+            <element name="basic-destruction-model" type="naadsm:basic-destruction-model-type" />
+            <element name="basic-zone-focus-model" type="naadsm:basic-zone-focus-model-type" />
+            <element name="conflict-resolver" type="naadsm:conflict-resolver-type" />
+            <element name="contact-spread-model" type="naadsm:contact-spread-model-type" />
+            <element name="contact-recorder-model" type="naadsm:contact-recorder-model-type" />  
+            <element name="detection-model" type="naadsm:detection-model-type" />
+            <element name="detection-monitor" type="naadsm:detection-monitor-type" />
+            <element name="destruction-list-monitor" type="naadsm:destruction-list-monitor-type" />
+            <element name="destruction-monitor" type="naadsm:destruction-monitor-type" />
+            <element name="disease-model" type="naadsm:disease-model-type" />
+            <element name="economic-model" type="naadsm:economic-model-type" />
+            <element name="exam-monitor" type="naadsm:exam-monitor-type" />
+            <element name="exposure-monitor" type="naadsm:exposure-monitor-type" />
+            <element name="infection-monitor" type="naadsm:infection-monitor-type" />
+            <element name="quarantine-model" type="naadsm:quarantine-model-type" />
+            <element name="resources-and-implementation-of-controls-model" type="naadsm:resources-and-implementation-of-controls-model-type" />       
+            <element name="ring-destruction-model" type="naadsm:ring-destruction-model-type" />    
+            <element name="ring-vaccination-model" type="naadsm:ring-vaccination-model-type" />
+            <element name="test-model" type="naadsm:test-model-type" />
+            <element name="test-monitor" type="naadsm:test-monitor-type" />
+            <element name="trace-back-zone-focus-model" type="naadsm:trace-back-zone-focus-model-type" />
+            <element name="trace-destruction-model" type="naadsm:trace-destruction-model-type" />
+            <element name="trace-exam-model" type="naadsm:trace-exam-model-type" />
+            <element name="trace-model" type="naadsm:trace-model-type" />
+            <element name="trace-monitor" type="naadsm:trace-monitor-type" />
+            <element name="trace-quarantine-model" type="naadsm:trace-quarantine-model-type" />
+            <element name="vaccination-list-monitor" type="naadsm:vaccination-list-monitor-type" />
+            <element name="vaccine-model" type="naadsm:vaccine-model-type" />
+            <element name="vaccination-monitor" type="naadsm:vaccination-monitor-type" />
+            <element name="zone-model" type="naadsm:zone-model-type" />
+            <element name="zone-monitor" type="naadsm:zone-monitor-type" /> 
+          </choice>
+        </complexType>
+      </element>
+
+      <element name="output" minOccurs="0" maxOccurs="unbounded">
+        <!-- Outputs. -->
+        <complexType>
+          <sequence>
+            <element name="variable-name">
+              <simpleType>
+                <restriction base="string">               
+                  <enumeration value="all-units-states">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          We need a definition here; Neil or Shaun,
+                          will you please provide one. I added this 
+                          enumeration here for the XML validation.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="num-units-in-each-state">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of units in each state.  This variable
+                          always reports the counts on the day of reporting,
+                          regardless of whether it is reported daily, weekly,
+                          or at some other interval.  This variable is needed
+                          to create a plot of the states over time.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="num-units-in-each-state-by-production-type">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of units in each state, broken down by
+                          production type.  This variable always reports the
+                          counts on the day of reporting, regardless of whether
+                          it is reported daily, weekly, or at some other
+                          interval.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="num-animals-in-each-state">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of animals in each state.  This variable
+                          always reports the counts on the day of reporting,
+                          regardless of whether it is reported daily, weekly,
+                          or at some other interval.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="num-animals-in-each-state-by-production-type">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of animals in each state, broken down by
+                          production type.  This variable always reports the
+                          counts on the day of reporting, regardless of whether
+                          it is reported daily, weekly, or at some other interval.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="diseaseDuration">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The day on which there were no more Latent or
+                          Infectious units.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="outbreakDuration">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The day on which there were no more Latent or
+                          Infectious units and no more control activities to do.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="clock-time">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of seconds the simulation took to run.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="tsdU"> <!-- new in 3.2.5 -->
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          Transition state daily units.
+                          rbh: someone please elaborate
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="tsdA"> <!-- new in 3.2.5 -->
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          Transition state daily animals.
+                          rbh: someone please elaborate
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                </restriction>
+              </simpleType>
+            </element>
+            <element name="frequency" type="naadsm:output-variable-frequency" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+
+    <attribute name="version" type="string" fixed="0.1" />
+    <attribute name="date" type="date" fixed="2003-02-01" />
+  </complexType>
+
+</schema>

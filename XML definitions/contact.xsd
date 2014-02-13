@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <!-- Types of contact between herds. -->
+
+  <complexType name="contact-spread-model-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          These parameters describe spread of the disease by direct contact
+          (movement of animals between units) or indirect contact (movement of
+          people, materials or equipment between units).
+        ]]>
+      </documentation>
+    </annotation>
+    <sequence>
+      <!-- Model parameters. -->
+      
+      <!-- rbh: Note on minOccurs="0"
+      The minOccurs="0" were necessary because contact-spread model parameters
+      originate from either the ContactSpreadParams ssXML forms or the ZoneParams ssXML. 
+      This results in all the elements of model never present in either
+      circumstance, validation fails for both sets of params without
+      the minOccurs="0". Is there a better way to handle this??
+      -->
+      
+      <element name="fixed-movement-rate" type="naadsm:frequency" minOccurs="0" >
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              A fixed integer number of shipments of animals from a unit each day 
+              (for direct contact) or a fixed integer number of movements of people,
+              materials or equipment from a unit each day (for indirect
+              contact).  Either a fixed movement rate or a mean movement rate (see below)
+              must be specified.  Fixed movement rates are primarily intended for testing:
+              most analyses should use a mean movement rate.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>     
+      <element name="movement-rate" type="naadsm:frequency"  minOccurs="0" >
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The mean number of shipments of animals from a unit each day (for
+              direct contact) or the mean number of movements of people,
+              materials or equipment from a unit each day (for indirect
+              contact).  Either a fixed movement rate (see above) or a mean movement rate 
+              must be specified.  Fixed movement rates are primarily intended for testing:
+              most analyses should use a mean movement rate.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="distance" type="naadsm:PDF"  minOccurs="0" >
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The distance between the source of the contact and the
+              destination, given as a probability distribution.
+            ]]>
+          </documentation>
+          <appinfo>
+            <x-axis-type>naadsm:length</x-axis-type>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="delay" type="naadsm:PDF"  minOccurs="0" >
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The shipping delay from the source to the
+              destination, given as a probability distribution.
+            ]]>
+          </documentation>
+          <appinfo>
+            <x-axis-type>naadsm:time</x-axis-type>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="prob-infect" type="naadsm:probability"  minOccurs="0" >
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The probability that a contact will result in an infection.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="movement-control" type="naadsm:REL"  minOccurs="0" >
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              A multiplier that can be used to reduce the movement rate based
+              on the number of days since the first detection of an infected
+              unit.  This simulates applying movement controls.
+            ]]>
+          </documentation>
+          <appinfo>
+            <x-axis-type>naadsm:time</x-axis-type>
+            <y-axis-type>naadsm:unitless</y-axis-type>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="latent-units-can-infect" type="boolean"  minOccurs="0" >
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              Whether a shipment of animals from a latent unit can infect
+              another unit.  Applies only to direct contact.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="subclinical-units-can-infect" type="boolean"  minOccurs="0" >
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              Whether contact with a subclinical infectious unit can infect
+              another unit.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+    </sequence>
+    <attribute name="version" type="string" fixed="0.1" />
+    <attribute name="from-production-type" type="string" use="required" />
+    <!-- rbh: Changed to-production-type use="required" to "optional" because when
+    a zone is specified there is no to-production-type and the XML validation fails. -->
+    <attribute name="to-production-type" type="string" use="optional" />
+    <attribute name="contact-type" type="naadsm:contact-type" use="required" />
+    <attribute name="zone" type="string" use="optional" />
+  </complexType>
+
+</schema>

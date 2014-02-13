@@ -1,0 +1,1754 @@
+Simulation error	Error en la simulación
+An error occurred while this simulation was in progress, and an error file has been created.	Ha occurido un error durante el transcurso de esta simulación y se ha creado un archivo de error.
+We would appreciate your help in solving this problem: please send the error file (named below) to the NAADSM Development Team for analysis.  Thank you!	Le agradecemos nos asista en resolver este problema: por favor envíe el archivo de error (nombrado abajo) para que pueda ser analizado por el group de desarrollo del NAADSM. Gracias.
+Error file name:	Error en el nombre del archivo:
+OK	OK
+Form1	Form1
+Copy message	Copiar mensaje
+Items to _____:	Puntos a _____:
+Cancel	Cancelar
+NAADSM updates	Actualización de NAADSM
+An updated version (xxx) of NAADSM is available: you are currently using version yyy.	Hay una versión actualizada disponible (xxx) del NAADSM: usted está usando la versión yyy.
+This update is critical, and highly recommended.  This line should wrap this line should wrap.	Esta actualización es crítica y altamente recomendable. Esta oración debe...
+A description of the enhancements in the new version is shown below:	Abajo se observa una descripción de las mejoras en la nueva versión:
+More information about this update is available at:	Puede encontrar información relacionada con las mejoras de esta versión en:
+http://www.naadsm.org/updates.php?version=3.0.79&&fromVersion=3.0.78	http://www.naadsm.org/updates.php?version=3.0.79&&fromVersion=3.0.78
+You may go to the NAADSM website now to download the update, if you wish.	Si desea, ahora puede abrir la página del NAADSM para bajar la versión actualizada.
+If you do not want to install this noncritical update, click '#39'Skip this update'#39' below, and you will not be prompted again until the next update becomes available.	Si usted no desea instalar esta actualización no-crítica, haga click en el  'Saltear esta actualización' abajo y se le recordará cuando la próxima actualización se encuentre disponible
+&Go to the NAADSM website	&Ir a la página de NAAADSM
+&Do not update now	&No actualizar ahora
+&Skip this update	&Saltear esta actualización
+FormWizardBase	FormWizardBase
+&Cancel	&Cancelar
+Abort current operations, not saving information on the screen and return to the main menu	Abandone las operaciones presentes sin guardar la información en la pantalla y regrese al menú principal
+< &Back	< &Atrás
+Return to the previous screen, saving this information	Regrese a la pantalla anterior guardando esta información
+&Next >	S&iguiente >
+Proceed to the next screen, saving this information	Proceda a la pantalla siguiente guardando esta información
+&Finish	&Finalizar
+Complete working on the screen by saving the information	Complete el trabajo en esta pantalla guardando esta información
+Stage progress:	Progreso de esta fase:
+Overall progress:	Progreso total:
+Please register NAADSM	Por favor, registrar el NAADSM
+&OK	&OK
+Accept changes	Aceptar los cambios
+Cancel changes	Cancelar los cambios
+Parameter	Parámetro
+Mean	Media
+Standard deviation	Desvío estándar
+Median	Mediana
+Quartile difference	Diferencia cuartil
+Number of histogram bins:	Número de columnas en el histograma:
+File name:	Nombre del archivo:
+Browse...	Buscar...
+*.*|All files|*.csv|Comma separated values	*.*|Todos los archivos|*.csv|Valores separados por comas
+Chart	Gráfico
+Save chart image to file	Guardar el gráfico en el archivo
+Copy chart image to clipboard	Copiar gráfico en el portapapeles
+Print chart image	Imprimir gráfico
+Save changes and exit	Guardar cambios y salir
+Exit without saving changes	Salir sin guardar los cambios
+Function name:	Nombre de la función:
+leTitle	leTitle
+Save	Guardar
+&Help	&Ayuda
+Show help screen	Mostrar pantalla de ayuda
+E&xit without saving changes to function	Sa&lir sin guardar cambios en la función
+&Save changes to function and exit	&Guardar cambios en la función y salir
+&Print chart image...	&Imprimir gráfico...
+S&ave chart image...	G&uardar gráfico...
+C&opy chart image to clipboard	C&opiar gráfico en el portapapeles
+&Export points to file...	&Exportar puntos al archivo...
+&Copy points to clipboard	&Copiar puntos en el portapapeles
+&Import points from clipboard	&Importar puntos desde el portapapeles
+&Import points from file...	&Importar puntos del archivo...
+Comma delimited file (*.csv)|*.csv|All files (*.*)|*.*	Archivos delimitados por comas(*.csv)|*.csv|Todos los archivos (*.*)|*.*
+Windows metafile (*.wmf)|*.wmf|All files (*.*)|*.*	Metarchivo de Windows (*.wmf)|*.wmf|Todos los archivos (*.*)|*.*
+Text files (*.csv, *.txt)|*.csv; *.txt|All files (*.*)|*.*	Archivos de texto (*.csv, *.txt)|*.csv; *.txt|Todos los archivos (*.*)|*.*
+Show cumulative probability	Mostrar probabilidad acumulada
+Add point	Agregar punto
+Remove point	Remover punto
+New...	Nuevo...
+Click to create a new function	Hacer clic para crear nueva función
+Remove	Remover
+Click to permanently remove the specified function	Hacer clic para remover la función especificada en forma permanente
+Edit...	Editar...
+Click to alter the specified function	Hacer clic para alterar la función especificada
+Clear	Limpiar
+Click to clear the selected function for this parameter	Hacer clic para borrar la función elegida para este parámetro
+(Select a function type)	(Elegir tipo de función)
+Value:	Valor:
+Parameters	Parámetros
+Mean:	Media:
+Standard deviation:	Desvío estándar:
+Minimum:	Mínimo:
+Mode:	Modo:
+Maximum:	Máximo:
+Alpha:	Alfa:
+Beta:	Beta:
+Location:	Ubicación:
+Scale:	Escala:
+View/Edit Points	Ver/Editar puntos
+Shape:	Forma:
+Zeta:	Zeta:
+Sigma':	Sigma':
+Alpha1:	Alfa1:
+Alpha2:	Alfa2:
+Convert to piecewise...	Convertir a
+Function type:	Tipo de función:
+X axis units:	Unidades en eje X:
+Y axis units:	Unidades en eje Y:
+Save data to file...	Guardar datos en archivo...
+Save chart(s) to file...	Guardar gráfico(s) en el archivo...
+Print data...	Imprimir datos
+Print chart(s)...	Imprimir gráfico(s)...
+Copy data to clipboard	Copiar datos en el portapapeles
+Copy chart(s) to clipboard	Copiar gráfico(s) en el portapapeles
+Close	Cerrar
+&Save data to file...	&Guardar datos en el archivo...
+S&ave chart(s) to file...	Guardar gráfico(s) en el archivo...
+&Print data...	&Imprimir datos...
+P&rint chart(s)...	I&mprimir gráfico(s)...
+&Close	&Cerrar
+&Copy data to clipboard	&Copiar datos en el portapapeles
+C&opy chart(s) to clipboard	C&opiar gráfico(s) en el portapapeles
+About NAADSM	Acerca de NAADSM
+&License...	&Licencia...
+Version xyz Build abc	Versión xyz Compilación abc
+This is an experimental version of the North American Animal Disease Spread Model.  This version deviates from the published conceptual specification in ways that may significantly affect the simulation outcome.	Esta es una versión experimental del Modelo Norte Americano de Diseminación de Eenfermades Animales.  Esta versión se desvía de las especificaciones conceptuales publicadas de tal forma que pudiera afectar significativamente el resultado de la simulación.
+NAADSM-Cheyenne	NAADSM-Cheyenne
+Scenario parameters: Airborne spread	Parámetros de situación: Diseminación aerógena
+Airborne spread	Diseminación aerógena
+Scenario parameters: Contact spread	Parámetros de situación: Diseminación por contacto
+Contact spread	Diseminación por contacto
+Scenario parameters: Cost accounting options	Parámetros de situación: Opciones de costos
+Cost accounting options	Opciones de contabilidad de costos
+For which control measures do you want to track DIRECT COSTS?	¿Para qué medidas de control quiere usted llevar cuenta de los COSTOS DIRECTOS?
+Track costs of destruction	Llevar costos de destrucción
+Track costs of vaccination	Llevar costos de vacunación
+Track costs of surveillance in zones	Llevar costos de zonas de vigilancia
+Scenario parameters: Costs of destruction	Parámetros de situación: Costos de destrucción
+Costs of destruction	Costos de destrucción
+Scenario parameters: Costs of vaccination	Parámetros de situación: Costos de vacunación
+Costs of vaccination	Costos de vacunación
+Scenario parameters: Costs of zone surveillance	Parámetros de situación: Costos de zona de vigilancia
+Costs of zone surveillance	Costos de zona de vigilancia
+Custom outputs	Resultados personalizados
+Custom output definitions	Definiciones de resultados personalizados
+Press CTRL + left mouse button to select multiple definitions	Oprimir CTRL+ el botón izquierdo del ratón para elegir definiciones múltiples
+SQL statement:	Instrucción SQL:
+Output frequency:	Frecuencia de resultados:
+Generate once per iteration	Generar un vez por repetición
+Generate for every production type for every iteration	Generar para cada tipo de producción para cada repetición
+Generate for every zone for every iteration	Generar para cada zona para cada repetición
+Generate for every zone and every production type for every iteration	Generar para cada zona y cada tipo de producción para cada repetición
+Output type:	Tipo de resultado:
+Number - integer	Número - entero
+Number - floating point	Número - coma flotante
+String	Secuencia
+Add definition	Agregar definición
+Remove selected definition	Remover las definiciones seleccionadas
+Test current/selected definition	Probar las definiciones actuales/seleccionadas
+Rename current/selected definition	Renombrar las definiciones actuales/seleccionadas
+This feature of NAADSM/PC is not well documented and may not be fully implemented.  It is intended for experts and others who don't mind living dangerously...	Esta característica del NAADSM/PC no está bien documentada y puede que no se implemente de forma completa. Está dirigida a los expertos y a otros a quienes no les importa vivir en peligro...
+unitsVacc5DaysPostDetection	unitsVacc5DaysPostDetection
+animalsVacc5DaysPostDetection	animalsVacc5DaysPostDetection
+unitsDestr5DaysPostDetection	unitsDestr5DaysPostDetection
+Chart of status of units, by day, for current/last iteration	Gráfico diario de estado de unidades para la actual/última repetición
+Iteration:	Repetición:
+Susceptible	Susceptible
+Nat Immune	Inmunidad nat
+Latent	Latente
+Vac Immune	Inmunidad vac
+Subclinical	Subclínico
+Destroyed	Destruido
+Clinical	Clínico
+Milestones	Logros
+Chart of status of zones, by day, for current/last iteration	Gráfico diario de estado de zonas para la actual/última repetición
+Y axis	Eje Y
+Area	Area
+# of units	# de unidades
+# of animals	# de animales
+Unit days	Unidad días
+Animal days	Animal días
+Scenario parameters: Global destruction options	Parámetros de situación: Opciones de destrucción global
+Global destruction options	Opciones de destrucción global
+Scenario parameters: Destruction priorities	Parámetros de situación: Prioridades de destrucción
+Destruction priorities	Prioridades de destrucción
+Scenario parameters: Destruction	Parámetros de situación: Destrucción
+Destruction	Destrucción
+Scenario parameters: Detection	Parámetros de situación: Detección
+Detection	Detección
+Scenario parameters: Disease	Parámetros de situación: Enfermedad
+Disease	Enfermedad
+Export scenario	Exportar situación
+Scenario parameters file:	Archivo de parámetros de situación:
+List of units:	Lista de unidades:
+Export	Exportar
+Items to import:	Elementos a importar:
+Export scenario parameters file	Exportar archivo de parámetros de situación
+Export list of units	Exportar lista de unidades
+Include output specification for NAADSM/SC	Incluir especificación de resultados para NAADSM/SC
+XML files (*.xml)|*.xml|All files (*.*)|*.*	Archivos XML (*.xml)|*.xml|Todos los archivos (*.*)|*.*
+Scenario parameters: Start setup	Parámetros de situación: Configuración de comienzo
+General description of the simulation session	Descripción general de la sesión de simulación
+Start setup	Configuración del comienzo
+Scenario description:	Descripción de situación:
+(Time to run)	(Tiempo de corrida)
+A simulation runs until:	La simulación corre hasta que:
+Number of iterations	Número de repeticiones
+1) there are no more incubating or contagious units in the replicate	1) no hayan más unidades en incubación o contagiosas en la repetición
+AND all vacination and/or destruction activities have been completed	Y todas las actividades de vacunación y/o de destrucción se hayan completado
+OR	O
+AND the stipulated number of iterations are completed	Y se ha completado el número estipulado de repeticiones
+Currently on iteration number	Se encuentra en repetición número
+Time to run this set of iterations:	Tiempo de correr este juego de repeticiones:
+2) the stop button is pressed (the current simluation day will still be completed)	2) el botón de parada se encuentre oprimido (no obstante se completará el día de simulación actual)
+Random number generator seed	Semilla generadora de números aleatorios
+Seed value (integer):	Valor de la semilla (entero):
+Generate seed automatically	Generar semilla automáticamente
+Specify a seed value	Especificar un valor de semilla
+Unit list export options	Opciones para exportar la lista de unidades
+File format	Formato del archivo
+CSV options	Optiones CSV
+Production types	Tipos de producción
+Initial disease states	Estados de enfermedad inicial
+(There are no XML options)	(No hay opciones XML)
+Export as CSV	Exportar como CSV
+Export as XML	Exportar como XML
+Export production types by name	Exportar tipos de producción por su nombre
+Export production types by number	Exportar tipos de producción por número
+Export initial states as character codes	Exportar estados iniciales como códigos de caracteres
+Export initial states as numeric codes	Exportar estados iniciales como códigos numéricos
+Scenario parameters: Set up starting units	Parámetros de situación: Establecer unidades iniciales
+Set up starting units	Establecer unidades iniciales
+Export unit list to file	Exportar lista de unidades al archivo
+Print unit list	Imprimir lista de unidades
+Import and replace existing unit list	Importar y reemplazar la lista existente de unidades
+Import and append to existing unit list	Importar y añadir a la lista existente de unidades
+Remove selected unit(s)	Remover la(s) unidad(es) seleccionada(s)
+Import and append to existing unit list...	Importar y añadir a la lista existente de unidades...
+Import and replace existing unit list...	Importar y reemplazar la lista existente de unidades...
+Export to file...	Exportar al archivo...
+Save changes and finish	Guardar los cambios y terminar
+Discard changes and exit	Descartar los cambios y salir
+Select &all visible units	Seleccionar &todas las unidades visibles
+All NAADSM files (*.csv, *.xml)|*.csv;*.xml|Comma separated values (*.csv)|*.csv|NAADSM XML (*.xml)|*.xml|All files (*.*)|*.*	Todos los archivos del NAADSM (*.csv, *.xml)|*.csv;*.xml|Valores separados por comas (*.csv)|*.csv|NAADSM XML (*.xml)|*.xml|Todos los archivos (*.*)|*.*
+&Import and append to existing unit list...	&Importar y añadir a la lista existente de unidades...
+I&mport and replace existing unit list...	I&mportar y reemplazar la existente lista de unidades...
+&Export to file...	&Exportar al archivo...
+&Print unit list	&Imprimir lista de unidades
+&Save changes and finish	&Guardar los cambios y terminar
+&Discard changes and exit	&Descartar los cambios y salir
+&Remove selected unit(s)	&Remover la(s) unidad(es) seleccionada(s)
+Import scenario	Importar situación
+Scenario database file to create:	Archivo para crear la base de datos de situación:
+Import existing XML files to the database	Importar archivos XML existentes a la base de datos
+Import	Importar
+Import scenario parameters file	Importar archivo de parámetros de situación
+Import list of units	Importar lista de unidades
+NAADSM scenario databases (*.mdb)|*.mdb|All files (*.*)|*.*	Base de datos de situación del NAADSM (*.mdb)|*.mdb|Todos los archivos (*.*)|*.*
+Summary of 1 iteration	Resumen de 1 repetición
+Epidemiology	Epidemiología
+Cost accounting	Contabilidad de costos
+Simulation status: completed/aborted/running	Estado de la simulación: completo/abortado/corriendo
+Lat/lon range selection	Rango de selección de lat/lon
+Inclusion/exclusion	Inclusión/exclusión
+Select units within the specified area	Seleccionar las unidades en el área especificada
+Select units that are NOT within the specified area	Seleccionar unidades que NO se encuentran dentro del área especificada
+Area shape	Forma del área
+Rectangular area	Area rectangular
+Circular area	Area circular
+Northwest corner:	Esquina noroeste:
+Latitude:	Latitud:
+Longitude:	Longitud:
+Southeast corner:	Esquina sudeste:
+Center coordinates:	Coordenadas centrales:
+Circle radius (km):	Radio del círculo (km):
+NAADSM 3.1	NAADSM 3.1
+Open a file to start a new session	Abra el archivo para comenzar una nueva sesión
+Stop	Parar
+Message	Mensaje
+&Exit	&Salir
+&Start setup	Iniciar con&figuración
+&Production type(s)	Tipo(s) de &producción
+S&et up starting units	&Unidades iniciadoras de configuración
+&About NAADSM...	&Acerca de NAADSM...
+&Open scenario file...	&Abrir archivo de situaciones...
+&Disease	&Enfermedad
+&Disease options	&Opciones de enfermedad
+&Production type settings for disease	Configuración de tipos de &producción para enfermedad
+Disease sp&read	Di&seminación de enfermedad
+&Spread options	&Opciones de diseminación
+&Production type combinations	Combinaciones de tipos de &producción
+&Contact spread	Diseminación por &contacto
+&Airborne spread	Diseminación &aerógena
+De&tection	De&tección
+&Detection options	&Opciones de detección
+&Production type settings for detection	Configuración de tipos de &producción para detección
+&Tracing	Ras&treo
+&Global tracing options	Opciones de rastreo &global
+&Production type settings for tracing	Configuración del rastreo para tipos de &producción
+Destructio&n	Destrucció&n
+&Global destruction options	Opciones de destrucción &global
+&Destruction priorities	Prioridades de &destrucción
+&Production type settings for destruction	Configuración de tipos de &producción para destrucción
+&Vaccination	&Vacunación
+&Global vaccination options	Opciones de vacunación &global
+&Vaccination priorities	Prioridades de &vacunación
+&Production type settings for vaccination	Configuración de tipos de &producción para vacunación
+&Cost accounting	&Contabilidad de costos
+&Cost accounting options	Opciones de &contabilidad de costos
+Production type settings for &destruction costs	Configuración de tipos de producción para costos de &destrucción
+Production type settings for &vaccination costs	Configuración de tipos de producción para costos de &vacunación
+Production type settings for &zone surveillance costs	Configuración de tipos de producción para costos de &zona de vigilancia
+&Interactive/advanced	&Interactivo/avanzado
+&Map of units	&Mapa de unidades
+Daily unit status (single iteration)	Estado diario de unidades (una repetición)
+&Events by day	&Eventos por día
+&Single iteration summary	&Resumen de una repetición
+Help	Ayuda
+Opens the help file	Abre el archivo de ayuda
+Output statistics	Estadísticas de resultados
+Summary epidemic curves	Resumen de curvas epidémicas
+Start and run until specified day...	Comenzar y ejecutar hasta el día especificado...
+Start and run until first detection(s)	Comenzar y ejecutar hasta la(s) primera(s) detección(es)
+Start and run to the end of active disease phase(s)	Comenzar y ejecutar hasta el final de la(s) fase(s) de enfermedad activa
+Start and run until end of outbreak(s)	Comenzar y ejecutar hasta el final del (de los) brote(s)
+Contact-exposure events by day	Eventos de contacto-exposición por día
+&Cascade	&Cascada
+&Arrange	&Arreglar
+View current units	Ver unidades actuales
+Unused1	Unused1
+Close all &windows	Cerrar todas las &ventanas
+&New scenario file	&Archivo de nueva situación
+&Save scenario file	&Guardar archivo de situación
+Sa&ve As...	G&uardar como...
+Append output	Añadir resultados
+&Import scenario...	&Importar situación...
+&Close scenario file	&Cerrar archivo de situación
+&Export scenario...	&Exportar situación...
+Output options	Opciones de resultados
+Clear scenario output	Borrar resultados de situación
+Verify current units	Verificar unidades actuales
+C&heck scenario validity	C&omprobar validez de situación
+&Empty scenario	Situación &vacia
+&US Midwest scenario	Situación de centro-oeste de &US
+Go to the NAADSM &website	Ir a la &página de NAADSM
+Opens the NAADSM website in your default browser	Abrir la página de NAADSM en su buscador por defecto
+Custom output options	Opciones de resultados personalizadas
+Define custom outputs	Definir resultados personalizados
+Zones	Zonas
+Zone options	Opciones de zonas
+Create/modify zones	C&rear/modificar zonas
+Production type settings for zones	Configuración de tipos de producción para zonas
+Com&pare to another scenario...	Com&parar con otra situación...
+Daily zone status (single iteration)	Estado diario de zona (una repetición)
+&New empty scenario file	&Nuevo archivo de situación vacia
+&Sample scenario file	&Muestra de archivo de situación
+E&xit	S&alir
+Trac&ing	R&astreo
+&Zone options	&Opciones de zona
+&Create/modify zones	&Crear/modificar zonas
+&Production type settings for zones	Configuración de tipos de &producción para zonas
+&Zones	&Zonas
+&Output options	&Opciones de resultados
+&Custom output options	Opciones de resultados a la &medida
+&Define custom outputs	&Definir resultados personalizados
+C&ustom outputs	Resultados a la m&edida
+&Clear scenario output	&Borrar resultados de situación
+&Start and run until specified day...	&Comenzar y ejecutar hasta el día especificado...
+St&art and run until first detection(s)	Com&enzar y ejecutar hasta la(s) primera(s) detección(es)
+Start a&nd run to the end of active disease phase(s)	Comenzar &y ejecutar hasta el final de la(s) fase(s) activa(s) de la enfermedad
+Sta&rt and run until end of outbreak(s)	Come&nzar y ejecutar hasta el final del (de los) brote(s)
+S&top simulation	&Parar simulación
+&Map of units for 1 iteration	&Mapa de unidades para 1 repetición
+&Daily unit status for 1 iteration	Estado &diario de unidades para 1 repetición
+Da&ily zone status for 1 iteration	Estado d&iario de zona para 1 repetición
+&Summary of 1 iteration	Re&sumen para 1 repetición
+C&ontact-exposure events by day	Eventos de c&ontacto-exposición por día
+O&utput statistics	Estadísticas de res&ultados
+Summa&ry epidemic curves	Resume&n de curvas epidémicas
+Apparent map of units, current/final day	Mapa aparente de unidades, día actual/final
+Size	Tamaño
+Status	Estado
+Zoom in	Acercar la vista
+Zoom out	Alejar la vista
+Fit to window	Ajustar a la ventana
+Events for 1 iteration	Eventos para 1 repetición
+Iteration status: completed/aborted/running	Estado de repetición: completado/abortado/ejecutando
+Filter by:	Filtre de acuerdo a:
+Day:	Día:
+Event type:	Tipo de evento:
+Unit ID:	ID de unidad:
+(No filter)	(Ningún filtro)
+Sort by:	Distribuya de acuerdo a:
+Sort order:	Orden:
+Day	Día
+Ascending	Ascendente
+Descending	Descendente
+Unit ID	ID de unidad
+Event type	Tipo de evento
+Infections	Infecciones
+State changes	Cambios de estado
+Detections	Detecciones
+Destructions	Destrucciones
+Vaccinations	Vacunaciones
+Traces of direct contact	Rastreos de contacto directo
+Traces of indirect contact	Rastreos de contacto indirecto
+Zone changes	Cambios de zona
+Creation of zone foci	Creación de focos de zona
+Event order on day	Orden de eventos
+Unit type	Tipo de unidad
+New state	Nuevo estado
+Successful trace	Rastreo exitoso
+Exposures for 1 iteration	Exposiciones para 1 repetición
+Source type:	Tipo de fuente:
+Recipient type:	Tipo de recipiente:
+Exposure type:	Tipo de exposición
+Source unit ID:	ID de unidad de fuente:
+Recipient unit ID:	ID de unidad recipiente:
+Status:	Estado:
+Successful exposures	Exposiciones exitosas
+Unsuccessful exposures	Exposiciones infructuosas
+Source unit ID	ID de unidad de fuente
+Source unit status	Estado de unidad de fuente
+Exposure type	Tipo de exposición
+Exposure success	Exito de exposición
+Recipient unit ID	ID de unidad recipiente
+Recipient unit status	Estado de unidad recipiente
+Direct contacts	Contactos directos
+Indirect contacts	Contactos indirectos
+Naturally immune	Inmunidad natural
+Vaccine immune	Inmunidad vacunal
+Exp. on day	Exp. en el día
+Source type	Tipo de fuente
+Source status	Estado de fuente
+Exp. type	Tipo de exp.
+Exp. success	Exito de exposición
+Recipient type	Tipo de recibidor
+Recipient status	Estado del recibidor
+Scenario parameters: Output options	Parámetros de situación: Opciones para resultados
+Select optional outputs that you would like to generate and record from those listed below.  Some of these selections will result in decreased performance and very large scenario database files: use these options with caution.	Seleccione los resultados opcionales que usted quisiera generar y guardar de los listados a continuación.  Algunas de estas selecciones resultaran en desempeño disminuído y un archivo de base de datos de situación muy grande: use estas opciones con prudencia.
+Daily unit states	Estados de unidad diarios
+Write a plain text file containing daily states for all units	Escriba un archivo de texto simple que contenga estados diarios para todas unidades
+Plain text file (*.txt)|*.txt|All files (*.*)|*.*	Archivo de texto simple (*.txt)|*.txt|Todos los archivos (*.*)|*.*
+Daily output for iterations	Resultados diarios para repeticiones
+Number of iterations:	Número de repeticiones
+Save all daily output for every iteration (warning: this option may produce very large scenario files)	Guardar todos los resultados diarios para cada repetición (advertencia: esta opción puede producir archivos de situacións muy grandes)
+Save all daily output for a specified number of iterations	Guardar todos los resultados para un número específico de repeticiones
+Daily events and exposures	Eventos y exposiciones diarias
+Save information for each event (scenario files may be very large)	Guardar la información para cada evento (archivos de situacións pueden ser muy grandes)
+Save information for each exposure (scenario files may be very large)	Guardar la información para cada exposición (archivos de situacións pueder ser muy grandes)
+NAADSMap output	Resultados por NAADSMap
+lblNAADSMapDir	lblNAADSMapDir
+Folder for NAADSMap output:	Archivo para resultados por NAADSMap
+Generate NAADSMap output	Generar resultados por NAADSMap
+Options...	Opciones...
+Select folder...	Seleccionar archivo...
+Scenario parameters	Parámetros de situación
+CHANGE THIS IN DERIVED CLASSES	CHANGE THIS IN DERIVED CLASSES
+Prioritize by dragging items up or down in both primary or secondary lists.  Drag higher priority items up and lower priority items down.  Or right-click the item in the white list box and change the priority number.	Priorice arrastrando los ítemes hacia arriba o abajo en ambas listas primarias o secundarias.  Arrastre ítemes de más alta prioridad arriba y de baja prioridad abajo.  O  haga clic con el botón secundario del ratón.
+Priority examples for selections above	Ejemplos
+Primary	Primaria
+Secondary	Secundaria
+The more days holding, the higher the priority	Mientras más días en espera, mayor es la prioridad
+Reason for destruction	Razón de destrucción
+Production type	Tipo de producción
+Days holding	Días en espera
+Pigs	Cerdos
+Cattle	Bovino
+Dairy	Bovino lechero
+Detected	Detectado
+Direct contact	Contacto directo
+Indirect contact	Contacto indirecto
+Circle	(Noun or verb?) Haga un círculo alrededor de
+Scenario parameters: Production type(s)	Parámetros de situación: Tipo(s) de producción
+Press CTRL + left mouse button to select multiple production types	Oprima CTRL + botón primario del ratón para seleccionar múltiples tipos de produccción
+Production type(s)	Tipo(s) de producción
+Add production type	Añadir tipo de producción
+Modify selected production type	Modificar tipo de producción seleccionado
+Remove selected production type(s)	Remover tipo(s) de producción seleccionado(s)
+Cattle - beef	Bovino de engorde
+Cattle - dairy	Bovino lechero
+Mixed - beef/dairy	Bovino - engorde y lechero
+Swine - confinement	Cerdo - confinamiento
+Swine - outside	Cerdo - afuera
+Apply to all	Aplicar a todos
+Production type combinations	Combinaciones de tipo de producción
+Scenario parameters: Production type combinations	Parámetros de situación: Combinaciones de tipo de producción
+Press CTRL key to select more than one production type	Oprima la tecla CTRL para seleccionar más de un tipo de producción
+Add	Añadir
+Removes selected combinations from the model	Remueve combinaciones seleccionadas del modelo
+Includes selected combinations in the model	Incluye combinaciones seleccionadas en el modelo
+Choose from all combinations	Escojer de entre todas las combinaciones
+Match production types below	Parear tipos de producción abajo
+Scenario comparison	Comparación de situaciones
+FileNameB	FileNameB
+FileNameA	FileNameA
+SM Output Base Class	SM Output Base Class
+Save data to file	Guardar datos en archivo
+Print data	Imprimir datos
+Save chart to file	Guardar gráfico en archivo
+Copy chart to clipboard	Copiar gráfico al portapapeles
+Print chart	Imprimir gráfico
+Windows Metafile (*.wmf)|*.wmf|All files (*.*)|*.*	Metarchivo de Windows (*.wmf)|*.wmf|Todos los archivos (*.*)|*.*
+CSV (Comma delimted) (*.csv)|*.csv|All files (*.*)|*.*	CSV (delimitado por coma) (*.csv)|*.csv|Todos los archivos (*.*)|*.*
+*	*
+&Select...	&Seleccionar
+Save this information and select another screen	Guardar esta información y seleccionar otra pantalla
+NAADSM splash screen	NAADSM splash screen
+Please see 'About NAADSM' for contact and support information.	Por favor, vea 'Acerca de NAADSM' para informació de contacto y ayuda.
+Copyright © 2003 - 2008 Animal Population Health Institute at Colorado State University and University of Guelph	Derechos de autor © 2003 - 2008 Animal Population Health Institute a Colorado State University y University of Guelph
+Scenario parameters: Spread options	Parámetros de situación: Opciones de diseminación
+Spread options	Opciones de diseminación
+What type of SPREAD would you like to model during simulation runs?	¿Qué tipo de DISEMINACION quisiera modelar durante las simulaciones?
+Airborne	Aerógeno
+Contact	Contacto
+Both airborne and contact	Ambos, aerógeno y contacto
+No spread	Ninguna diseminación
+For airborne spread:	Para diseminación aerógena:
+Rate of disease transfer declines linearly from source	Tasa de transferencia de la enfermedad declina linealmente desde la fuente
+Rate of disease transfer declines exponentially from source	Tasa de transferencia de la enfermedad declina exponencialmente desde la fuente
+Simulation days per interval:	Días de simulación por intervalo:
+units	unidades
+Animals	Animales
+Actual epidemic curve	Curva epidémica real
+Apparent epidemic curve	Curva epidémica aparente
+Graphical view	Vista gráfica
+Tabular view	Vista tabular
+Scenario parameters: Tracing	Parámetros de situación: Rastreo
+Tracing	Rastreo
+Scenario parameters: Global tracing options	Parámetros de situación: opciones de rastreo global
+Global tracing options	Opciones de rastreo global
+Conduct trace-forward (trace-out) investigations for some or all production types	Conducir investigaciones de rastreo prospectivo para algunos o todos los tipos de producción
+Scenario parameters: Global vaccination options	Parámetros de situación: Opciones de vacunación global
+Global vaccination options	Opciones de vacunación global
+Scenario parameters: Vaccination	Parámetros de situación: Vacunación
+Vaccination	Vacunación
+Scenario parameters: Vaccination priorities	Parámetros de situación: Prioridades de vacunación
+Vaccination priorities	Prioridades de vacunación
+FORM CAPTION	FORM CAPTION
+Scenario parameters: Zone parameters	Parámetros de situación: Parámetros de zona
+Zone parameters	Parámetros de zona
+Scenario parameters: Zones	Parámetros de situación: Zonas
+Add zone	Añadir zona
+Rename selected zone	Renombrar zona seleccionada
+Remove selected zone	Remover zona seleccionada
+Parameters of selected zone	Parámetros de la zona seleccionada
+Zone radius (km):	Radio de la zona (km):
+1.5	1.5
+High risk	Riesgo alto
+Moderate risk	Riesgo moderado
+Low risk	Riesgo bajo
+Maximum distance spread under these conditions (in km, minimum 1 km):	Distancia máxima de diseminación bajo estas circumstancias (en km, mínimo 1 kilómetro):
+Probability of spread/contg. day, at 1 km, average unit sizes (0 to 1):	Probabilidad de diseminación/día de contagio, a 1 km, tamaño de unidad promedio (0 a 1):
+Airborne transport delay:	Demora de transporte aerógeno:
+This parameter is a probability density function	Este parámetro es una función de probabilidad de densidad
+(The rate of disease declines exponentially from the source: a maximum distance of spread is not required.)	(La tasa de la enfermedad declina exponencialmente desde la fuente: distancia maxima de diseminación no requerida)
+Model airborne spread between these production types	Modelar transmisión aerógena entre estos tipos de producción
+Fixed baseline contact rate (integer) (recipient units/unit/day):	Tasa de contacto basal fija (entero) (unidades recipientes/unidad/día):
+Mean baseline contact rate (recipient units/unit/day):	Tasa de contacto basal promedio (unidades recipientes/unidad/día):
+Latent units can spread disease	Unidades en estado latente pueden diseminar enfermedad
+Subclinical units can spread disease	Unidades en estado subclínico pueden diseminar la enfermedad
+Use fixed baseline contact rate	Usar tasa de contacto basal fijo
+Probability of infection transfer (if source positive) (0 to 1):	Probabilidad de transferencia de infección (si la fuente es positiva)(0 a 1):
+Distance distribution of recipient units:	Distribución de la distancia entre unidades recipientes:
+Shipping delay:	Demora en transporte:
+Effect of movement controls on baseline contact rate, after detection in any production type (Note: this effect does not apply within zones: movement controls must be specified separately for each zone):	Efecto de control de movimientos en la tasa de contacto base después de detección en algún tipo de producción (Nota:este efecto no aplica dentro de las zonas:el movimiento de los controles debe especificarse por separado para cada zona):
+This parameter is a relational function	Este parámetro es una función de relación
+Model direct contact spread	Modelar diseminación por contacto directo
+Model indirect contact spread	Modelar diseminación por contacto indirecto
+Table of daily costs	Tabla de costos diarios
+Graph of daily costs	Gráfico de costos diarios
+Track direct costs for this production type	Seguir costos directos para este tipo de producción
+Cost of appraisal (per unit):	Costo de tasación (por unidad):
+Cost of cleaning and disinfection (per unit):	Costo de limpieza y desinfección (por unidad):
+Indemnification (per animal):	Indemnización (por animal):
+Carcass disposal (per animal):	Descarte de carcasas (por animal):
+Euthanasia (per animal):	Eutanasia (por animal):
+Additional cost for each animal vaccinated beyond the threshold (per animal):	Costo adicional por cada animal vacunado pasado el umbral (por animal):
+Cost of site setup (per unit):	Costo de configuración del sitio (por unidad):
+Baseline vaccination cost (per animal):	Costos de vacunación basal (por animal):
+Number of animals that may be vaccinated before the cost increases:	Número de animales que pueden ser vacunados antes de que aumenten los costos:
+Destruction costs:	Costos de destrucción:
+Vaccination costs:	Costos de vacunación:
+$	$
+(Destruction is not used with the selected production type.)	(No se usa destrucción con el tipo de producción seleccionada.)
+(Vaccination is not used with the selected production type.)	(No se usa vacunación con el tipo de producción seleccionada.)
+Zone description	Descripción zonal
+Cost of surveillance per animal per day:	Costo de vigilancia por animal por día:
+The NAADSM Development Team:	Equipo de desarrollo del modelo NAADSM:
+Primary contact (US):	Contacto primario (US):
+Barbara A. Corso	Barbara A. Corso
+USDA-APHIS-VS-CEAH	USDA-APHIS-VS-CEAH
+2150 Centre Ave., Bldg. B, Mail Stop 2W4	2150 Centre Ave., Bldg. B, Mail Stop 2W4
+Fort Collins, CO 80526-8117	Fort Collins, CO 80526-8117
+Barbara.A.Corso@aphis.usda.gov	Barbara.A.Corso@aphis.usda.gov
+Primary contact (Canada):	Contacto primario (Canada):
+Caroline Dubé	Caroline Dubé
+CFIA-Animal Health and Production Division	CFIA-Animal Health and Production Division
+59 Camelot	59 Camelot
+Ottawa, ON K1A 0Y9	Ottawa, ON K1A 0Y9
+dubecm@inspection.gc.ca	dubecm@inspection.gc.ca
+Technical support (Windows/PC):	Apoyo técnico (Windows/PC):
+Aaron Reeves	Aaron Reeves
+Aaron.Reeves@colostate.edu	Aaron.Reeves@colostate.edu
+Animal Population Health Institute	Animal Population Health Institute
+Colorado State University	Colorado State University
+Technical support (Parallel processing):	Apoyo técnico (procesamiento paralelo):
+Neil Harvey	Neil Harvey
+nharvey@uoguelph.ca	nharvey@uoguelph.ca
+Department of Computing && Information Science	Department of Computing && Information Science
+University of Guelph	University of Guelph
+Kim N. Forde-Folle	Kim N. Forde-Folle
+Ashley E. Hill	Ashley E. Hill
+Ann H. Seitzinger	Ann H. Seitzinger
+USDA-APHIS-VS-CEAH-NCAHS-NAHMS	USDA-APHIS-VS-CEAH-NCAHS-NAHMS
+Deborah A. Stacey	Deborah A. Stacey
+W. Bruce McNab	W. Bruce McNab
+Ministry of Agriculture Food and Rural Affairs	Ministry of Agriculture Food and Rural Affairs
+Province of Ontario	Province of Ontario
+M.D. Salman	M.D. Salman
+Additional programming:	Programación adicional:
+Shaun P. Case	Shaun P. Case
+Department of Computer Science	Department of Computer Science
+Snehal Shetye	Snehal Shetye
+Department of Mechanical Engineering	Department of Mechanical Engineering
+Former development team members:	Miembros anteriores del equipo de desarrollo:
+Mark A. Schoenbaum	Mark A. Schoenbaum
+USDA-APHIS-VS-WRO	USDA-APHIS-VS-WRO
+Francisco Zagmutt-Vergara	Francisco Zagmutt-Vergara
+3-D View	Vista 3-D
+Use destruction for disease control for some or all production types	Usar destrucción para controlar la enfermedad en algunos o todos los tipos de producción
+Destruction capacity (units per day over time):	Capacidad de destrucción (unidades por día a través del tiempo):
+Delay before implementing destruction program (days):	Demora previa a la implementación del programa de destrucción (días):
+Ring radius (km):	Radio de anillo (km):
+(Diseased units of this production type will be destroyed if detected)	(Unidades enfermas de este tipo de producción serán destruidas si son detectadas)
+(Units of this and/or other types may be pre-emptively destroyed if they are within the specified ring)	(Unidades de este y/u otros tipos pueden ser destruidas prioritariamente si están dentro del anillo especificado)
+* Tracing must be conducted for this type, or this option will be unavailable	* Debe conducir rastreo para este tipo de producción, o esta opción no estará disponible
+Destroy detected diseased units of this production type	Destruir unidades enfermas detectadas de este tipo de producción
+Pre-emptively destroy units of this production type	Destruir prioritariamente unidades de este tipo de producción
+Destroy units of this production type that have had DIRECT contact with a detected unit as identified by tracing*	Destruir unidades de este tipo de producción que han estado en contacto DIRECTO con una unidad detectada por el rastreo*
+Destroy units of this production type that have had INDIRECT contact with a detected unit as identified by tracing*	Destruir unidades de este tipo de producción que han estado en contacto INDIRECTO con una unidad detectada por rastreo*
+Destroy units of this type when they are within a destruction ring around any unit that is a ring trigger	Destruir unidades de este tipo de producción cuando estén dentro de un anillo de destrucción alrededor de cualquier unidad que sea el disparador del anillo
+Trigger ring destruction around detected units of this production type	Desencadenar destrucción en anillo alrededor de unidades detectadas de este tipo de producción
+Model disease detection in this production type	Modelar detección de la enfermedad en este tipo de producción
+Probability of observing clinical signs, given the number of days that a unit is clinically infectious:	Probabilidad de observar signos clínicos, dado el número de días en que una unidad es clinicamente infecciosa:
+Probability of reporting an observed clinical unit, given the number of days since disease was first detected in any unit:	Probabilidad de reportar una unidad clínica observada, dado el número de días desde que la enfermedad fue detectada por primera vez en cualquier unidad:
+Simulate disease progression in units of this production type	Simular el progreso de la enfermedad en las unidades de este tipo de produccion
+Immune period:	Período inmune:
+Infectious clinical period:	Período clínico infeccioso:
+Infectious subclinical period:	Período subclínico infeccioso:
+Latent period:	Período latente:
+Within-unit prevalence:	Prevalencia dentro de la unidad:
+* In the course of a simulation run, these activities may occur more than once on a single unit	* En el curso de una simulacione, estas actividades pueden ocurrir más de una vez en una sola unidad
+Detection and Tracing	Detección y Rastreo
+Apparent Epidemic Curve -- includes only detected infections	Curva epidémica aparente -- sólo incluye infecciones detectadas
+Reasons for infection -- includes all infections	Razones para infección -- incluye todas las infeciones
+Actual Epidemic Curve -- includes all infections	Curva epidémica real -- incluye todas las infecciones
+(Change this message)	(Change this message)
+Order	Orden
+Unit size:	Tamaño de unidad:
+Production type:	Tipo de producción:
+Days left in state:	Días a permanecer en ese estado:
+Please specify a geographic range.	Por favor, especifique un rango geográfico.
+Remove unit	Remover unidad
+ID	ID
+xxxUnused Unit size	Tamaño de unidad
+Latitude	Latitud
+Longitude	Longitud
+Geographic range	Rango geográfico
+Specific latitude	Latitud específica
+Specific longitude	Longitud específica
+Days left in state	Días a permanecer en ese estado
+Select an output above to display this chart	Seleccionar resultados arriba para mostrar en este gráfico
+Histogram	Histograma
+Convergence	Convergencia
+Show cumulative costs	Mostrar costos acumulativos
+Itemized destruction costs	Costos de destrucción itemizados
+Itemized vaccination costs	Costos de vacunación itemizados
+Appraisal	Tasación
+Cleaning and disinfection	Limpieza y desinfección
+Euthanasia	Eutanasia
+Indemnification	Indemnificación
+Disposal	Descarte
+Destruction subtotal	Subtotal de destrucción
+Site setup	Establecimiento de los predios
+Vaccination subtotal	Subtotal de vacunación
+Total costs	Costos totales
+95th percentile	95 percentil
+75th percentile	75 percentil
+50th percentile (median)	50 percentil (media)
+25th percentile	25 percentil
+5th percentile	5 percentil
+Cumulative data	Datos acumulativos
+Days before detection:	Días antes de la detección:
+Probability of trace success (0 to 1):	Probabilidad de éxito de rastreo (0 a 1):
+Trace-forward (trace-out) investigations	Investigaciones de rastreo prospectivo
+NAADSM regional settings	
+CSV import/export	
+Decimal symbol:	
+Trace direct contacts	Rastrear contactos directos
+Trace indirect contacts	Rastrear contactos indirectos
+Use tracing for some or all production types	Usar rastreo para algunos o todos los tipos de producción
+Use vaccination for disease control for some or all production types	Usar vacunación para control de enfermedad para algunos o todos los tipos de producción
+Vaccination capacity (units per day over time):	Capacidad de vacunación (unidades por dia a través del tiempo):
+How many diseased units (of any production type) must be detected before the vaccination program begins?	¿Cuántas unidades enfermas (de cualquier tipo de producción) deben ser detectadas antes de comenzar el programa de vacunación?
+Radius of vaccination ring (km):	Radio del anillo de vacunación (km):
+Trigger a vaccination ring upon disease detection in units of this production type	Desencadenar un anillo de vacunación al detectar enfermedad en unidades de este tipo de producción
+Vaccinate units of this production type as part of disease control efforts	Vacunar unidades de este tipo de producción como parte de los esfuerzos para el control de la enfermedad
+Vaccine immune period:	Período de inmundad vacunal:
+Delay in unit immunity following vaccination (days):	Demora en inmunidad de la unidad luego de vacunación (días):
+Minimum time between vaccinations (days):	Tiempo mínimo entre vacunaciones (días):
+Creating (triggering) zones	Creando (desencadenando) zonas
+Indirect tracing of units of this type triggers a zone focus	Rastreo indirecto de unidades de este tipo de producción desencadena un foco zonal
+Direct tracing of units of this type triggers a zone focus	Rastreo directo de unidades de este tipo de producción desencadena un foco zonal
+Detection of infected units of this type triggers a  zone focus	Detección de unidades infectadas de este tipo de producción desencadena un foco zonal
+Alter direct movement rate for this production type in this zone	Alterar la tasa de movimiento directo  para este tipo de producción en esta zona
+Effect on baseline direct movement rate from units of this type:	Efecto en la tasa de movimiento directo basal desde unidades de este tipo de producción:
+Alter indirect movement rate for this production type in this zone	Alterar tasa de movimiento indirecto para este tipo de producción en esta zona
+Effect on baseline indirect movement rate from units of this type:	Efecto en la tasa de moviento indirecto desde unidades de este tipo de producción:
+Alter the probability of detection for this production type in this zone	Alterar la probabilidad de detección para este tipo de producción en esta zona
+Multiplier for the probability of observing clinical signs: (Note: probability of reporting an observed clinical unit within a zone is 1.)	Multiplicador para la probabilidad de observación  de síntomas clínicos: (Nota: la probabilidad de reportar una unidad clínica observada dentro de una zona es 1.)
+(Unitless)	(Sin unidad)
+Per day	Por día
+Degrees	Grados
+Units per day	Unidades por día
+US dollars	Dólares estadounidenses
+Percent	Por ciento
+Axis units unspecified	Unidades del eje no especificadas
+Beta	Beta
+All values must be specified.	Todos los valores deben ser especificados.
+BetaPERT	BetaPERT
+(Unspecified)	(No especificado)
+Fixed value	Valor fijo
+Triangular	Triangular
+Gaussian (normal)	Gaussiana (normal)
+Piecewise (general)	General
+Uniform	Uniforme
+Gamma	Gamma
+Weibull	Weibull
+Exponential	Exponencial
+Pearson 5	Pearson 5
+Logistic	Logística
+Loglogistic	Loglogística
+Lognormal	Lognormal
+Poisson	Poisson
+Alpha1 and alpha2 must be greater than 0.	Alfa 1 y alfa 2 deben ser mayor que 0.
+Min must be equal to or greater than 0.	Mín debe ser igual o mayor que 0.
+Min must be less than max.	Mín deber ser menor que máx.
+Values must be greater than or equal to 0.	Valores deben ser mayor o igual a 0.
+The minimum value must be less than the mode, which must be less than the maximum.	El valor mínimo debe ser menor que el modo, el que a su vez debe ser menor que el máximo.
+Gaussian	Gaussiana
+Piecewise	General
+Point	Punto
+Function type is unspecified.	El tipo de función no está especificado.
+Mean must be specified.	La media debe ser especificada.
+Mean must be greater than or equal to 0.	La media debe ser mayor o igual a 0.
+The specified beta value is too small for practical calculation.	El valor beta especificado es demasiado pequeño para un cálculo  práctico.
+The specified alpha value is too small for practical calculation.	EL valor alfa especificado es demasiado pequeño para un cálculo práctico.
+Standard deviation must be greater than 0.	La desviación estándar debe ser mayor que 0.
+Scale must be greater than 0.	La escala debe ser mayor que 0.
+Scale and shape must be greater than 0.	La escala y figura deben ser mayor que 0.
+Mean, standard deviation, and sigma'' must be greater than 0.	La media, el desvío estándar, y sigma deben ser mayor que 0.
+Beta must be greater than 0.	Beta debe ser mayor que 0.
+Alpha must be greater than 1.	Alfa debe ser mayor que 1.
+There are too few points to specify this function.	Hay muy pocos puntos para especificar esta función.
+Value must be specified.	El valor debe ser especificado.
+Value must be equal to or greater than 0.	El valor debe ser igual o mayor que 0.
+Please enter a file name.	Favor de entrar un nombre de archivo.
+Missing file name	Falta el nombre de archivo
+Please make a selection from the buttons below.	Por favor, seleccione de entre los botones abajo.
+Please enter a positive number of histogram bins.	Favor de entrar un número positivo de compartimientos de histograma.
+Invalid entry	Entrada no válida
+Clipboard data is not in text format: points could not be imported.	Los datos del portapapeles no están en formato de texto: los puntos no pudieron ser importados.
+Cannot import points	Los puntos no pueden importarse
+The file xyz could not be opened: it may be in use by another application.	El archivo xyz no se pudo abrir: puede estar siendo usado por otra aplicación.
+Parsing failed	El análisis ha fallado
+The contents of xyz could not be parsed.  Please check that you are using comma-delimited data.	El contenido de xyz no pudo ser analizado.  Por favor, verifique que haya usado datos delimitados por comas.
+The contents of xyz are missing the "x" column and/or the "y" column.  Please check your data format.	Al contenido de xyz le faltan la columna "x" y/o la columna "y".  Favor de cotejar el formato de sus datos.
+The contents of xyz could not be parsed: a negative or nonnumeric value was found on line zxy.  Please check your data format.	El contenido de xyz no pudo ser analizado: un valor negativo o no numérico ha sido encontrado en la línea zxy.  Por favor, verifique el formato de sus datos.
+'The contents of xyz could not be parsed: an error occurred at or near line zyx.  Please check your data format.	'El contenido de xyz no pudo ser analizado: ha ocurrido un error en o cerca de la línea zyx.  Por favor, verifique el formato de sus datos.
+There are too few points for this type of function.  Points cannot be imported.	Hay muy pocos puntos para este tipo de función.  Los puntos no pueden ser importados.
+X values are not ordered from smallest to largest.  Points cannot be imported.	Los valores de x no están ordenados de más pequeño a más grande.  Los puntos no pueden ser importados.
+First and last y values for a general/piecewise PDF must be 0.  Points cannot be imported.	El primer y último valor para un FDP de distribución general debe ser 0.  Los puntos no pueden ser importados.
+zyx points were written to file xyz.	Los puntos zyx se escribieron al archivo xyz.
+File xyz could not be written.	El archivo xyz no pudo ser escrito.
+Points could not be written to file xyz.	Los puntos no pudieron ser escritos al archivo xyz.
+zyx points were copied to the clipboard.	Los puntos zyx fueron copiados al portapapeles.
+Points could not be exported to the clipboard.	Los puntos no pudieron ser exportados al portapapeles.
+This chart has been successfully saved to xyz.	Este gráfico ha sido guardado exitosamente en xyz.
+This chart could not be saved to xyz.	Este gráfico no pudo ser guardado en xyz.
+The chart has been sent to the selected printer.	Este gráfico ha sido enviado al  impresor seleccionado.
+The chart could not be printed.	El gráfico no pudo ser impreso.
+This chart has been successfully copied to the clipboard.	Este gráfico ha sido copiado exitosamente al portapapeles.
+This chart could not be copied to the clipboard.	Este gráfico no pudo ser copiado al portapapeles.
+The function type is unspecified, or the parameters are not valid for the specified type.  Please correct this problem and try again.	El tipo de  función  no está specificado, o los parámetros no son válidos para el tipo especificado. Favor de corregir el problema y tratar otra vez.
+No function or invalid parameters	Ninguna función o parámetros no válidos
+Function parameters are not valid for the specified type.  Please correct this problem and try again.	Los parámetros de la función no son válidos para el tipo especificado.  Favor de corregir este problema y tratar otra vez.
+Invalid function parameters	Parámetros de función inválidos
+Please enter a name for this function.	Favor de entrar un nombre para esta función.
+No name provided	Ningún nombre ha sido provisto
+This is a read-only chart: it may be viewed, exported or printed, but not modified.	Este es un gráfico inalterable: puede ser visto, exportado e impreso, pero no puede ser modificado.
+Chart editor	Editor de gráficos
+Drag points with the left mouse button to reposition them.	Arrastre los puntos con el botón secundario del ratón para reposicionarlos.
+Right click on points to remove or edit the position of a point.	Hacer clic con el botón secundario del ratón para remover o editar la posición de un punto.
+Right click on a position to create a new point.	Hacer clic con el botón secundario del ratón en una posición para crear un nuevo punto.
+Drag points off the chart to expand the axes.	Arrastre los puntos afuera del gráfico para expandir los ejes.
+Alternatively, edit the point values in the grid shown on the left side of the screen.	Alternativamente, edite los valores de puntos en la rejilla mostrada en el lado izquierdo de la pantalla.
+Click 'OK' to apply your changes.	Hacer clic en 'OK' para aplicar sus cambios.
+Select a type of probability density function from the list, and enter all of the required parameters.	Seleccione un tipo de función de probabilidad de densidad de la lista, y entre todos los parámetros requeridos.
+Click on the green checkmark to apply the changes and view the function.	Hacer clic en la marca de cotejo verde pata aplicar los cambios y ver la función.
+If no chart is displayed, correct the problems described in the error message shown on the right side of the window.	Si el gráfico no aparece, corrija los problemas descritos en el mensaje de error mostrado  en el lado derecho de la ventana.
+There are not enough points to specify this function.	No hay suficientes puntos para especificar esta función.
+A default set of points will be created.	Se creará un conjunto de puntos
+Too few points	Muy pocos puntos
+At least one Y value is outside the range allowed for this function	Al menos un valor Y está afuera del rango permitido para esta función
+to	para
+All such values will be adjusted.	Todos esos valores serán ajustados.
+Invalid Y values	Valores Y inválidos
+Please finish editing the current probability density function before attempting this operation.	Por favor, termine de editar la función de probabilidad de densidad actual antes de tratar esta operación.
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.  For complete license details, please see below.	Este programa es gratuito; usted puede redistribuirlo y/o modificarlo bajo los términos del Licencia Pública General GNU según publicado por la Free Software Foundation; ambas,  la versión 2 de la licencia, o (a su opción) cualquier otra versión posterior.  Para detalles completos de licencia, por favor vea a continuación.
+Copyright © 2003 - 2007 Animal Population Health Institute at Colorado State University and University of Guelph	Derechos de autor © 2003 - 2007 Animal Population Health Institute at Colorado State University and University of Guelph
+It appears that you may not have not registered your copy of NAADSM.  Registration is a good way to stay in touch with the NAADSM Development Team.  The process is simple, and registered users will be updated periodically regarding new releases and features.	Parece ser que usted no ha registrado su copia de NAADSM. Registrarse es una buena manera de mantenerse en contacto con el equipo de desarrollo de NAADSM. El proceso es simple y los usuarios registrados serán actualizados periodicamente con respecto a nuevas descargas y características.
+Please select a registration option:	Por favor, seleccione una opción de registro:
+Go to NAADSM website to register now	Vaya a la página de internet de NAADSM para registrarse ahora
+Remind me again later	Recuérdemelo más tarde
+I have already registered	Ya estoy registrado
+Skip registration	Saltar el registro
+Items to save:	Items a guardar:
+Items to copy:	Items a copiar:
+An updated version	Una versión actualizada
+of NAADSM is available: you are currently using version	de NAADSM está disponible: actualmente usted está usando la versión
+This is a critical update: it corrects programming bugs or model implementation errors that may result in incorrect calculations or data loss.	Esta es una actualización crítica: corrige errores de programación o errores de implementación de modelos que pueden resultar en cálculos incorrectos o pérdida de datos.
+This is an important update: it corrects problems that may cause NAADSM to crash unexpectedly.	Esta es una actualización importante: corrige problemas que pueden causar la caída repentina y total de  NAADSM.
+This is not a critical update, but it corrects one or more minor problems or introduces useful new features.	Esta no es una actualización crítica, pero corrige uno o más problemas menores o introduce características nuevas y útiles.
+Progress:	Progreso:
+Please wait...	Espere, por favor...
+of	de
+(Locked)	(Bloqueado)
+E&xit without saving changes	S&alir sin guardar cambios
+(No function is selected)	(Ninguna función ha sido seleccionada)
+Version	Versión
+Build	Compilación
+Proportion of xxx units X 100%	Proporción de xxx unidades X 100%
+(Simulation is not loaded)	(Simulación no está cargada)
+Chart of status of units, by day, for iteration	Gráfico de estado de unidades, por día, para la repetición
+Zone Area in Square Kilometers	Area de zona en kilómetros cuadrados
+Animals Days	Días animales
+Number of Units	Número de unidades
+Number of Animals	Número de animales
+Chart of status of zones, by day, for iteration	Gráfico de estado de zonas, por día, para la repetición
+Preparing to run simulation...	Preparando para ejecutar la simulación
+Simulation interrupted by user: please wait?	Simulación interrumpida por el usuario: por favor espere
+Iteration	Repetición
+Day 1	Día 1
+Map of units, current/final day	Mapa de unidades, día actual/final
+(No folder selected)	(Ninguna carpeta ha sido seleccionada)
+Scenario parameters: Within-unit prevalence	Parámetros de situación: Prevalencia dentro de la unidad
+Disease options	Opciones de enfermedad
+Would you like to include WITHIN-UNIT PREVALENCE?	¿Quisiera incluir la PREVALENCIA DENTRO DE LA UNIDAD?
+Yes, use within-unit prevalence	Sí, use la prevalencia dentro de la unidad
+No, use a specified probability of infection transfer instead	No, en su lugar use una probabilidad de transferencia de infección especificada
+Scenario parameters: Detection options	Parámetros de situación: Opciones de detección
+Detection options	Opciones de detección
+Would you like to include DISEASE DETECTION in simulation runs?	¿Quisiera incluir la DETECCION DE LA ENFERMEDAD en las simulaciones?
+Yes, include detection	Sí, incluya detección
+No, do not include detection	No, no incluya detección
+Scenario parameters: zone options	Parámetros de situación: Opciones de zona
+Would you like to include ZONES in simulation runs?	¿Quisiera  incluir ZONAS en simulaciones?
+Yes, include zones	Sí, incluya zonas
+No, do not include zones	No, no incluya zonas
+Scenario parameters: Custom outputs	Parámetros de situación: Resultados personalizados
+Would you like to define and use CUSTOM OUTPUTS?	¿Quisiera definir y usar RESULTADOS PERSONALIZADOS?
+Yes, use custom output definitions (EXPERIMENTAL FEATURE FOR EXPERTS ONLY)	Sí, use definiciones para resultados personalizados (CARACTERISTICA EXPERIMENTAL SOLO PARA EXPERTOS)
+No, do not use custom output definitions	No, no use definiciones para resultados personalizados
+(Probability of infection transfer is determined by within-unit prevalence)	(La probabilidad de transferencia de infección está determinada por la prevalencia dentro de la unidad)
+Costs associated with zone	Costos asociados con la zona
+&Remove selected units	&Remover unidades seleccionadas
+&Remove selected unit	&Remover unidad seleccionada
+(No units exist in this scenario)	(En esta situación no existen unidades)
+Circle with radius	Círculo con radio
+Rectangle	Rectángulo
+NOT in	NO en
+Effect of zone	Efecto de zona
+aborted	abortado
+complete	completo
+Lines:	Líneas:
+All Files (*.*)|*.*	Todos los archivos (*.*)|*.*
+NAADSM XML (*.xml)|*.xml	NAADSM XML (*.xml)|*.xml
+Comma separated values (*.csv)|*.csv	Valores separados por comas (*.csv)|*.csv
+Days	Días
+Kilometers	Kilómetros
+Cannot set PDF	FDP no puede ser establecido
+The temporary file xyz could not be deleted.	El archivo temporero xyz no pudo ser borrado.
+Fixed contact rates are primarily used for testing purposes.  For most analyses, please specify a mean contact rate.	Las tasas de contacto fijas se usan primariamente para propósitos de prueba.  Para la mayoría de los análisis, favor de especificar una tasa de contacto promedio.
+Do not show this message again	No muestre este mensaje de nuevo
+Fixed contact rates	Tasas de contacto fijas
+The current destruction cost parameters will be applied to all production types, but will have no effect on production types for which destruction is not used.	Los parámetros de costos de destrucción actuales serán aplicados a todos los tipos de producción, pero no tendrán efecto en tipos de producción para los cuales no se use destrucción.
+Destruction is not used with all production types	La destrucción no se usa para todos los tipos de producción.
+The current vaccination cost parameters will be applied to all production types, but will have no effect on production types for which vaccination is not used.	Los parámetros de costo de vacunación actuales serán aplicados a todos los tipos de producción, pero no tendrán efecto en tipos de producción para los cuales no se use vacunación.
+Vaccination is not used with all production types	No se usa vacunación en todos los tipos de producción
+Please make sure that every definition includes an output frequency and type.	Por favor, asegúrese de que cada definición incluye  frecuencia y tipo para resultados.
+Problem with definition(s)	Problema con definición(es)
+Please make sure that every definition includes an SQL statement.	Por favor, asegúrese de que cada definición incluye un declaración SQL.
+A definition with this name is already present.	Una definición con este nombre ya existe.
+Cannot add output definition	No puede añadirse la definición del resultado
+Another output definition with this name is already present.	Ya existe otra definición de resultado con este nombre.
+Cannot modify output definition	No puede modificar la definición del resultado
+This scenario file could not be written.  Please check your file name and available disk space.	Este archivo de situación no pudo ser escrito.  Por favor, verifique el nombre de su archivo y el espacio disponible en el disco.
+Cannot write scenario file	No puede escribir archivo de situación
+This unit file could not be written.  Please check your file name and available disk space.	Este archivo de unidades no pudo ser escrito.  Por favor, verifique el nombre de su archivo y el espacio disponible en el disco.
+Cannot write unit file	No puede escribir archivo de unidades
+The file export process was successful.	El proceso de exportación del archivo fue exitoso.
+At least one iteration must be entered.	Debe entrar por lo menos una repetición.
+Invalid value	Valor inválido
+Please specify a seed value.	Por favor, especifique un valor de semilla
+Please enter a valid file name.	Favor de entrar un nombre de archivo válido.
+File name is missing	Falta el nombre del archivo
+List of units successfully exported to file xyz.	La lista de unidades se exportó exitosamente al archivo xyz
+Export success	Exito en la exportación
+Export of unit list to file xyz failed.  Please check the file name, your disk space, and your permissions.	La exportación de las lista de unidades al archivo xyz ha fallado. Por favor, revise el nombre del archivo, el espacio en el disco y sus permisos.
+Export failed	Exportación fallida
+The selected file xyz does not exist.	El archivo xyz seleccionado no existe.
+Missing file	Archivo desaparecido
+The format of the selected file xyz could not be determined.	No se pudo determinar el formato del archivo xyz seleccionado.
+Files must be XML or CSV format	Los archivos deben tener formato XML o CSV.
+and file names must have the appropriate three-letter extension.	y los nombres de los archivos deben tener la extensión adecuada de tres letras.
+For more information, please see your user''s documentation:	Para más información favor de ver la documentación para el usuario:
+Unrecognized file format	Formato de archivo no reconocido
+The file xyz could not be parsed.	El archivo xyz no pude ser analizado.
+Please check that the file exists, is not open in another application, and is formatted properly.	Por favor, verifique que el archivo existe, que no está abierto en otra aplicación y que tiene el formato adecuado.
+File import failed	Falló la importación del archivo
+The file xyz was successfully parsed,	El archivo xyz se analizó exitosamente
+but contains at least one production type (xyz) that does not exist in this scenario.	pero contiene por los menos un tipo de producción (xyz) que no existe en esta situación.
+The unit list cannot be imported.	La lista de unidades no puede ser importada
+Missing production type(s)	Falta(n) tipo(s) de producción(es)
+New units from xyz have been added to the current list of units.	Nuevas unidades de xyz se añadieron a la actual lista de unidades
+Click 'Cancel' to revert to the previous list of units, or any other button to save to new list of units to the scenario database.	Hacer clic en 'cancelar' para revertir a la lista de unidades previa, o hacer clic en cualquier otro botón para guardar la lista de unidades nuevas en la base de datos de la situación
+Import success	Importación exitosa
+Existing units have been replaced with those from xyz.	Las unidades existentes fueron reemplazadas por las provenientes de xyz
+Closing current scenario	Cerrar situación actual
+An existing scenario file is currently open. This file will now be closed and a new one created.	Existe un archivo de situación abierto. Este archivo se cerrará y se creará uno nuevo.
+An scenario database could not be created: there may be a problem with your parameter file.	No se pudo crear la base de datos de situaciones: puede haber un problema con los parámetros de su archivo.
+Please check with the developers for more assistance.	Por favor, consulte con el grupo de desarollo para más asistencia
+Import failed	Importación fallida
+Please select a database name to use.	Por favor, elija un nombre de base de datos.
+Please select an XML file to import.	Por favor, elija un archivo XML para importar.
+Please select a file name for the new scenario.	Por favor, elija elnombre de archivo para una nueva situación.
+Scenario filename is missing	Nombre de archivo de situación desaparecido
+The southern latitude must be less than or equal to the northern latitude.	La latitud sur debe ser menor o igual que la latitud norte.
+Invalid latitude range	Rango de latitud inválido
+Radius must be greater than 0.	El radio debe ser mayor que 0.
+Invalid radius	Radio inválido
+Latitudes must be between -90 and 90 degrees.	Las latitudes deben tener entre -90 y 90 grados.
+Invalid latitude	Latitud inválida
+Longitudes must be between -180 and 180 degrees.	Las longitudes deben tener entre -180 y 180 grados.
+Invalid longitude	Longitud inválida
+Please close the current scenario file first.	Por favor, cierre primero el actual archivo de situación.
+File is open	Archivo abierto
+The sample scenario could not be created.	No se ha podido crear la situación de la muestra.
+Please check your permissions on the selected folder as well as available disk space.	Por favor, revisar los permisos en la carpeta seleccionada y la capacidad disponible en el disco.
+Scenario creation failed	Falla en la creación de la situación.
+An empty scenario file has been created. Use the "Scenario parameters" menu to set up the scenario.	Se ha creado un archivo de situación vacia. Use el menú de "Parámetros de situación" para configurar la situación
+Scenario file created	Se ha creado el archivo de situación
+The current scenario file cannot be saved.	No se puede guardar el archivo de situación actual.
+You may need to check your available hard disk space, or close any scenario files that are open in external applications.	Necesita verificar el espacio disponible en el disco duro o cerrar los archivos de situación que se encuentren abiertos en aplicaciones externas.
+Cannot save scenario file	No se puede cerrar el archivo de situación
+An application error occurred, and the selected scenario file could not be opened.	Ha ocurrido un error en la aplicación y no se pudo abrir el archivo de situación.
+Please check with the developers.	Por favor, consulte con el grupo de desarrollo.
+Technical information:	Información técnica:
+Application error	Error en la aplicación
+The selected scenario file xyz does not exist.	El archivo de situación xyz  seleccionado no existe.
+Please select another scenario file.	Por favor, seleccione otro archivo de situación.
+Cannot open scenario file	No se puede abrir el archivo de situación.
+The selected scenario file xyz cannot be opened.	No se puede abrir el archivo de situación xyz elegido.
+Please double-check the file format.	Por favor, verifique el formato de archivo
+The format of the selected scenario file is out of date, and conversion to the new format requires a separate conversion utility.	El formato del archivo de situación seleccionado se encuentra vencido y su conversión a un nuevo formato requiere un programa separado
+For further assistance, please contact the programmers.	Para mayor asistencia por favor contacte a los programadores.
+Obsolete scenario file	Archivo de situación obsoleto
+This file does not appear to be a valid NAADSM scenario file or may have been created with a newer version of NAADSM.	Este archivo no es un archivo válido de a situación del NAADSM o se ha creado con una versión nueva del NAADSM.
+Please select another file.	Por favor, elija otro archivo.
+Unrecognized scenario file	Archivo de situación no reconocido
+An error occurred, and this database could not be updated (the original file is unchanged).	Ha occurido un error y esta base de datos no ha sido actualizada (el archivo original no ha sufrido cambios)
+This version of NAADSM cannot run this scenario.	Esta situación no puede ser corrida en esta versión del NAADSM.
+If the problem persists, please contact the developers.	Si el problema persisite,por favor contacte al grupo de desarrollo.
+Scenario file update failed	Falla en la actualización del archivo de situación
+Scenario file updated	El archivo de situación ha sido actualizado
+Please open a scenario file first.	Por favor, abra primero el archivo de situación
+No scenario	No hay situación
+No problems were detected in this scenario.	No se han detectado problemas con esta situación
+Scenario OK	Situación OK.
+A required program library cannot be found or is out of date.	La biblioteca de programa requerida no se encuentra o está desactualizada.
+While you will be able to create a scenario, you will not be able to run it.	Aunque ha podido crear una situación no podrá correrla.
+To solve this problem, please reinstall the application, or check with the developers.	Para resolver este problema instalar la plaicación nuevamente o consultar con el grupo de desarrollo
+Temporary files required to launch this simulation were not written.	Los archivos temporarios requeridos para el lanzamiento de esta situación no han sido escritos
+Please ensure that you have adequate hard disk space and sufficient permissions to write files to your hard disk.	Por favor, asegúrese de que tiene espacio adecuado y los permisos suficientes para escribir archivos en el disco duro
+For further assistance, please contact the developers.	Para asistencia adicional, por favor contacte al grupo de desarrollo
+Temporary files not written	No se han escrito los archivos temporarios
+Cannot compare scenarios	No puede comparar situaciones
+The selected file xyz does not appear to contain an NAADSM scenario	El archivo xys seleccionado no contiene una situación del NAADSM
+or may have been created with a newer version of NAADSM.	o puede haber sido creado con una versión más nueva del NAADSM.
+It cannot be displayed.	No se puede mostrar.
+The format of the selected scenario file is out of date.  You may wish to consider re-running the the scenario in this version of NAADSM.	El formato del archivo de situación seleccionado está desactualizado. Considere correr nuevamente la situación en esta versión del NAADSM.
+Scenario file out of date	Archivo de situación desactualizado.
+The selected scenario file xyz contains no output.	El archivo de situación seleccionado no contiene resultados.
+The simulation in file xyz did not run to completion.	La simulación del archivo xyz no corrió en forma completa
+Simulation is complete!	Se ha completado la simulación.
+Simulation interrupted by user.	La simulación ha sido interrumpida por el usuario.
+Data entry problem	Problema en la entrada de datos
+A production type with this name is already present.	Ya existe un tipo de producción con este nombre
+Cannot add production type	No puede agregar tipo de producción
+Cannot modify production type	No puede modificar tipo de producción
+The two selected scenario files contain different production types.	Los dos archivos de situación seleccionados contienen tipos de producción diferentes
+It will not be possible to compare simulation outputs for individual production types.	No será posible comparar resultados de simulación para tipos de producción individuales
+Production types do not match	Los tipos de producción no coinciden
+Only one of the two selected scenario files uses zones.	Solamente uno de los dos archivos de situación seleccionados usa zonas
+It will not be possible to compare zone outputs.	No será posible comparar los resultados de zona
+Zones do not match	Las zonas no coinciden
+The two selected scenario files contain different zones.	Los dos archivos de situación seleccionados contienen diferentes zonas
+It will not be possible to compare simulation outputs for individual zones.	No será posible comparar resultados de simulación para zonas individuales
+No tables are currently displayed.	No se exhibe muestra ninguna momentáneamente
+File xyz has been successfully saved.	El archivo xyz ha sido guardado exitosamente
+File saved	Archivo guardado
+File xyz could not be written.  Please check your disk and your folder permissions.	No se ha podido escribir el archivo xyz. Por favor, revise sus permisos y su disco.
+Save failed	Falla en guardar
+table has	tabla tiene
+tables have	tablas tienen
+The visible xyz been copied to the clipboard.	El(los) gráfico(s) visible(s) se ha copiado en el portapapeles
+Copy successful	Copia exitosa
+No charts are currently displayed.	No se están exhibiendo los gráficos
+chart has	el gráfico tiene
+charts have	los gráficos tienen
+An application error occurred.  The image could not be created.	Ha occurrido un error en la aplicación. No se pudo crear la imagen.
+The radius for each zone must be greater than 0.	El radio para cada zona debe ser mayor que 0
+Invalid zone radius	Radio de zona inválido
+Each zone must have a unique radius.	Cada zona debe tener un radio único
+Please enter a name for the new zone.	Favor de entrar el nombre de la nueva zona.
+A zone with this name is already present.	Ya existe una zona con este nombre.
+Cannot add zone	No se puede agregar zona
+Cannot rename zone	No se puede re-nombrar zona
+Probability must be between 0 and 1, inclusive.	La probabilidad debe ser entre 0 y 1, inclusive.
+Parameter out of range	Parámetro fuera de rango
+Maximum distance of spread must be at least 1 km.	La máxima distancia de diseminación debe ser como mínimo de 1 km.
+Destruction ring radius must be greater than 0.	El radio de destrucción debe ser mayor que 0.
+The value in the current cell does not have a valid format.	El valor de la celda actual no tiene un formato válido.
+Please correct this problem before continuing.	Por favor, corrija este problema antes de continuar.
+Invalid data	Datos inválidos
+Latitude values must be between -90 and 90 degrees, inclusive.	Los valores de latitud deben ser entre -90 y 90 grados inclusive.
+Longitude values must be between -180 and 180 degrees, inclusive.	Los valores de longitud deben ser enter -180 y 180 grados inclusive.
+There are too many units (zyx) to display practically in this program.	Hay demasiadas unidades para exhibir el programa en forma práctica.
+You may use Microsoft Access or a similar application to edit units in your scenario database.	Puede usar Microsoft Access o una apliicación similar para editar las unidades en la base de datos de situaciones.
+Too many units	Demasiadas unidades
+Please specify a valid unit size	Por favor, especifique un tamaño de unidad válido
+No unit size	No hay tamaño de unidad
+Please specify a valid number of days	Por favor, especifique un número válido de días
+Days unspecified	Días no especificados
+Probability of direct trace success must be between 0 and 1, inclusive.	La probabilidad de éxito de rastreo directo debe ser enter 0 y 1, inclusive.
+Probability of indirect trace success must be between 0 and 1, inclusive.	La probabilidad de éxito de rastreo indirecto debe ser entre 0 y 1, inclusive.
+Total number of unit days spent in a zone (1 unit for 1 day = 1 unit day, 1 unit for 2 days = 2 unit days, etc.)	Número total de días unidad de permanencia en una zona (1 unidad por 1 día=1 día unidad, 1 unidad por 2 días=2 días unidad, etc.)
+Total number of animal days spent in a zone (1 animal for 1 day = 1 animal day, 1 animal for 2 days = 2 animal days, etc.)	Número total de días animal de permanencia en una zona (1 animal por 1 día= 1 día animal, 1 animal por 2 días= 2 días animal, etc.)
+Total cost associated with surveillance in a zone over the course of an iteration	Costo total asociado con la vigilancia en una zona durante el curso de una repetición
+Total cost of appraisal for all units destroyed over the course of an iteration.	Costo total de tasación de todas las unidades destruidas durante el curso de una repetición.
+Total cost of cleaning and disinfection for all units destroyed over the course of an iteration.	Costo total de limpieza y desinfección de todas las unidades destruidas durante el curso de una repetición.
+Total cost of euthanasia for all animals in units destroyed over the course of an iteration.	Costo total de eutanasia de todos los animales en unidades destruidas durante el curso de una repetición.
+Total cost of indemnification for all animals in units destroyed over the course of an iteration.	Costo total de indemnificación por todos los animales en unidades destruidas durante el curso de una repetición.
+Total cost of carcass disposal for all animals in units destroyed over the course of an iteration.	Costo total por el descarte de carcasas de todos los animales en unidades destruidas durante el curso de una repetición.
+Total cost associated with destruction over the course of an iteration.	Costo total asociado con destrucción durante el curso de una repetición.
+Total cost of vaccination setup for all units vaccinated over the course of an iteration.	Costo total asociado con vacunación para todas las unidades vacunadas durante el curso de una repetición.
+Total cost of vaccination for all animals in units vaccinated over the course of an iteration.	Costo total asociado con vacunación para todos los animales en las unidades vacunadas durante el curso de una repetición.
+Total cost associated with vaccination over the course of an iteration.	Costo total asociado con vacunaciones durante el curso de una repetición.
+Total cost of all activities over the course of an iteration.	Costo total de todas las actividades durante el cusro de una repetición.
+Number of units that are or become susceptible over the course of an iteration	Número de unidades que son o se hacen susceptibles durante el curso de una repetición
+Total number of animals in all units that are or become susceptible over the course of an iteration	Número total de animales en todas las unidades que son o se hacen susceptibles durante el curso de una repetición
+Number of units that are or become latent over the course of an iteration	Número de unidades que son o se hacen latentes durante el curso de una repetición
+Total number of animals in all units that are or become latent over the course of an iteration	Número total de animales en todas las unidades que son o se hacen latentes durante el curso de una repetición
+Number of units that are or become subclinically infectious over the course of an iteration	Número total de unidades que están o se convierten en infectadas subclínicamente durante el curso de una repetición
+Total number of animals in all units that are or become infectious over the course of an iteration	Número total de animales en todas las unidades que son o se hacen infecciosas durante el curso de una repetición
+Number of units that are or become clinical over the course of an iteration	Número de unidades que son o se hacen clínicas durante el curso de una repetición
+Total number of animals in all units that are or become clinical over the course of an iteration	Número total de animales  en todas las unidades que son o se vuelven clínicas durante el curso de una repetición
+Number of units that are or become naturally immune over the course of an iteration	Número de unidades que son o se hacen naturalmente inmunes durante el curso de una repetición
+Total number of animals in all units that are or become naturally immune over the course of an iteration	Número total del animales en todas las unidades que son o se hacen naturalmente inmunes durante el curso de una repetición
+Number of units that are or become vaccine immune over the course of an iteration	Número de unidades que son o se hacen inmunes por vacunación durante el curso de una repetición
+Total number of animals in all units that are or become vaccine immune over the course of an iteration	Número total de animales en todas las unidades que son o se hacen inmunes por vacunación durante el curso de una repetición
+Number of units that are destroyed over the course of an iteration	Número de unidades que son destruidas durante el curso de una repetición
+Total number of animals in all units that are destroyed over the course of an iteration	Número total de animales en todas las unidades que son destruidas durante el curso de una repetición
+Number of units that are initially infected at the beginning of an iteration	Número de unidades inicialmente infectadas al comienzo de una repetición
+Number of animals in units that are initially infected at the beginning of an iteration	Número de animales en unidades que están inicialmente infectadas durante el comienzo de una repetición
+Number of units that become infected by airborne spread over the course of an iteration	Número de unidades que se infectan por diseminación aerógena durante el curso de una repetición
+Number of animals in units that become infected by airborne spread over the course of an iteration	Número de animales en unidades que se infectan por diseminación aerógena durante el curso de una repetición
+Number of units that become infected by direct contact over the course of an iteration	Número de unidades que se infectan por contacto directo durante el curos de una repetición
+Number of animals in units that become infected by direct contact over the course of an iteration	Número de animales en unidades que se infectan por contacto directo durante el curso de una repetición
+Number of units that become infected by indirect contact over the course of an iteration	Número de unidades que se infectan por contacto indirecto durante el curso de una repetición
+Number of animals in units that become infected by indirect contact over the course of an iteration	Número de animales en unidades que se infectan por contacto indirecto durante el curso de una repetición
+Total number of units directly exposed to any infected unit over the course of an iteration	Número total de unidades directamente expuestas a cualquier unidad infectada durante el curso de una repetición
+Total number of animals in units directly exposed to any infected unit over the course of an iteration	Número total de animales en unidades directamente expuestos a cualquier unidad infectada durante el curso de una repetición
+Total number of units indirectly exposed to any infected unit over the course of an iteration	Número total de unidades indirectamente expuestas a cualquier unidad infectada durante el curso de una repetición
+Total number of animals in units indirectly exposed to any infected unit over the course of an iteration	Número total de animales en unidades indirectamente expuestas a cualquier unidad infectada durante el curso de una repetición
+Number of units directly exposed and successfully traced over the course of an iteration	Número de unidades directamente expuestas y rastreadas exitosamente durante el curso de una repetición
+Total number of animals in all units directly exposed and successfully traced over the course of an iteration	Número de animales en todas las unidades directamente expuestas y rastreadas exitosamente durante el curso de una repetición
+Number of units indirectly exposed and successfully traced over the course of an iteration	Número de unidades indirectamente expuestas y rastreadas exitosamente durante el curso de una repetición
+Total number of animals in all units indirectly exposed and successfully traced over the course of an iteration	Número de animales en todas las unidades indirectamente expuestos y rastreados exitosamente durante el curso de una repetición
+Number of units directly exposed that could possibly have been traced over the course of an iteration	Número of unidades expuestas directamente que se hubiesen podido rastrear durante el curso de una repetición
+Total number of animals in all units directly exposed that could possibly have been traced over the course of an iteration	Número total de animales en todas las unidades con exposición directa que se hubiesen podido rastrear durante el curso de una repetición
+Number of units indirectly exposed that could possibly have been traced over the course of an iteration	Número de unidades expuestas indirectamente que se hubiensen podido rasterar durante el curso de una repetición
+Total number of animals in units indirectly exposed that could possibly have been traced over the course of an iteration	Número total de animales en unidades expuestas indirectamente que se hubiesen podido rastrear durante el curso de una repetición
+Number of units detected by clinical signs over the course of an iteration	Número de unidades detectadas por signos clínicos durante el curso de una repetición
+Total number of animals in all units detected by clinical signs over the course of an iteration	Número total de animales en todas las unidades detectadas por signos clínicos durante el curso de una repetición
+Number of units destroyed prior to the start of the simulation	Número de unidades destruidas antes del comienzo de una simulación
+Total number of animals in units destroyed prior to the start of the simulation	Número total de animales en unidades destruidas antes del comienzo de una simulación
+Number of units destroyed because they were detected positive over the course of an iteration	Número de unidades destruidas debido a que fueron detectadas positivas durante el curso de una repetición
+Total number of animals in all units destroyed because they were detected positive over the course of an iteration	Número total de animales en todas las unidades destruidas debido a que fueron detectadas positivas durante el curso de una repetición
+Number of units destroyed because they were direct traces over the course of an iteration	Número de unidades destruidas por ser rastreos directos durante el curso de una repetición
+Total number of animals in units destroyed because they were direct traces over the course of an iteration	Número total de animales en unidades destruidas por ser rastreos directos durante el curso de una repetición
+Number of units destroyed because they were indirect traces over the course of an iteration	Número de unidades destruidas por ser rastreos indirectos durante el curso de una repetición
+Total number of animals in units destroyed because they were indirect traces over the course of an iteration	Número total de animales en unidades destruidas por ser rastreos indirectos durante el curso de una repetición
+Number of units destroyed because they were in a destruction ring over the course of an iteration	Número de unidades destruidas debido a que se estaban en un anillo de destrucción durante el curso de una repetición
+Total number of animals in all units destroyed because they were in a destruction ring over the course of an iteration	Número total de animales en todas las unidades destruidas debido por estar en un anillo de destrucción durante el curso de una repetición
+Number of units destroyed for any reason over the course of an iteration	Número de unidades destruidas por cualquier motivo durante el curso de una repetición
+Number of units vaccinated in rings around detected-infected units over the course of an iteration	Número de unidades vacunadas en anillo que rodean unidades infectadas y detectadas durante el curso de una repetición
+Total number of animals in all units vaccinated in rings around detected-infected units over the course of an iteration	Número total de animales en todas las unidades vacunadas en anillo que rodean unidades infectadas y detectadas durante el curso de una repetición
+Day of first detection of an infected unit in the specified iteration	Día en que se detecta por primera vez una unidad infectada en la repetición especificada
+Day of first vaccination of an infected unit in the specified iteration	Día en que se vacuna por primera vez una unidad infectada en la repetición especificada
+Day of first destruction of an infected unit in the specified iteration	Día en que se destruye por primera vez una unidad infectada en la repetición especificada
+Duration of the active disease phase in the specified iteration	Duración de la fase de enfermedad activa en la repetición especificada
+Duration of the outbreak in the specified iteration	Duración del brote en la repetición especificada
+Total number of animals in all units destroyed for any reason over the course of an iteration	Número total de animales en todas las unidades destruidas por cualquier razón durante el curso de una repetición
+Number of units that were vaccine immune prior to the start of the simulation	Número de unidades que con inmunidad vacunal antes del inicio de una repetición
+Total number of animals in units that were vaccine immune prior to the start of the simulation	Número total de animales en unidades  con inmunidad vacunal antes del inicio de una repetición
+Total number of new zone foci created around units of the indicated type over the course of an iteration	Número total de nuevos focos zonales creados en torno a unidades del tipo indicado durante el curso de una repetición
+Ambiguous "--database" switch repetition.  Switch will be ignored.	Repetición de interruptor de "base de datos" ambigua.  El interruptor será ignorado.
+Bad command line switch	Interruptor de línea de mal comando
+Switch "xyz" has the wrong number of arguments.  Switch will be ignored.	El interruptor "xyz" tiene el número erróneo de argumentos.  El interruptor será ignorado.
+Days since start of iteration	Días desde el comienzo de la repetición
+Number of case-units	Número de unidades-caso
+Loading units...	Cargando unidades...
+Loading production types...	Cargando tipos de producción...
+Reading units?	Leyendo unidades
+Building units?	Construyendo unidades
+Building unit with ID xyz	Construyendo unidad con identificación xyz
+Reading scenario parameters?	Leyendo paramétros de situación
+Updating units in scenario database?	Actualizando unidades en la base de datos de la situación
+Checking production types?	Verificando tipos de producción
+GNU General Public License	Licencia Pública General GNU
+Natural immune	Inmunidad natural
+ActionMainMenuBar1	ActionMainMenuBar1
+lblIterationCounter	lblIterationCounter
+lblDayCounter	lblDayCounter
+btnTest	btnTest
+Zoom:	Enfoque:
+All units	Todas las unidades
+Unknown	Desconocido
+Vaccinated	Vacunado
+Traced - Direct	Rastreo - Directo
+Traced - Indirect	Rastreo - Indirecto
+FormSMWizardBase	FormSMWizardBase
+Please enter a name for the new production type.  NOTE: Do not enter an ID number.  It will be handled automatically.	Favor de entrar un nombre para el nuevo tipo de producción.  Nota: No entre un número de identificación.  Será dirigido automáticamente.
+To add a new production type it will be necessary to delete all current output records, if present.  Continue?	Para añadir un nuevo tipo de producción será necesario borrar todos los registros de resultados actuales presentes.  ¿Desea continuar?
+The current scenario file has changed. Save before closing?	El archivo de la situación actual ha cambiado.  ¿Desea guardarlo antes de cerrar?
+Save current file?	¿Desea guardar el archivo actual?
+Incomplete iteration detected	Repetición incompleta detectada
+This scenario file is read-only.  NAADSM requires write access if you wish to modify or run this scenario.	Este archivo de situación es inalterable.  NAADSM requiere acceso para alterar si usted desea modificar o ejecutar esta situación.
+Continue?	¿Desea continuar?
+Read-only file	Archivo inalterable
+Altered database schema detected	Detección de esquema alterado de base de datos
+Continue opening the current file?	¿Desea continuar abriendo el archivo actual?
+The schema of this scenario database has been altered.  Some output will not be recorded correctly, and some features may not be available or will not work properly. Unless you are an expert user, it is suggested that you do not continue.	El esquema de la base de datos de esta situación ha sido alterado.  Algunos resultados no se guardarán correctamente, y otras características no estarán disponibles o no funcionarán apropiadament.  A menos que usted sea un usuario experto, se sugiere que usted no continúe.
+(Technical information: index "dynHerd_PK" does not exist on table "dynHerd".)	(Información técnica: el índice "dynHerd_PK" no existe en la tabla "dynHerd".)
+This file contains output generated by an experimental, updated, unrecognized, or unsupported application.	Este archivo contiene resultados generados por una aplicación experimental, actualizada, desconocida o sin apoyo.
+Would you like to clear existing output in order to rerun this scenario now?	¿Desea borrar el resultados actual para reejecutar  esta situación ahora?
+Unrecognized application version	Versión desconocida de la aplicación
+The format of the selected scenario file needs to be updated for use with this version of NAADSM.	El formato del archivo de situación seleccionado necesita ser actualizado para usarse con esta versión de NAADSM.
+The output stored in this scenario will be deleted.	El resultado guardado en esta situación será borrado.
+Scenario file is out of date	El archivo de situación esta pasado de fecha
+The information stored in this scenario will not be altered.	La información guardada en esta situación no será alterada.
+The scenario must be run again if you want to generate the new outputs.	La situación debe ser ejecutada nuevamente si desea generar los nuevos resultados.
+Some outputs reported by this version were not recorded in the file, but those that were are still valid.	Algunos resultados reportados por esta versión no fueron guardados en el archivo, pero los que fueron guardados aún son válidos.
+Please visit the NAADSM website (xyz) for information about these changes.	Por favor, visite la sitio de internet (xyz) para información sobre estos cambios.
+If you continue now, existing outputs will be unchanged.  Continue?	Si continúa ahora, los resultados existentes parmanecerán iguales.  ¿Desea Continuar?
+incomplete iteration	Repetición incompleta
+complete iteration	repetición completa
+complete iterations	repeticiones completas
+Delete existing data?	¿Desea borrar los datos existentes?
+This scenario file contains results for xyz complete iterations.	Este archivo de situación contiene resultados para xyz repeticiones completas.
+Are you sure that you want to erase this data?	¿Está seguro de que desea borrar estos datos?
+This scenario file contains output.  Changing parameters will require the deletion of existing output.	Este archivo de situación contiene resultados.  El cambio de los parámetros requerirá borrar los resultados existentes.
+File contains output	El archivo contiene resultados
+This function is used in several places.  Altering it will affect all of them.  Continue?	Esta función se usa en varios lugares. Alterara esta función afectará a todas las demás. ¿Desea continuar?
+Multiple function instances	Múltiples instancias de función.
+Removing this function will permanently delete it from the scenario file.	Remover esta función hará que se borre permanentemente del archivo de situaciones
+If you want to keep this function in the scenario file but not apply it here, select ''Clear'' instead.	Si desea conservar esta función en el archivo de situaciones pero no aplicarla aquí,alternativamente seleccione 'Borrar'
+Function will be permanently removed	La función será removida permanentemente
+This function is used in several places.  Removing it will affect all of them.  Continue?	Esta función se usa en varios lugares. Si la remueve se afectará en todos ellos. ¿Desea continuar?
+By continuing, units of this production type(s) and all output records, if present, will be deleted.	Si continúa, el/los tipo/s de unidades de producción y todos los resultados serán borrados.
+Remove production type(s)	Remover tipo(s) de produción/es
+these selected production types	estos tipos de producción seleccionados
+Are you sure you wish to remove xyz?	¿Está seguro(a) de querer remover xyz?
+Parameters for the selected production type will be applied to all other production types.  Continue?	Los parámetros para el tipo de producción seleccionado serán aplicados a todos los demás tipos de producción. ¿Desea continuar?
+All production types will be changed	Se cambiarán todos los tipos de producción
+There are no selected production type pairs.  Disease spread will be disabled.  Continue?	No hay seleccionados pares de tipos de producción. Se desactivará la diseminación de enfermedad. ¿Desea continuar?
+No disease spread	No hay diseminación de enfermedad.
+The following primary combinations may be critical to simulations:	Las siguientes combinaciones primarias pueden ser críticas para las simulaciones:
+Proceed to save without these combinations?	¿Desea proceder a guardar sin estas combinaciones?
+Missing combinations	Combinaciones perdidas
+To add a new zone it will be necessary to delete all current output records, if present.  Continue?	Para añadir una zona nueva será necesario borrar los registros de resultados actuales si estuviesen presentes.  ¿Desea continuar?
+these selected zones	estas zona seleccionadas
+By continuing, this zone and all output records, if present, will be deleted.	Si continúa, esta zona y todos los resultados presentes serán borrados.
+Remove zone	Remover zona
+Parameters for the selected production type combination will be applied to all other combinations.  Continue?	Los parámetros de la combinación de los tipos de producción seleccionados se aplicarán a todas las demás combinaciones. ¿Desea continuar?
+All combinations will be changed	Se cambiarán todas las combinaciones
+Remove custom output definition	Remover las definiciones de resultados personalizados
+Are you sure you want to remove the custom output definition ''xyz''?	¿Está seguro de que desea remover la definición de resultado "xyz"?
+This file contains output for an incomplete iteration, as well as xyz complete iteration(s).	Este archivo contiene resultados para una repetición incompleta así como también para repeticiones xyz
+It is recommended that you delete the incomplete data, and use a complete iteration to generate any single-iteration outputs.	Se recomienda borrar los datos incompletos y usar una repetición completa para generara cualquier resultado de repetición única.
+Delete partial iteration?	¿Desea borrar la repetición parcial?
+This file contains partial output for only one incomplete iteration.	Este archivo contiene resultados parciales para una única repetición incompleta.
+It is recommended that you delete this partial output, and run the scenario again to generate any single-iteration outputs.	Se recomienda borrar este resultado parcial y correr la situación nuevamente para generar resultados de repeticiones simples.
+This version (xyz) corrects calculation errors that existed in the previous version.	Esta versión corrige errores de cálculo existentes en la versión previa.
+This file contains output generated by a previous version (xyz) of NAADSM.	Este archivo contiene resultados generadas por una versión previa (xyz) del NAADSM
+Please visit the NAADSM website (xyz) for information about these errors to determine how they might affect your work.	Por favor, visite la página de internet del NAADSM (xyz) para información sobre estos errores y de cómo los mismos pueden afectar su trabajo.
+Updated application version	Versión actualizada de la aplicación.
+This version (xyz) implements a new, incompatible version of the conceptual disease spread model.	Esta versión (xyz) implementa una versión nueva e incompatible  del modelo conceptual de diseminación de enfermedad.
+Please visit the NAADSM website (xyz) for information about this new version.	Por favor, visite la página de internet del NAADSM (xyz) para información sobre esta nueva versión.
+Would you like to clear existing output and convert this scenario to the new version now?	¿Quisiera borrar los resultados existentes y convertir esta situación a la nueva versión ahora?
+New conceptual model	Nuevo modelo conceptual
+NAADSM is unable to create a new scenario file. You may need to check your available hard disk space.	NAADSM no puede crear un nuevo archivo de situación. Usted debería verificar el espacio disponible en su disco duro.
+NAADSM is unable to open the selected scenario file. You may need to check your available hard disk space.	NAADSM no puede abrir un nuevo archivo de situación. Usted debería verificar el espacio disponible en su disco duro.
+NAADSM is unable to create a new scenario file. You may need to check your available hard disk space or your parameter file.	NAADSM no puede crear un nuevo archivo de situación. Usted debería verificar el espacio disponible en su disco duro o los parámetros del archivo.
+Please specify the number of days for each iteration:	Por favor, especifique el número de días para cada repetición:
+Iteration length	Duración de la repetición
+This function name is already in use.  Please enter a unique name.	El nombre de esta función ya ha sido usado. Favor de entrar un nombre único.
+Duplicate function name	Duplicar el nombre de la función
+Traced, direct	Rastreo, directo
+Traced, indirect	Rastreo, indirecto
+Unspecified	No especificado
+Unit size	Tamaño de unidad
+Save model scenario database as?	Guardar base de datos de situaciones del modelo como
+Save as	Guardar como
+Create sample model scenario database with the file name?	Crear muestra de base de datos de situaciones del modelo con el nombre de archivo
+SampleScenario.mdb	MuestradeSituación.mdb
+Create a scenario database	Crear una base de datos de situación
+Create a scenario parameter file	Crear archivo de parámetro de situación
+Create a unit file	Crear un archivo de unidades
+All production types	Todos los tipos de producción
+NAADSM single iteration summary (epidemiology)	Resumen de repetición singular de NAADSM (epidemiología)
+NAADSM single iteration summary (direct costs)	Resumen de repetición singular de NAADSM (costos directos)
+NAADSM single iteration summary	Resumen de repetición singular de NAADSM
+Application version:	Versión de aplicación:
+Date:	Fecha:
+Scenario file:	Archivo de situación:
+NAADSM scenario output summary (epidemiology)	Resumen de resultados de situación de NAADSM (epidemiología)
+NAADSM scenario output summary (direct costs)	Resumen de resultados de situación de NAADSM (costos directos)
+NAADSM scenario output summary (zones)	Resumen de resultados de situación de NAADSM (zonas)
+All zones	Todas las zonas
+NAADSM scenario output summary	Resumen de resultados de situación de NAADSM
+Zone:	Zona:
+Summary of xyz iterations	Resumen de repeticiones xyz
+NAADSM summary epidemic curves	Resumen de curvas epidemiológicas de NAASDSM
+First destruction	Primera destrucción
+First vaccination	Primera vacunación
+First detection	Primera detección
+Outbreak over	Final del brote
+Day of simulation	Día de simulación
+Frequency	Frecuencia
+Output value	Valor de resultado
+Convergence of the mean	Convergencia de la media
+Convergence of the standard deviation	Convergencia del desvío estándar
+Convergence of the median	Convergencia de la mediana
+Convergence of the quartile difference	Convergencia de la diferencia de cuartil
+Output	Resultado
+Low	Bajo
+High	Alto
+Newly infected units for each xyz-day interval	Unidades infectadas recientemente para cada intervalo xyz-día
+Simulation day	Día de simulación
+Newly detected units for each xyz-day interval	Unidades detectadas recientemente por cada intervalo xyz-día
+Apparent epidemic curve (Units)	Curva epidémica aparente (Unidades)
+Actual epidemic curve (Units)	Curva epidémica real (Unidades)
+Apparent epidemic curve (Animals)	Curva epidémica aparente (Animales)
+Actual epidemic curve (Animals)	Curva epidémica real (Animales)
+&File	&Archivo
+&Scenario parameters	&Parámetros de situación
+&Run	&Ejecutar
+&Output windows	&Resultados
+Problems found	Problemas encontrados
+Problems were found with some of the current units.  These problems must be corrected before this scenario can be run:	Se han encontrado problemas con algunas de las unidades actuales.  Estos problemas deben ser corregidos antes de que esta situación pueda ser ejecutada:
+Latitude (xyz) is invalid.	La latitud (xyz) es inválida.
+Longitude (xyz) is invalid.	La longitud (xyz) es inválida.
+Initial unit size is not set.	El tamaño inicial del unidad no está establecido.
+Initial unit size is 0.	El tamaño inicial del unidad es 0.
+Production type is not identified.	El tipo de producción no está identificado.
+Initial disease status is not set.	El estado inicial de la enfermedad no está establecido.
+Production type ID xyz is unrecognized.	El tipo de producción con identificación xyz es desconocido.
+Disease transitions are not simulated for units of this type, but an initial disease status is specified.	Las transiciones de enfermedad no se simulan para unidades de este tipo de producción, pero el estado inicial de la enfermedad está especificado.
+Unit xyz is not valid:	La unidad xyz no es válida:
+There are no units in this scenario.	No hay unidades en esta situación.
+None of the current units is capable of transmitting disease: no disease spread can occur.	Ninguna de las unidades actuales es capaz de transmitir la enfermedad: no puede ocurrir ninguna diseminación de la enfermedad.
+Days to immunity must be equal to or greater than 0.	Días hasta la inmunidad deben ser igual o mayor que 0.
+Vaccine immune period is not set.	El período de inmunidad por vacuna no está establecido.
+Vaccine immune period is not valid:	El período de inmunidad por vacuna no es válido:
+Ring vaccination parameters for xyz:	Parámetros de vacunación en anillo para xyz:
+Wind direction start angle is invalid.	El ángulo inicial de dirección de viento en inválido.
+Wind direction end angle is invalid.	El ánugulo final de dirección de viento es inválido.
+Probability of spread at 1 km is invalid.	La probabilidad de diseminación a 1 km es inválida.
+Transport delay PDF is not set.	Demora de transporte FDP no está establecida.
+Transport delay PDF is not valid:	Demora de transporte FDP no es válida:
+Airborne spread from xyz to zyx:	Diseminación aérea de xyz a xyz:
+Probability of infection transfer is not set.	La probabilidad de transferencia de infección no está establecida.
+Fixed contact rate is not set.	La tasa de contacto fijo no está establecida.
+Mean contact rate is not set.	La tasa de contacto media no está establecida.
+Transport distance PDF is not set.	La distancia de transporte FDP no está establecida.
+Transport distance PDF is not valid:	La distancia de transporte FDP no es válida:
+Movement control function is not set.	La función de control de movimiento no está establecida.
+Movement control function is not valid:	La función de control de movimiento no es válida:
+Direct	Directo
+Indirect	Indirecto
+Direct/indirect contact from xyz to zyx:	Contacto directo/indirecto de xyz a xyz:
+Destruction ring radius must be specified.	El radio anular de destrucción debe ser especificado.
+Probability of direct trace success must be between 0 and 1.	Probabilidad de éxito de rastreo directo debe estar entre 0 y 1.
+Probability of indirect trace success must be between 0 and 1.	Probabilidad de éxito de rastreo indirecto debe estar entre 0 y 1.
+Destruction parameters for xyz:	Paámetros de destrucción para xyz:
+Latent period PDF is not set.	El período latente FDP no está establecido.
+Latent period PDF is not valid:	El período latente FDP no es válido:
+Subclinical period PDF is not set.	El período subclínico FDP no está establecido.
+Subclinical period PDF is not valid:	El período subclínico FDP no es válido:
+Clinical period PDF is not set.	El período clínico FDP no está establecido.
+Clinical period PDF is not valid:	El período clínico FDP no es válido.
+Immune period PDF is not set.	El período inmune FDP no está establecido.
+Immune period PDF is not valid:	El período inmune FDP no es válido.
+Prevalence REL function is not set.	La función Prevalencia REL no ha sido configurada.
+Prevalence REL function is not valid:	La función Prevalencia REL no es válida.
+Detection is indicated, but parameters are not set.	La detección ha sido indicada pero los parámetros no han sido configurados
+Detection parameters are not valid:	Los parámetros de detección no son válidos
+Destruction is indicated, but parameters are not set.	La destrucción se ha indicado pero los parámetros no han sido configurados
+Destruction parameters are not valid:	Parámetros de destrucción inválidos:
+Ring vaccination is indicated, but parameters are not set.	Vacunación en anillo ha sido indicada pero los parámetros no han sido configurados
+Ring vaccination parameters are not valid:	Parámetros de vacunación en anillo inválidos
+Vaccination is indicated, but parameters are not set.	Se ha indicado vacunación pero los parámetros no han sido configurados.
+Vaccination parameters are not valid:	Parámetros de vacunación inválidos:
+Cost accounting is indicated, but parameters are not set.	Contabilidad de costos han sido indicados pero los parámetros no han sido configurados
+Destruction cost parameters are not valid:	Parámetros de costos de destrucción inválidos:
+Vaccination cost parameters are not valid:	Parámetros de costos de vacunación inválidos:
+Use of zones is indicated, but parameters are not set.	Se ha indicado el uso de zonas pero los parámetros no han sido configurados
+Zone parameters are not valid:	Parámetros de zona inválidos:
+Production type xyz:	Tipo de producción xyz:
+Disease transition is not occurring in any production type.	No ocurre enfermedad en transición en ningún tipo de producción.
+Destruction is specified but is not used for any production type.	Se ha especificado destrucción pero no se ha usado en ningún tipo de producción
+Use of ring destruction is specified, but no production type is targeted for ring destruction.	Se ha especificado el uso de destrucción en anillo pero no hay ningún tipo de producción que sea blanco de destrucción en anillo
+Use of ring destruction is specified, but is not triggered by any production type.	Se ha especificado el uso de destrucción en anillo pero no ha sido disparada por ningún tipo de producción
+Production type destruction priorities are ambiguous: please double-check these parameters.	Las prioridades de destrucción de tipos de producción son ambiguas: por favor verifique estos parámetros
+Use of vaccination is specified, but is not triggered by any production type.	El  uso de vacunación ha sido especificado pero no ha sido disparado por ningún tipo de producción
+Vaccination is specified but is not used for any production type.	Se ha especificado vacunación pero no se se usa para ningún tipo de producción
+Production type vaccination priorities are ambiguous: please double-check these parameters.	La prioridades de vacunación por tipo de producción son ambiguas:por favor verifique estos parámetros
+Use of zones is specified, but is not triggered by any production type.	El uso de zonas ha sido especificado pero no ha sido disparado por ningún tipo de producción.
+Probability of observing clinical signs versus time clinical is not set.	La probabilidad de observar signos clínicos versus tiempo clínico no ha sido configurada
+Probability of observing clinical signs versus time clinical is not valid:	La probabilidad de observar signos clínicos versus tiempo clínico no es válida:
+Probability of reporting versus time since first detection is not set.	La probabilidad de reportar versus tiempo desde la primera detección no ha sido configurada
+Probability of reporting versus time since first detection is not valid:	La probabilidad de reportar versus tiempo desde la primera detección no es válida:
+Probability of reporting versus time since first detection is not valid: detection will not occur if the baseline probability is 0.	La probabilidad de reportar versus tiempo desde la primera detección no es válida: no habrá detección si la probabilidad basal es 0
+Minimum time between vaccinations must be equal to or greater than 0.	El tiempo mínimo entre vacunaciones debe ser igual o mayor que 0.
+Ring radius must be greater than or equal to 0.	El radio del anillo debe ser mayor o igual a 0
+Destruction program delay must be a greater than or equal to 0 days.	La demora del programa de destrucción debe ser mayor o igual a 0 días
+Destruction capacity is not set.	La capacidad de destrucción no ha sido configurada.
+Destruction capacity is not valid:	La capacidad de destrucción no es válida.
+Vaccination program delay (number of detected units) must be a greater than or equal to 0 days.	La demora del programa de vacunación (número de unidades detectadas) debe ser mayor o igual a 0 días.
+Vaccination capacity is not set.	La capacidad de vacunación no ha sido configurada.
+Vaccination capacity is not valid:	La capacidad de vacunación no es válida.
+Global control parameters:	Parámetros de control global:
+Direct contact parameters are not set	Los parámetros de contacto directo no han sido configurados
+Indirect contact parameters are not set	Los parámetros de contacto indirecto no han sido configurados
+Airborne spread parameters are not set	Los parámetros de diseminación aerógena no han sido configurados
+File name for daily states file is unspecified.	Nombre de archivo de estado diario no especificado
+The daily states file cannot be written in the specified directory.	El archivo de estado diario no puede ser escrito en el directorio especificado
+File name for NAADSMap file is unspecified.	El nombre de archivo del NAADSMap no ha sido especificado
+The folder selected for NAADSMap output cannot be written to.	La carpeta seleccionada para la salida del NAADSMap no puede ser escrita.
+Vaccination setup cost is not set.	Los costos de configuración de vacunaciones no están establecidos
+Vaccination threshold is not set.	El umbral de vacunación no ha sido configurado
+Baseline vaccination cost is not set.	La línea de base de vacunaciones no ha sido configurada.
+Additional vaccination cost is not set.	Costos adicionales de vacunación no han sido configurados
+Appraisal cost is not set.	Costos de tasación no configurados
+Cleaning and disinfection cost is not set.	Costos de limpieza y desinfección no configurados
+Euthanasia cost is not set.	Costos de eutanasia no configurados.
+Indemnification cost is not set.	Costos de indemnificación no configurados
+Disposal cost is not set.	Costos de descarte no configurados
+Zone has an invalid ID number.	La zona tiene un número de ID inválido.
+Radius must be greater than 0 km.	El radio debe ser mayor que 0 km.
+Zone is unnamed.	Zona sin nombre.
+Zone	Zona
+Use of zones is indicated, but no zones are defined.	El uso de zonas ha sido indicado pero las zonas no han sido definidas
+Each zone must have a unique name.	Cada zona debe tener un nombre único
+Detection multiplier is unspecified.	El multiplicador de detección no ha sido especificado
+Effect of zone on direct movement rate is unspecified.	El efecto de zona sobre la tasa de movimiento directo no ha sido especificado
+Direct movement rate function is not valid:	La función de la tasa de movimiento directo no es válida:
+Effect of zone on indirect movement rate is unspecified.	El efecto de zona sobre la tasa de movimiento indirecto no ha sido especificado
+Indirect movement rate function is not valid:	La función de la tasa de movimiento indirecto no es válida:
+Cost of surveillance is unspecified.	El costo de vigilancia no ha sido especificado.
+Parameters for zone "xyz":	Parámetros de zona "xyz":
+Preview is not available for fixed values.	Vista previa no disponible para valores fijos
+Function parameters are not valid:	Parámetros de función inválidos:
+Function is unspecified.	Función no especificada.
+All probabilities must be at least 0.	Todas las probabilidades deben ser por lo menos 0
+Each x value must be greater than the preceding one.	Cada valor de x debe ser mayor que el valor anterior
+Probability of reporting infectious cattle	Probabilidad de reportar bovino infectado
+Indirect contact distance	Distancia de contacto indirecto
+Immune period vaccination	Período de inmunidad vacunal
+Probability of reporting	Probabilidad de reporte
+Immune period	Período inmune
+Latent period - cattle	Período de bovino latente
+Subclinical period - cattle	Período de bovino subclínico
+Clinical period - cattle	Período de bovino clínico
+Direct contact distance	Distancia de contacto directo
+1 day shipping delay	Demora de transporte de 1 día
+Unrestricted movement	Movimiento no restringido
+Probability of observing clinical signs	Probabilidad de observar signos clínicos
+Latent period - swine	Período de cerdo latente
+Subclinical period - swine	Período de cerdo subclínico
+Infectious period - swine	Período de cerdo infeccioso
+1 day delay	demora de 1 día
+Virtually unlimited capacity	Capacidad virtual ilimitada
+High vaccination capacity	Alta capacidad de vacunación
+This file contains a sample scenario for an outbreak of a highly contagious disease.  This file may serve as an example that can be modified for other uses, but parameters in this file should not be considered definitive or accurate for any particular disease or situation.	Este archivo contiene una muestra de situación de un brote de enfermedad altamente contagiosa.  Este archivo puede servir de ejemplo y ser modificado para otros usos pero los parámetros de este archivo no deben ser considerados definitivos o ciertos para niguna enfermedad o situación particular.
+Swine	Cerdo
+Language preferences	Prefencia de lenguaje
+English	Inglés
+Spanish	Español
+Always use the selected language	Use siempre el lenguaje seleccionado
+New language preferences will take effect the next time NAADSM is run.	La preferencia de nuevo lenguaje se hará efectiva la próxima vez que corra el NAADSM.
+Language preferences changed	El lenguaje de preferencia ha cambiado
+Automatically detect language settings	Detectar automáticamente las configuraciones de lenguaje
+Note: Only English and Spanish are currently available.	Nota: Sólo inglés y español se encuentran disponibles por el momento
+(Selected folder is read-only)	(La carpeta seleccionada es "solo para leer")
+Browse for folder	Buscar por carpeta
+Selected folder:	Carpeta seleccionada
+Create new folder	Crear una nueva carpeta
+lblFolder	lblFolder
+Select a folder from the list below:	Seleccionar una carpeta de la siguiente lista
+Please enter a name for the new folder:	Favor de entrar un nombre para la nueva carpeta
+New folder name	Nuevo nombre para la carpeta
+A folder with this name already exists.	Ya existe una carpeta con este nombre
+Folder creation failed	Falla en la creación de la carpeta
+The new folder could not be created: you may not have sufficient permission to create it in the selected folder.	No se pudo crear una nueva carpeta: posiblemente no tenga suficientes permisos en la carpeta seleccionada.
+The selected folder cannot be written to: you may not have sufficient permission to write to it.  Please select a different folder.	No se puede escribir la carpeta seleccionada:posiblemente no tenga los permisos necesarios para escribirla.Por favor seleccione otra carpeta.
+Folder is read-only	Esta carpeta es inalterable
+Stability of the mean over iteration	Estabilidad de la media durante la repetición
+TChart	TChart
+Days of simulation	Días de simulación
+Day of outbreak	Días de brote
+Cost ($)	Costo ($)
+Direct costs of outbreak by day	Costos directos diarios del brote
+Proportion of units X 100%	Proporción de unidades X 100%
+x units go here:  Title property- > Axis -> Title	x units go here:  Title property- > Axis -> Title
+y units go here:  Title property- > Axis -> Title	y units go here:  Title property- > Axis -> Title
+Probability density function	Función de densidad de probabilidad
+(Unnamed PDF)	(FDP sin nombre)
+(Unnamed REL)	(REL sin nombre)
+Detect&ion	Detecc&ión
+Dest&ruction	Dest&rucción
+&Tools	&Herramientas
+&Language settings...	&Configuración de lenguaje
+NAADSM Language settings	Configuración de lenguaje del NAADSM
+Please select a language:	Por favor, elija el lenguaje:
+Always prompt user for a language selection	Siempre consulte al usuario para seleccionar lenguaje
+Always use selected language	Siempre use el lenguaje seleccionado
+Always use this computer's default language	Siempre use el lenguaje de defecto de la computadora
+Warning	Advertencia
+Error	Error
+Information	Información
+Confirm	Confirmar
+&Yes	&Sí
+&No	&No
+No help available	Ayuda no disponible
+&Abort	&Abortar
+&Retry	Segui&r intentando
+&Ignore	&Ignorar
+&All	&Todos
+N&o to All	N&o por todos
+Yes to &All	Sí &por todos
+Application exception	Excepción en la aplicación
+lblMessage	lblMessage
+lblCounter	lblCounter
+p5	p5
+p25	p25
+p50	p50
+p75	p75
+p95	p95
+StdDev	DesvEst
+Reason for xyz	Razones para xyz
+Priority order	Orden de prioridad
+Enter a new order number to change priority	Entre un nuevo orden numérico para cambiar prioridades
+Activity	Actividad
+events	eventos
+unit	unidad
+abc units shown (of xyz units total)	Se exhiben abc unidades (del total xyz de unidades)
+xyz units	xyz unidades
+&Edit	&Editar
+(Unnamed function)	Función sin nombre
+Problems were found with this scenario.  These problems must be corrected before this scenario can be run:	Se hallaron problemas con esta situación. Los problemas deben ser correjidos antes de correr la situación:
+Problems were found with this scenario.  These problems must be corrected before this scenario can be exported:	Se hallaron problemas con esta situación. Los problemas deben ser correjidos antes de exportar la situación:
+Trace-back investigations	Investigaciones de rastreo retrospectivo
+from	desde
+Range of wind direction (0-360 degrees,  0 degrees = north, proceeding clockwise):	Rango de dirección del viento (0-360 grados, 0 grados=norte,procediendo en dirección horaria)
+Wind direction (blue indicates selected range):	Dirección del viento (el rango seleccionado se indica en azul)
+Reason for vaccination	Razón para vacunación
+Ring	Anillo
+pnlBeforeProdType	pnlBeforeProdType
+pnlAfterProdType	pnlAfterProdType
+pnlBeforeDiseaseState	pnlBeforeDiseaseState
+pnlAfterDiseaseState	pnlAfterDiseaseState
+pnlHerdCounter	pnlHerdCounter
+mnuMain	mnuMain
+lblProdType	lblProdType
+lblFunctionDescr	lblFunctionDescr
+The format of the selected scenario file has been updated, and output has been cleared.	El formato del archivo de situación seleccionado ha sido actualizado y lo resultados de han borrado
+If you wish to keep the old version, select File -> Save As... now to save the updated scenario file with a new name, or File -> Close to discard the changes.	Si desea conservar la versión vieja elija ahora Archivo ->Guardar como... para guardar la situación actual con un nuevo nombre, o Cerrar->Archivo para rechazar los cambios.
+The format of the selected scenario file has been updated.	Se ha actualizado el formato del archivo de situación seleccionado.
+The minimum value must be less than the maximum.	El valor mínimo debe ser menor que el valor máximo
+Unit zone	Unidad zona
+event	evento
+(filtered)	(filtrado)
+Infection	Infección
+State change	Cambio de estado
+Trace-direct	Rastreo directo
+Trace-indirect	Rastreo indirecto
+Zone change	Cambio de zona
+Zone focus created	Se ha creado un foco zonal
+Source zone	Zona fuente
+Recipient zone	Zona recipiente
+exposure	exposición
+exposures	exposiciones
+true	cierto
+false	falso
+Spanish translation:	Traducción en español
+mainMenuBar	mainMenuBar
+(Not a number)	(No es un número)
+(Negative infinity)	(Infinito negativo)
+(Infinity)	(Infinito)
+(Error during number-to-string conversion)	(Error en la conversión número a cadena)
+Insert row	Insertar línea
+Delete row	Borrar ahora
+NatImmune	InmunidadNat
+VacImmune	InmunidadVac
+Animals in newly detected units for each xyz-day interval	Animales en unidades detectadas recientemente por cada intervalo xyz-día
+Animals in newly infected units for each xyz-day interval	Animales en unidades infectadas recientemente para cada intervalo xyz-día
+New language settings will take effect the next time NAADSM is started.	Las configuraciones para el nuevo lenguaje serán efectivas la próxima vez que inicie el NAADSM
+btnYes	btnYes
+btnNo	btnNo
+Lognormal (2nd form)	Lognormal (2da forma)
+Relational function	Función de relación
+Relational	Función de relación
+grpButtons	grpButtons
+lblErrorMessage	lblErrorMessage
+General	General
+Reading scenario parameters...	Leyendo los par metros de situación
+The parameter file was successfully imported.  The resulting scenario database is now open.	El archivo de par metros fue importado exitosamente.  La base de datos de la situación resultante est abierta ahora.
+Import successful	Importe exitoso
+Potential problems during import	Problemas potenciales durante el importe
+The parameter file was imported, with the following errors and/or warnings:	El archivo de par metros fue importado, con los siguientes errores o advertencias:
+abc units	abc unidades
+Cumulative number of units	Número acumulativo de unidades
+Cumulative number of animals	Número acumulativo de animales
+TOTAL	TOTAL
+Ring*	Anillo*
+Clinical detections*	Detección de signos clínicos*
+Direct traces (successfully traced)*	Rastreos de contactos directos (Rastreados exitosamente)*
+Indirect traces (successfully traced)*	Rastreos de contactos indirectos (Rastreados exitosamente)*
+List separator:	
+lblDecimalSymbol	
+Label3	Label3
+Use system characters for CSV import/export	
+Use specified characters for CSV import/export in NAADSM	
+Kim.N.Forde-Folle@aphis.usda.gov	
+Kim.N.Forde-Folle@aphis.usda.gov@aphis.usda.gov	
+Animal Health and Production Division	
+Canadian Food Inspection Agency	
+Shaun Case	
+Javier Sanchez	
+Animal Health Risk Assessement Unit	
+Anthony "Drew" Schwickerath	
+Celia Antognoli	
+Noa Roman-Muniz	
+This is an experimental version of NAADSM.  This version deviates from the published conceptual specification in ways that may significantly affect the simulation outcome.	
+A required program library (xyz) cannot be found or is out of date.	La biblioteca de programa requerida (xyz) no se encuentra o está desactualizada.
+Required program libraries (xyz) cannot be found or are out of date.	La biblioteca de programa requerida (xyz) no se encuentra o está desactualizada.
+Initially infected	Infectado inicialmente
+Airborne*	Diseminación aerógena*
+Direct contact*	Contacto directo*
+Indirect contact*	Contacto indirecto*
+Initially destroyed	Destruido inicialmente
+Direct traces	Rastreos de contactos directos
+Indirect traces	Rastreos de contactos indirectos
+Initially vaccinated	Vacunado inicialmente
+iterations	repeticiones
+Number of units destroyed for any reason over the course of an iteration.	Número de unidades destruidas por cualquier razón durante el curso de una repetición.
+Total number of animals in all units destroyed for any reason over the course of an iteration.	Total número de animales en todas las unidades destruidas por cualquier razón durante el curso de una repetición.
+Number of iterations in which infected units were detected	Número de repeticiones en las cuales se detectaron unidades infectadas
+Number of iterations in which vaccination occurred	Número de repeticiones en las cuales hubo vacunación
+Number of iterations in which the active disease phase ended	Número de repeticiones en las cuales la fase activa de la enfermedad terminó
+Length of the active disease phase in the specified iteration	Duración de la fase activa de la enfermedad en la repetición especificada
+Number of iterations in which the outbreak ended	Número de repeticiones en las cuales el brote terminó
+Length of the outbreak in the specified iteration	Duración del brote en la repetición especificada
+at	en
+and	y
+Daily zone status for 1 iteration	Estado diario de zona para 1 repetición
+Daily unit status for 1 iteration	Estado diario de unidades para 1 repetición
+Invalid values	Valores inválidos
+At least one value is outside the range allowed for this function	Al menos un valor está afuera del rango permitido para esta función
+Iteration status: completed	Estado de repetición: completado
+Iteration status: aborted	Estado de repetición: abortado
+Iteration status: running	Estado de repetición: ejecutando
+Tracing is indicated, but parameters are not set.	Rastreo es indicado, pero los par metros no est n establecidos.
+Tracing parameters are not valid:	Los par metros de rastreo no son v lidos:
+Tracing cost parameters are not valid:	Los par metros de costo de rastreo no son v lidos:
+Tracing is specified but is not used for any production type.	El rastreo est especificado, pero no se usa para ningún tipo de producción.
+No tracing delay	No hay demora de rastreo
+Delay for tracing is not set.	La demora de rastreo no est  establecida.
+Delay for tracing is not valid:	La demora de rastreo no es v lida:
+Detection multiplier for forward traces of direct contact is not set.	El multiplicador de detección para ratreos prospectivos de contacto directo no est establecido.
+Detection multiplier for forward traces of indirect contact is not set.	El multiplicador de detección para ratreos prospectivos de contacto indirecto no est establecido.
+Detection multiplier for trace back of direct contacts is not set.	El multiplicador de detección para rastreos retrospectivos de contacto directo no est establecido.
+Detection multiplier for trace back of indirect contacts is not set.	El multiplicador de detección para rastreos retrospectivos de contacto indirecto no est establecido.
+Test sensitivity must be between 0 and 1.	La sensibilidad de la prueba debe estar entre 0 y 1.
+Test specificity must be between 0 and 1.	La especificidad de la prueba debe estar entre 0 y 1.
+Delay for test results is not set.	La demora para los resultados de la prueba no est  establecida.
+Delay for test results is not valid:	La demora para los resultados de la prueba no es v lida:
+Diagnostic testing is indicated, but parameters are not set.	Pruebas diagnósticas son indicadas, pero los par metros no est n establecidos.
+Diagnostic testing parameters are not valid:	Los par metros de pruebas diagnósticas no son v lidos:
+&Diagnostic testing of traced units	&Pruebas diagnósticas en unidades rastreadas
+&Examination of traced units	&Examen en unidades rastreadas
+Examination of traced herds for clinical signs is specified but is not used for any production type.	El examen de signos clínicos en hatos rastreados est especificado pero no se usa para ningún tipo de producción.
+Diagnostic testing of traced herds is specified but is not used for any production type.	Pruebas diagnósticas en hatos rastreados son indicadas, pero los par metros no est n establecidos.
+(Unused/disabled)	(No usado/ incapacitado)
+Destroy units of this production type that have had DIRECT contact with a detected unit as identified by TRACE FORWARD*	Destruir unidades de este tipo de producción que hayan tenido contacto DIRECTO con unidades detectadas identificadas por RASTREO PROSPECTIVO*
+Destroy units of this production type that have had INDIRECT contact with a detected unit as identified by TRACE FORWARD*	Destruir unidades de este tipo de producción que hayan tenido contacto INDIRECTO con unidades detectadas identificadas por RASTREO PROSPECTIVO*
+Destroy units of this production type that have had DIRECT contact with a detected unit as identified by TRACE BACK*	Destruir unidades de este tipo de producción que hayan tenido contacto DIRECTO con unidades detectadas identificadas por RASTREO RETROSPECTIVO*
+Destroy units of this production type that have had INDIRECT contact with a detected unit as identified by TRACE BACK*	Destruir unidades de este tipo de producción que hayan tenido contacto INDIRECTO con unidades detectadas identificadas por RASTREO RETROSPECTIVO*
+Conduct tracing for some or all production types	Conducir rastreo para todos o algunos tipos de producción
+Examine some or all traced units for clinical signs of disease	Examinar signos clínicos de la enfermedad en algunas o todas las unidades rastreadas
+Perform diagnostic testing for some or all traced herds	Haga pruebas diagnósticas en algunos o todos los hatos rastreados
+Multiplier for the probability of observing clinical signs:	Multiplicador para la probabilidad de observación de signos clínicos:
+Examine units identified by TRACE-FORWARD of DIRECT contact for clinical signs of disease*	Examinar signos clínicos de la enfermedad en unidades identificadas por RASTREO PROSPECTIVO de contacto DIRECTO*
+Examine units identified by TRACE-FORWARD of INDIRECT contact for clinical signs of disease*	Examinar signos clínicos de la enfermedad en unidades identificadas por RASTREO PROSPECTIVO de contacto INDIRECTO*
+Examine units identified by TRACE-BACK of DIRECT contact for clinical signs of disease*	Examinar signos clínicos de la enfermedad en unidades identificadas por RSTREO RETROSPECTIVO de contacto DIRECTO*
+Examine units identified by TRACE-BACK of INDIRECT contact for clinical signs of disease*	Examinar signos clínicos de la enfermedad en unidades identificadas por RASTREO RETROSPECTIVO de contacto INDIRECTO*
+Perform diagnostic testing of units identified by TRACE-FORWARD of DIRECT contact*	Haga pruebas diagnósticas en unidades identificadas por RASTREO PROSPECTIVO de contacto DIRECTO*
+Perform diagnostic testing of units identified by TRACE-FORWARD of INDIRECT contact*	Haga pruebas diagnósticas en unidades identificadas por RASTREO PROSPECTIVO de contacto INDIRECTO*
+Perform diagnostic testing of units identified by TRACE-BACK of DIRECT contact*	Haga pruebas diagnósticas en unidades identificadas por RASTREO RETROSPECTIVO de contacto DIRECTO*
+Perform diagnostic testing of units identified by TRACE-BACK of INDIRECT contact*	Haga pruebas diagnósticas en unidades identificadas por RASTREO RETROSPECTIVO de contacto INDIRECTO*
+Delay in obtaining test results	Demora en obtener los resultados de las pruebas
+Test sensitivity:	Sensibilidad de la prueba:
+Test specificity:	Especificidad de la prueba:
+For tracing of DIRECT contacts:	Para rastreo de contactos DIRECTOS:
+For tracing of INDIRECT contacts:	Para rastreo de contactos INDIRECTOS:
+Delay for carrying out trace investigation:	Demora en llevar a efecto investigación de rastreo:
+For ANY trace investigation:	Para CUALQUIER investigación de rastreo:
+Conduct TRACE FORWARD for DIRECT contacts	Conduzca RATREO PROSPECTIVO para contactos DIRECTOS
+Conduct TRACE FORWARD for INDIRECT contacts	Conduzca RATREO PROSPECTIVO para contactos INDIRECTOS
+Conduct TRACE BACK for DIRECT contacts	Conduzca RATREO RETROSPECTIVO para contactos DIRECTOS
+Conduct TRACE BACK for INDIRECT contacts	Conduzca RATREO RETROSPECTIVO para contactos INDIRECTOS
+Scenario parameters: Diagnostic testing	Parámetros de situación: Pruebas diagnósticas
+Diagnostic testing	Pruebas diagnósticas
+Scenario parameters: Unit examination for clinical signs	Parámetros de situación: Examen de signos clínicos en unidad
+Unit examination for clinical signs	Examen de signos clínicos en unidad
+Select production type combinations	Seleccione combinaciones de tipo de producción
+To copy the parameters for the current production type combination to other combinations, select one or more from the list below and click 'Copy':	Para copiar los par metros del tipo de producción actual a otras combinaciones, seleccione uno o m s de la lista a continuación y haga clic en 'copiar'
+&Copy	&Copiar
+Press CTRL + left mouse button to select multiple combinations	Oprima CTRL + botón secundario del ratón para seleccionar combinaciones múltiples
+Select production types	Seleccione tipos de producción
+To copy the parameters for the current production type to other production types, select one or more from the list below and click 'Copy':	Para copiar los par metros del tipo de producción actual a otros tipos de producción, seleccione uno o m s de la lista a continuación y haga clic en 'copiar'
+C&opy...	C&opiar...
+Copyright ©	Derechos de autor ©
+Animal Population Health Institute at Colorado State University and University of Guelph	Animal Population Health Institute a Colorado State University y University of Guelph
+Copyright © 2003 - 2009 Animal Population Health Institute at Colorado State University and University of Guelph	Derechos de autor © 2003 - 2009 Animal Population Health Institute a Colorado State University y University of Guelph
+Days in staus	Días en ese estado
+n:	n:
+p:	p:
+M:	M:
+D:	D:
+s:	s:
+Theta:	Theta:
+a:	a:
+Create sample model scenario database with the file name...	
+Days in state	Días en ese estado
+lblProdTypePair	lblProdTypePair
+The following errors were reported:	
+The file does not seem to be a CSV file, and cannot be parsed.	
+Column "id" is missing.	
+Column "productionType" is missing.	
+Column "herdSize" is missing.	
+Column "lat" is missing.	
+Column "lon" is missing.	
+An error occurred at or near row xyz.	
+Negative binomial	
+Pareto	Pareto
+View	
+(Unsaved)	
+Herd-level disease state durations	
+Model:	
+Date and time:	
+Prevalence (proportion) of latent infection on each day of each iteration	
+Prevalence (proportion) of subclinical disease on each day of each iteration	
+Prevalence (proportion) of clinical disease on each day of each iteration	
+Prevalence (proportion) of infected individuals (latent, subclinical, and clinical) on each day of each iteration	
+Prevalence (proportion) of infectious individuals (subclinical and clinical) on each day of each iteration	
+Cumulative incidence (proportion) of death from disease on each day of each iteration	
+Cumulative incidence (proportion) of death from other causes on each day of each iteration	
+Cumulative incidence (proportion) of death from any cause on each day of each iteration	
+Plain text file (*.txt)	
+The selected file could not be saved.  Please ensure that you have adequate permissions and disk space.	
+&Stop	
+Execution of the model was stopped before completion.	
+Model stopped	
+The decimal symbol is the same character as the list separator.	
+This will cause problems when you attempt to use delimited plain-text files.	
+You can change these system settings using the Windows Control Panel (see the Control Panel option labeled "Regional and Language Options").	
+Alternatively, you can specify characters to use within NAADSM.	
+Characters cannot be the same	
+Please specify both characters.	
+Characters must be specified	
+Please specify different characters.	
+Probability of spread at 1 km must be less than 1 for exponential decay.	
+The first Y value of a piecewise PDF must be 0.	
+The last Y value of a piecewise PDF must be 0.	
+Curve standardization resulted in negative Y values.	
+The area under the curve does not add to 1.	
+Each X value must be greater than the preceding X value.	
+The sum of the Y values of a piecewise PDF must be greater than 0.	
+The resulting chart would have no area.	
+Total number of units that become infected over the course of an iteration	
+Total number of animals in units that become infected over the course of an iteration	
+Total number units exposed by any contact  to any infected unit over the course of an iteration	
+Total number of animals in units exposed cy any contact  to any infected unit over the course of an iteration	
+Number of units exposed by direct contact on the indicated day	
+Number of animals in units exposed by direct contact on the indicated day	
+Number of units exposed by indirect contact on the indicated day	
+Number of animals in units exposed by indirect contact on the indicated day	
+Detection parameters for xyz:	
+The selected model file xyz does not exist.	
+Open a model scenario database	
+Cannot open file	
+The selected file xyz cannot be opened.	
+This probability density function cannot be used to represent a proportion or a probability.	
+Unbounded probability density functions cannot be used to represent proportions or probabilities.	
+Proportions and probabilities must be between 0 and 1, inclusive.	
+An error occurred while loading at least one relational or probability density function.	
+This may have occurred if the scenario database was changed with an application other than NAADSM.	
+NAADSM will attempt to automatically correct this situation, but some problems may still exist.	
+Please double-check your parameters before running this scenario.	
+Database error	
+lblWebsite	lblWebsite
+Caroline Dub'#23	Caroline Dub'#23
+Copyright '#169' 2003 - 2008 Animal Population Health Institute at Colorado State University and University of Guelph	Copyright '#169' 2003 - 2008 Animal Population Health Institute at Colorado State University and University of Guelph
+Number of iterations in which destruction occurred	
+Iteration status: complete	Estado de repetición: completado
+CleaningAndDisposal	LimpiezaYDesinfección
+DestrSubtotal	SubtotalDestr
+VaccSetup	ConfiguraciónVac
+VaccSubtotal	SubtotalVac
+TotalCosts	Total
+Proportion of xyz units X 100%	
+pnlEventCounter	pnlEventCounter
+Receipient status	
+Receipient zone	
+This combination of production types is already selected	
+Apparent Epidemic Curve	Curva epidémica aparente
+Actual Epidemic Curve	Curva epidémica real

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<naadsm:disease-simulation
+  xmlns:naadsm="http://www.naadsm.org/schema"
+  xmlns:xdf="http://xml.gsfc.nasa.gov/XDF">
+  <description>Specs for a sample simulation run.</description>
+  <num-days>200</num-days>
+  <num-runs>50</num-runs>
+
+  <models>
+    <!-- foot-and-mouth disease -->
+    <disease-model livestock-class="Beef Cattle">
+      <incubation-period>
+        <value>5</value>   <p>0</p>
+        <value>7.5</value> <p>0.4</p>
+        <value>10</value>  <p>0</p>
+        <units><xdf:unit>day</xdf:unit></units>
+      </incubation-period>
+      <contagious-period>
+        <value>0</value>  <p>0</p>
+        <value>21</value> <p>0.0247</p>
+        <value>81</value> <p>0</p>
+        <units><xdf:unit>day</xdf:unit></units>
+      </contagious-period>
+      <natural-immunity-period>
+        <value>6</value>  <p>0</p>
+        <value>9</value>  <p>0.333</p>
+        <value>12</value> <p>0</p>
+        <units><xdf:unit>month</xdf:unit></units>
+      </natural-immunity-period>
+      <vaccine-immunity-period>
+        <value>4</value> <p>0</p>
+        <value>5</value> <p>1.0</p>
+        <value>6</value> <p>0</p>
+        <units><xdf:unit>month</xdf:unit></units>
+      </vaccine-immunity-period>
+    </disease-model>
+
+    <!-- direct contact -->
+    <contact-spread-model from-livestock-class="Beef Cattle" to-livestock-class="Beef Cattle">
+      <movement-rate>
+        <value>0.15</value>
+        <units><xdf:unit power="-1">day</xdf:unit></units>
+      </movement-rate>
+      <distance>
+        <value>0</value>        <p>0</p>
+        <value>3.271028</value> <p>0.8467433</p>
+        <value>15.88785</value> <p>0.9961686</p>
+        <value>53.27103</value> <p>0.7088122</p>
+        <value>78.50467</value> <p>0.2298851</p>
+        <value>200</value>      <p>0</p>
+        <units><xdf:unit>km</xdf:unit></units>
+      </distance>
+      <prob-infect>0.8</prob-infect>
+      <movement-control>
+        <value>0</value> <value>1.0</value>
+        <value>6</value> <value>0.1667</value>
+        <units><xdf:unit>week</xdf:unit></units>
+        <units><xdf:unitless /></units>
+      </movement-control>
+    </contact-spread-model>
+
+    <!-- indirect contact -->
+    <contact-spread-model from-livestock-class="Beef Cattle" to-livestock-class="Beef Cattle">
+      <movement-rate>
+        <value>1</value>
+        <units><xdf:unit power="-1">day</xdf:unit></units>
+      </movement-rate>
+      <distance>
+        <value>0</value>        <p>0</p>
+        <value>1.345794</value> <p>0.9157088</p>
+        <value>6.64486</value>  <p>0.9961686</p>
+        <value>19.76636</value> <p>0.6245211</p>
+        <value>27.75701</value> <p>0.2720307</p> 	   
+        <value>36</value>       <p>0</p>
+        <units><xdf:unit>km</xdf:unit></units>
+      </distance>
+      <prob-infect>0.05</prob-infect>
+      <movement-control>
+        <value>0</value> <value>1.0</value>
+        <value>6</value> <value>0.1667</value>
+        <units><xdf:unit>week</xdf:unit></units>
+        <units><xdf:unitless /></units>
+      </movement-control>
+    </contact-spread-model>
+
+    <airborne-spread-model from-livestock-class="Beef Cattle">
+      <prob-spread-1km>0.05</prob-spread-1km>
+      <wind-direction>
+	<start>
+	  <value>0</value>
+	  <units><xdf:unit>degree</xdf:unit></units>
+	</start>
+	<end>
+	  <value>359</value>
+	  <units><xdf:unit>degree</xdf:unit></units>
+	</end>
+      </wind-direction>  
+      <max-spread>
+	<value>4</value>
+	<units>
+	  <xdf:unit>km</xdf:unit>
+	</units>
+      </max-spread>
+    </airborne-spread-model>
+
+  </models>
+
+</naadsm:disease-simulation>

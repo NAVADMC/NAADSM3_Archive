@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+    targetNamespace="C:\NAADSM-XML-Validation\3Line\schema"
+    xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+    xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="economic-model-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module tallies costs of an outbreak.
+        ]]>
+      </documentation>
+    </annotation>
+    <sequence>
+      <!-- Model parameters. -->
+      <element name="vaccination-fixed" type="naadsm:money" minOccurs="0">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The fixed setup cost for vaccinating a unit.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="vaccination" type="naadsm:money" minOccurs="0">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The cost of vaccinating an animal.  This parameter and the
+              the vaccination-fixed parameter above are used together to give
+              the total cost of vaccinating a unit.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="baseline-vaccination-capacity" type="naadsm:unitless" minOccurs="0">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The number of animals that can be vaccinated before the cost
+              increases.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="additional-vaccination" type="naadsm:money" minOccurs="0">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The additional cost of vaccinating an animal once the baseline
+              capacity has been exceeded.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="appraisal" type="naadsm:money" minOccurs="0">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The cost of appraisal per unit.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="euthanasia" type="naadsm:money" minOccurs="0">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The cost of euthanasia per animal.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="indemnification" type="naadsm:money" minOccurs="0">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The cost of indemnification per animal.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="carcass-disposal" type="naadsm:money" minOccurs="0">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The cost of carcass disposal per animal.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="cleaning-disinfecting" type="naadsm:money" minOccurs="0">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The cost of cleaning and disinfecting per unit.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="surveillance" type="naadsm:money" minOccurs="0">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The cost of zone surveillance per animal per day.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="output" minOccurs="0" maxOccurs="unbounded">
+        <complexType>
+          <sequence>
+            <element name="variable-name">
+              <simpleType>
+                <restriction base="string">                
+                  <enumeration value="total-cost" />
+                  <enumeration value="appraisal-cost" />
+                  <enumeration value="euthanasia-cost" />
+                  <enumeration value="indemnification-cost" />
+                  <enumeration value="carcass-disposal-cost" />
+                  <enumeration value="cleaning-and-disinfecting-cost" />
+                  <enumeration value="vaccination-cost" />
+                  <enumeration value="surveillance-cost" />
+                  <enumeration value="cumulative-total-cost" />
+                  <enumeration value="cumulative-appraisal-cost" />
+                  <enumeration value="cumulative-euthanasia-cost" />
+                  <enumeration value="cumulative-indemnification-cost" />
+                  <enumeration value="cumulative-carcass-disposal-cost" />
+                  <enumeration value="cumulative-cleaning-and-disinfecting-cost" />
+                  <enumeration value="cumulative-vaccination-cost" />
+                  <enumeration value="cumulative-surveillance-cost" />
+                  <!-- rbh: the ones above are the originals and the ones below new; 
+                  are these new ones replacements, supplements or a bit of both ? -->
+                  <enumeration value="destrAppraisal" />
+                  <enumeration value="destrEuthanasia" />
+                  <enumeration value="destrIndemnification" />
+                  <enumeration value="destrDisposal" />
+                  <enumeration value="destrCleaning" />
+                  <enumeration value="destrSubtotal" />
+                  <enumeration value="vaccSetup" />
+                  <enumeration value="vaccVaccination" />
+                  <enumeration value="vaccSubtotal" />
+                  <enumeration value="costSurveillance" />
+                  <enumeration value="costsTotal" />
+                </restriction>
+              </simpleType>                   
+            </element>
+            <element name="frequency" type="naadsm:output-variable-frequency" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+    <attribute name="version" type="string" fixed="0.1" />
+    <!--<attribute name="production-type" type="string" use="required" />-->
+    <!-- rbh: hack to revisit! "required" will not work with current output for SC option.
+         When the model content is just <output> no production type name is specified and 
+         XML validation fails when production-type is required. 
+    -->
+    <attribute name="production-type" type="string" use="optional" />
+    <attribute name="production-type-id" type="integer" use="optional"  />
+    <attribute name="zone" type="string" use="optional" />
+  </complexType>
+
+</schema>

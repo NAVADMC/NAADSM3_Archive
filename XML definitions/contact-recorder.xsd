@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="contact-recorder-model-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module records direct and indirect contacts, and carries out
+          traces when requested.
+        ]]>
+      </documentation>
+    </annotation>
+    <sequence>
+      <!-- Model parameters. -->
+      <element name="trace-period" type="naadsm:time">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The time period prior to the request that is of interest for
+              trace investigations.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="trace-success" type="naadsm:probability">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The probability that a trace will succeed.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="trace-delay" type="naadsm:PDF">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              How long the trace takes to get results.
+            ]]>
+          </documentation>
+          <appinfo>
+            <x-axis-type>naadsm:time</x-axis-type>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+
+    <attribute name="version" type="string" fixed="0.1" />
+    <attribute name="production-type" type="string" /> <!-- optional -->
+    <attribute name="production-type-id" type="integer" /> <!-- optional -->
+    <attribute name="contact-type" type="naadsm:contact-type" use="required" />
+  </complexType>
+
+</schema>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="test-monitor-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module tracks diagnostic testing of units.  It can record the
+          number of tests, the reasons why they were done, and the number of
+          true positives, true negatives, false positives, and false negatives.
+        ]]>
+      </documentation>
+    </annotation>
+    <sequence>
+      <!-- No parameters. -->
+
+      <element name="output" minOccurs="0" maxOccurs="unbounded">
+        <complexType>
+          <sequence>
+            <element name="variable-name">
+              <simpleType>
+                <restriction base="string">
+                  <enumeration value="tstcU">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          Number of units subjected to diagnostic testing over
+                          the course of the iteration.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="tstcA">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          Total number of animals in units subjected to
+                          diagnostic testing over the course of the iteration.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="tstcUTruePos">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          Number of tested units with a true positive diagnostic 
+                          test result over the course of the iteration.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="tstcUTrueNeg">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          Number of tested units with a true negative diagnostic 
+                          test result over the course of the iteration.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="tstcUFalsePos">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          Number of tested units with a false positive diagnostic 
+                          test result over the course of the iteration.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="tstcUFalseNeg">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          Number of tested units with a false negative diagnostic 
+                          test result over the course of the iteration.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                </restriction>
+              </simpleType>
+            </element>
+            <element name="broken-down" type="naadsm:yes-no" minOccurs="0" />
+            <element name="frequency" type="naadsm:output-variable-frequency" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+
+    <attribute name="version" type="string" fixed="0.1" />
+  </complexType>
+
+</schema>

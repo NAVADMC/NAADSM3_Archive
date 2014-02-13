@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="zone-model-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This component defines a zone with a name, radius and level of
+          surveillance.  The parameters for all zones should be given before
+          the parameters for any module that is affected by zones.
+        ]]>
+      </documentation>
+    </annotation>
+    <sequence>
+      <!-- Component parameters. -->
+      <element name="name" type="naadsm:text">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              This zone's name.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="level" type="naadsm:unitless" minOccurs="0" maxOccurs="1" >
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              This zone's surveillance level.  Level 1 should correspond to the
+              smallest radius and probably the most intensive surveillance.
+              Level 2 should correspond to the second-smallest radius and
+              probably the second-most intensive surveillance, and so on.  If
+              this parameter is omitted, the zone will be given a number one
+              higher than any previously seen.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="radius" type="naadsm:length">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The radius of the surveillance rings around foci for this zone.
+              A radius of 0 indicates that this name and surveillance level
+              apply to all "background" areas that are not in any other zone.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+
+      <element name="output" minOccurs="0" maxOccurs="unbounded">
+        <complexType>
+          <sequence>
+            <element name="variable-name">
+              <simpleType>
+                <restriction base="string">
+                  <enumeration value="num-fragments">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of "fragments" making up the zone, which
+                          may be greater than the number of separate areas.
+                          Not very meaningful for purposes other than debugging.
+                          This variable always reports the count on the day of
+                          reporting, regardless of whether it is reported
+                          daily, weekly, or at some other interval.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="num-holes-filled">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of "holes" that have been filled as a
+                          result of the no-donuts rule.  Not very meaningful
+                          for purposes other than debugging.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                  <enumeration value="cumulative-num-holes-filled">
+                    <annotation>
+                      <documentation xml:lang="en">
+                        <![CDATA[
+                          The number of "holes" that have been filled since the
+                          beginning of the simulation as a result of the
+                          no-donuts rule.  Not very meaningful for purposes
+                          other than debugging.
+                        ]]>
+                      </documentation>
+                    </annotation>
+                  </enumeration>
+                </restriction>
+              </simpleType>
+            </element>
+            <element name="frequency" type="naadsm:output-variable-frequency" />
+          </sequence>
+        </complexType>
+      </element>
+
+    </sequence>
+    <!-- Use can not be required until ZoneParams ssXML specifies a zone-id for the Background zone -->
+    <attribute name="zone-id" type="integer" use="optional"  />
+    <attribute name="version" type="string" fixed="0.1" />
+  </complexType>
+
+</schema>

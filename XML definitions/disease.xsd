@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="disease-model-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          These parameters describe the natural progress of a disease.
+        ]]>
+      </documentation>
+    </annotation>
+    <sequence>
+      <!-- Model parameters. -->
+      <element name="latent-period" type="naadsm:PDF">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The duration of the latent period, when the animals are infected
+              but are not yet themselves infectious.
+            ]]>
+          </documentation>
+          <appinfo>
+            <x-axis-type>naadsm:time</x-axis-type>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="infectious-subclinical-period" type="naadsm:PDF">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The duration of the infectious subclinical period, when the
+              animals are infectious but do not yet show clinical signs of the
+              disease.
+            ]]>
+          </documentation>
+          <appinfo>
+            <x-axis-type>naadsm:time</x-axis-type>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="infectious-clinical-period" type="naadsm:PDF">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The duration of the infectious clinical period, when the animals
+              are infectious and show clinical signs of the disease.
+            ]]>
+          </documentation>
+          <appinfo>
+            <x-axis-type>naadsm:time</x-axis-type>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="immunity-period" type="naadsm:PDF">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The duration of the natural immunity period after the animals
+              recover from the disease.
+            ]]>
+          </documentation>
+          <appinfo>
+            <x-axis-type>naadsm:time</x-axis-type>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="prevalence" type="naadsm:REL" minOccurs="0">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              The prevalence curve for the disease.  The y-values may range
+              from 0 to 1.  Unless the prevalence curve is a horizontal line
+              (constant value), the first and last y-values should be 0, and
+              the x-values should begin at 0.
+            ]]>
+          </documentation>
+          <appinfo>
+            <x-axis-type>naadsm:time</x-axis-type>
+            <y-axis-type>naadsm:probability</y-axis-type>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+    <attribute name="version" type="string" fixed="0.1" />
+    <attribute name="production-type" type="string" use="required" />
+    <attribute name="production-type-id" type="integer" use="required"  />
+  </complexType>
+
+</schema>

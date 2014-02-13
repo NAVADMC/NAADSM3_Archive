@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="trace-zone-focus-model-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module provides a policy of establishing a zone focus around
+          units that have had contact with a diseased unit.  This module has no
+          parameters.
+        ]]>
+      </documentation>
+    </annotation>    
+    <sequence>
+      <!-- Model parameters. -->
+    </sequence>
+    <attribute name="version" type="string" fixed="0.1" />
+    <attribute name="production-type" type="string" />
+    <attribute name="contact-type" type="naadsm:contact-type" use="required" />
+  </complexType>
+
+</schema>

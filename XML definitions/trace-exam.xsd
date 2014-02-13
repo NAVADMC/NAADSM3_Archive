@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+	targetNamespace="C:\NAADSM-XML-Validation\3Line\schema" 
+	xmlns:naadsm="C:\NAADSM-XML-Validation\3Line\schema"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <include schemaLocation="base_types.xsd" />
+
+  <complexType name="trace-exam-model-type">
+    <annotation>
+      <documentation xml:lang="en">
+        <![CDATA[
+          This module simulates a visual inspection for disease at units that
+          have been found by trace foward or trace back.
+        ]]>
+      </documentation>
+    </annotation>    
+    <sequence>
+      <!-- Model parameters. -->
+      <element name="detection-multiplier" type="naadsm:unitless">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              A multiplier for the base probability of detection.  Can be used
+              to simulate better scrutiny or expertise.
+            ]]>
+          </documentation>
+        </annotation>    
+      </element>
+      <element name="test-if-no-signs" type="boolean">
+        <annotation>
+          <documentation xml:lang="en">
+            <![CDATA[
+              If clinical signs are not observed during an exam, a diagnostic
+              test can be requested.  This parameter indicates whether
+              diagnostic testing will occur.  Parameters for the testing itself
+              are described in test.xsd.
+            ]]>
+          </documentation>
+        </annotation>
+      </element>
+    </sequence>
+
+    <attribute name="version" type="string" fixed="0.1" />
+    <attribute name="production-type" type="string" /> <!-- optional -->
+    <attribute name="production-type-id" type="integer" use="optional"  />
+    <attribute name="contact-type" type="naadsm:contact-type" use="required" />
+    <attribute name="direction" type="naadsm:trace-direction-type" /> <!-- optional -->
+  </complexType>
+
+</schema>
